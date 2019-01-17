@@ -19,7 +19,7 @@ if ($autorisation === true) {
 
 // Affichage des signalements utilisateurs du plus recent au plus ancien //
 
-    $avert_user = "SELECT * FROM signalements_users";
+    $avert_user = "SELECT * FROM signalements_users WHERE etat!='traité'";
     $query_user = $pdo->prepare($avert_user);
     $query_user->execute();
 
@@ -36,7 +36,7 @@ if ($autorisation === true) {
 
 // Affichage des signalements utilisateurs du plus recent au plus ancien //
 
-    $avert_post = "SELECT * FROM signalements_posts";
+    $avert_post = "SELECT * FROM signalements_posts WHERE etat!='traité'";
     $query_post = $pdo->prepare($avert_post);
     $query_post->execute();
 
