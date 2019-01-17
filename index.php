@@ -93,15 +93,9 @@ if (isset($_SESSION['info'])) {
 </div>
 
 
-
-
-
-<footer>LibWav<br/><a target="_blank" href="https://antoinevanderbrecht.fr/">VANDERBRECHT Antoine</a> | TRACCOEN Léa <br/></footer>
-
-
-
-
-
+<?php
+include('vues/footer.php');
+?>
 
 
 </body>

@@ -6,6 +6,26 @@
  * Time: 18:49
  */
 
+function roleUser($role){
+
+    switch ($role) {
+
+        case "admin":
+            $role = 5;
+            break;
+        case "modo":
+            $role = 4;
+            break;
+        case "user":
+            $role = 3;
+            break;
+        default:
+            $role = 0;
+   }
+
+    return $role;
+}
+
 
 
 function getUserInfo($id) {

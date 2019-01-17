@@ -10,7 +10,7 @@ $autorisation = false;
 
 if (isset($_SESSION["id"])) {
     $role = getUserInfo($_SESSION["id"])['statut'];
-    if ($role >= 5) {
+    if ($role >= roleUser("admin")) {
         $autorisation = true;
     }
 }
