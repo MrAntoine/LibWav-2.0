@@ -1,7 +1,7 @@
 <?php
 include("config/config.php");
 include("config/bd.php"); // commentaire
-//include("divers/balises.php");
+include("assets/divers/balises.php");
 include("assets/divers/functions_library.php");
 include("config/actions.php");
 session_start();
@@ -20,10 +20,10 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
     <title>LibWav</title>
 
     <!-- CSS -->
-    <link href="./css/style.css" rel="stylesheet">
-    <link href="./css/404.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/404.css" rel="stylesheet">
 
-    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </head>
 

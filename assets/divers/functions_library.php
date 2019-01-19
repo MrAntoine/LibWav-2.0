@@ -38,4 +38,70 @@ function getUserInfo($id) {
 }
 
 
+function getSonInfo($id) {
+    global $pdo;
+    $sql = "select * from son where id=?";
+    $query = $pdo->prepare($sql);
+    $query->execute(array($id));
+    $user = $query->fetch();
+    return $user;
+}
+
+
+
+function checkLikes($id_user,$id_contenu){
+    global $pdo;
+    $sql = "SELECT * FROM likes WHERE (id_user=? AND id_contenu=?)";
+    $query = $pdo->prepare($sql);
+    $query->execute(array($id_user,$id_contenu));
+    $result = $query->fetch();
+    return $result;
+}
+
+function addLikes($id_user,$id_contenu){
+    global $pdo;
+    $sql = "INSERT INTO likes VALUES(NULL,?,?)";
+    $query = $pdo->prepare($sql);
+    $query->execute(array($id_user,$id_contenu));
+
+}
+
+function deleteLikes($id_user,$id_contenu){
+    global $pdo;
+    $sql = "DELETE FROM likes WHERE (id_user=? AND id_contenu=?)";
+    $query = $pdo->prepare($sql);
+    $query->execute(array($id_user,$id_contenu));
+
+}
+
+function countLikes($id_contenu){
+    global $pdo;
+    $sql = "SELECT * FROM likes WHERE id_contenu=?";
+    $query = $pdo->prepare($sql);
+    $query->execute(array($id_contenu));
+    $total = 0;
+    while ($result = $query->fetch()) {
+        $total = $total +1;
+    }
+    return $total;
+}
+
+
+
+function checkSignalementsUser($id_user){
+    global $pdo;
+    $sql = "SELECT * FROM signalements_users WHERE id_user=?";
+    $query = $pdo->prepare($sql);
+    $query->execute(array($id_user));
+    $total = 0;
+    while ($result = $query->fetch()) {
+       $total = $total +1;
+    }
+    return $total;
+}
+
+
+
+
+
 ?>

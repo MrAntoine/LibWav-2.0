@@ -40,8 +40,28 @@ if ($autorisation === true) {
         echo "<br/>"."date: ".$result['date_publi'];
         echo "<br/>"."Titre: ".$result['titre'];
         echo "<br/>"."Description: ".$result['description'];
+
         echo"<br/>";
+
+
+        // Vérifié si un like est deja mis..
+        $totalLikes = countLikes($result['id']);
+        $resultLike = checkLikes($_SESSION['id'],$result['id']);
+        if ($resultLike == false) {
+            $style = "style='background-color:black'";
+        } else {
+            $style = "style='background-color:#b57600'";// style css
+        }
+        echo "<form method='POST' action='index.php?action=like'>";
+        echo "<input type='hidden' name='idPost' value='" . $result['id'] . "'>";
+        echo "<input type='submit' name='like' value='' class='postMsg likes'" . $style . " ></form>";
+        echo "Nombre de likes : " . $totalLikes;
+
+
+
     }
+
+
 
 
 

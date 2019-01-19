@@ -25,8 +25,8 @@ if ($autorisation === true) {
 
     while ($result = $query_user->fetch()) {
 
-        echo  "<br/>"."utilisateur signalé: " . getUserInfo($result['id_user'])['pseudo'] ;
-        echo  "<br/>"."demandeur: " . getUserInfo($result['id_demandeur'])['pseudo'] ;
+        echo  "<br/>"."utilisateur signalé: " . lien('?action=profil&id='.getUserInfo($result['id_user'])['id'],getUserInfo($result['id_user'])['pseudo']) ;
+        echo  "<br/>"."demandeur: " . lien('?action=profil&id='.getUserInfo($result['id_demandeur'])['id'],getUserInfo($result['id_demandeur'])['pseudo']) ;
         echo "<br/>"."raison: ".$result['raison'];
         echo "<br/>"."date: ".$result['date'];
         echo "<br/>"."etat: ".$result['etat'];
@@ -43,8 +43,8 @@ if ($autorisation === true) {
 
     while ($result = $query_post->fetch()) {
         echo "<ul>";
-        echo  "<li>"."contenu signalé: " . getUserInfo($result['id_post'])['pseudo'] ;
-        echo  "<li>"."demandeur: " . getUserInfo($result['id_demandeur'])['pseudo'] ;
+        echo  "<li>"."contenu signalé: " . getSonInfo($result['id_post'])['titre'] ;
+        echo  "<li>"."demandeur: " . lien('?action=profil&id='.getUserInfo($result['id_demandeur'])['id'],getUserInfo($result['id_demandeur'])['pseudo']) ;
         echo "<li>"."raison: ".$result['raison'];
         echo "<li>"."date: ".$result['date'];
         echo "<li>"."etat: ".$result['etat'];
