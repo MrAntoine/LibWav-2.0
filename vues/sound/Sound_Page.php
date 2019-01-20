@@ -20,7 +20,8 @@ if ($autorisation === true) {
     // Affichage des filtres //
 
 
-
+    // Bouton upload //
+    echo "<a href='?action=uploadSound'>Upload un son</a>";
 
     // Affichage des sons avec le lecteur et differents boutons //
 
