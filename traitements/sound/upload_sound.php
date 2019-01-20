@@ -17,10 +17,10 @@ if ($autorisation === true) {
 
     if( isset($_POST['upload'])){
 
-        var_dump($_FILES);
-        print_r($_FILES['fichier']);
+        //var_dump($_FILES);
+        //print_r($_FILES['fichier']);
         $erreur = 0;
-        $content_dir = 'uploads/'; // dossier où sera déplacé le fichier
+        $content_dir = 'uploads/sound/'; // dossier où sera déplacé le fichier
         $tmp_file = $_FILES['fichier']['tmp_name'];
 
         if (!is_uploaded_file($tmp_file)) {
@@ -123,13 +123,16 @@ if ($autorisation === true) {
 
             //reset les champs
 
+            // Attribution des points à l'utilisateur
+            addUserPoint(5,$_SESSION['id']);
+
 
 
         }else {
             exit("Impossible de copier le fichier dans $content_dir");
         }
     }else {
-        echo"erreur dans l'nvoi du formulaire";
+        echo"erreur dans l'envoi du formulaire";
     }
 
 
