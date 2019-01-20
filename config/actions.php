@@ -7,5 +7,7 @@ $listeDesActions = array(
     "son" => "vues/sound/Sound_Page.php",
     "like" => "vues/likes.php",
     "profil" => "vues/user/profil.php",
+    "uploadSound" => "vues/sound/upload_sound.php",
+    "soundUpload" => "traitements/sound/upload_sound.php",
     "register" => "traitement/register.php"
 );
