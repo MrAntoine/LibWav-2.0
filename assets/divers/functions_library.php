@@ -47,7 +47,10 @@ function getSonInfo($id) {
     return $user;
 }
 
-
+function needConnect(){
+    $message = "Vous devez être connecté pour accéder à ceci ! ";
+    return $message;
+}
 
 function checkLikes($id_user,$id_contenu){
     global $pdo;
@@ -100,6 +103,27 @@ function checkSignalementsUser($id_user){
     return $total;
 }
 
+function addUserPoint($nb_points,$id_user){
+    global $pdo;
+    $sql = "UPDATE user SET points=points+? WHERE id=?";
+    $query = $pdo->prepare($sql);
+    $query->execute(array($nb_points,$id_user));
+
+    ConvertPointsToLvl($id_user);
+
+}
+
+function ConvertPointsToLvl($id_user){
+    global $pdo;
+    $sql = "SELECT points FROM user WHERE id=?";
+    $query = $pdo->prepare($sql);
+    $query->execute(array($id_user));
+    $result = $query->fetch();
+    return $result;
+    //
+    // Si tu as autant de points, mettre le lvl ... etc
+    //
+}
 
 
 
