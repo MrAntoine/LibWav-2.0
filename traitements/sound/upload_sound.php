@@ -24,22 +24,25 @@ if ($autorisation === true) {
         $tmp_file = $_FILES['fichier']['tmp_name'];
 
         if (!is_uploaded_file($tmp_file)) {
-            exit("Le fichier est introuvable");
+            echo "<script type='text/javascript'>alert(\"Le fichier est introuvable\");</script>";
             $erreur = 1;
+            exit(header('Location: ' . $_SERVER['HTTP_REFERER'] ));
         }
 
         // on vérifie maintenant l'extension
         $type_file = $_FILES['fichier']['type'];
 
         if (!strstr($type_file, 'mp3')) {
-            exit("Le fichier n'est pas un mp3 !");
+            echo "<script type='text/javascript'>alert(\"Le fichier n'est pas un mp3 !\");</script>";
             $erreur = 1;
+            exit(header('Location: ' . $_SERVER['HTTP_REFERER'] ));
         }
 
         // on vérifie la taille du fichier
         if ($_FILES["fichier"]["size"] > 1000000) {
             $erreur = 1;
             echo "<script type='text/javascript'>alert(\"Sorry, your file is too large.\");</script>";
+            exit(header('Location: ' . $_SERVER['HTTP_REFERER'] ));
         }
 
 /*
@@ -59,6 +62,7 @@ if ($autorisation === true) {
         if (file_exists($Filepath)) {
             $erreur = 1;
             echo "<script type='text/javascript'>alert(\"Sorry, file already exists.\");</script>";
+            exit(header('Location: ' . $_SERVER['HTTP_REFERER'] ));
         }
 
 
@@ -70,6 +74,7 @@ if ($autorisation === true) {
         if (file_exists($name_file)) {
             $erreur = 1;
             echo "<script type='text/javascript'>alert(\"Sorry, file already exists.\");</script>";
+            exit(header('Location: ' . $_SERVER['HTTP_REFERER'] ));
         }
 // CE CODE NE FAIT RIEN
 
@@ -120,7 +125,7 @@ if ($autorisation === true) {
             echo "<script type='text/javascript'>alert(\"Upload Successfull\");</script>";
 
             //redirection
-
+            header("location:index.php?action=son");
             //reset les champs
 
             // Attribution des points à l'utilisateur
@@ -129,7 +134,8 @@ if ($autorisation === true) {
 
 
         }else {
-            exit("Impossible de copier le fichier dans $content_dir");
+            header('Location: ' . $_SERVER['HTTP_REFERER'] );
+            echo "<script type='text/javascript'>alert('Impossible de copier le fichier dans '".$content_dir.");</script>";
         }
     }else {
         echo"erreur dans l'envoi du formulaire";
