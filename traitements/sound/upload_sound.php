@@ -1,8 +1,10 @@
 <?php
-
-// Checker si le nom de FICHIER est deja utiliser
-
-
+/**
+ * Created by PhpStorm.
+ * User: Antoine
+ * Date: 19/01/2019
+ * Time: 14:54
+ */
 
 $autorisation = false;
 
@@ -19,6 +21,7 @@ if ($autorisation === true) {
 
         //var_dump($_FILES);
         //print_r($_FILES['fichier']);
+        $sizeLimit = 3000000;
         $erreur = 0;
         $content_dir = 'uploads/sound/'; // dossier où sera déplacé le fichier
         $tmp_file = $_FILES['fichier']['tmp_name'];
@@ -32,14 +35,15 @@ if ($autorisation === true) {
         // on vérifie maintenant l'extension
         $type_file = $_FILES['fichier']['type'];
 
-        if (!strstr($type_file, 'mp3')) {
-            echo "<script type='text/javascript'>alert(\"Le fichier n'est pas un mp3 !\");</script>";
+        //if (!strstr($type_file, 'mp3')) {
+        if ($type_file != "audio/mp3" && $type_file != "audio/wav") {
+            echo "<script type='text/javascript'>alert(\"Le fichier n'est pas au bon format !\");</script>";
             $erreur = 1;
             exit(header('Location: ' . $_SERVER['HTTP_REFERER'] ));
         }
 
         // on vérifie la taille du fichier
-        if ($_FILES["fichier"]["size"] > 1000000) {
+        if ($_FILES["fichier"]["size"] > $sizeLimit) {
             $erreur = 1;
             echo "<script type='text/javascript'>alert(\"Sorry, your file is too large.\");</script>";
             exit(header('Location: ' . $_SERVER['HTTP_REFERER'] ));
@@ -118,7 +122,7 @@ if ($autorisation === true) {
                 $description = "";
             }
             $file = $_FILES["fichier"]["name"]/*.".".$type_file*/;
-            $sql2 = "INSERT INTO son VALUES(NULL,?,?,?,?,?,0,0)";
+            $sql2 = "INSERT INTO son VALUES(NULL,?,?,?,?,?,0)";
             $query2 = $pdo->prepare($sql2);
             $query2->execute(array($file,$_POST['post_title'], $description, $_SESSION['id'], $date));
 
@@ -126,6 +130,7 @@ if ($autorisation === true) {
 
             //redirection
             header("location:index.php?action=son");
+
             //reset les champs
 
             // Attribution des points à l'utilisateur
