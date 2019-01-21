@@ -33,8 +33,8 @@ if ($autorisation === true) {
     while ($result = $query_contenu->fetch()) {
 
         // Affichage des avatars utilisateur //
-        $id = $result["idCreateur"];
-        include('vues/user/infos_user_avatar.php');
+            //$id = $result["idCreateur"];
+            //include('vues/user/infos_user_avatar.php');
 
 
        // echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
