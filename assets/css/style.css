@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'libwav-font';
-    src:  url('fonts/libwav-font.eot?8420ot');
-    src:  url('fonts/libwav-font.eot?8420ot#iefix') format('embedded-opentype'),
-    url('fonts/libwav-font.ttf?8420ot') format('truetype'),
-    url('fonts/libwav-font.woff?8420ot') format('woff'),
-    url('fonts/libwav-font.svg?8420ot#libwav-font') format('svg');
+    src:  url('fonts/libwav-font.eot?vgfb9s');
+    src:  url('fonts/libwav-font.eot?vgfb9s#iefix') format('embedded-opentype'),
+    url('fonts/libwav-font.ttf?vgfb9s') format('truetype'),
+    url('fonts/libwav-font.woff?vgfb9s') format('woff'),
+    url('fonts/libwav-font.svg?vgfb9s#libwav-font') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,3 +24,6 @@ i {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-like:before {
+    content: "\e900";
+}
