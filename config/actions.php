@@ -9,5 +9,9 @@ $listeDesActions = array(
     "profil" => "vues/user/profil.php",
     "uploadSound" => "vues/sound/upload_sound.php",
     "soundUpload" => "traitements/sound/upload_sound.php",
+    "profilConfiguration" => "vues/user/profil_conf.php",
+    "downloadData" => "traitements/user/download_data.php",
+    "test" => "test.php",
+    "userInfo" => "userInfo.php",
     "register" => "traitement/register.php"
 );
