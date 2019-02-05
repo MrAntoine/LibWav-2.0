@@ -21,18 +21,19 @@ if ($autorisation === true) {
     $resultLike = checkLikes($_SESSION['id'],$_POST['idPost']);
 
     if ($resultLike == false) {
-        $data = "faux";
+        $data = "unlike";
         addLikes($_SESSION['id'],$_POST['idPost']);
-        header('Location: ' . $_SERVER['HTTP_REFERER'] );
+        //header('Location: ' . $_SERVER['HTTP_REFERER'] );
 
     } else {
-        $data = "vrai";
+        $data = "like";
         deleteLikes($_SESSION['id'],$_POST['idPost']);
-        header('Location: ' . $_SERVER['HTTP_REFERER'] );
+        //header('Location: ' . $_SERVER['HTTP_REFERER'] );
 
     }
 
     echo $data;
 }
+
 
 ?>
