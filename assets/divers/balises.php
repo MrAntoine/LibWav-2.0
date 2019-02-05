@@ -6,6 +6,9 @@
  * Time: 19:57
  */
 
+function isAjax() {
+    return (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest'));
+}
 
 function options($attributes){
     $o = "";
