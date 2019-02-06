@@ -21,7 +21,7 @@ if ($autorisation === true) {
 
 
     if ($role >= roleUser("modo")) {
-        echo "<a href='?action='>Menu Admin </a>";
+        echo "<a href='?action=menuAdmin'>Menu Admin </a>";
     }
 
 

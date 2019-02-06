@@ -23,6 +23,8 @@ if ($autorisation === true) {
     $query_user = $pdo->prepare($avert_user);
     $query_user->execute();
 
+    echo "<h2>Liste des utilisateurs signalés : </h2>";
+
     while ($result = $query_user->fetch()) {
 
         echo  "<br/>"."utilisateur signalé: " . lien('?action=profil&id='.getUserInfo($result['id_user'])['id'],getUserInfo($result['id_user'])['pseudo']) ;
@@ -40,6 +42,7 @@ if ($autorisation === true) {
     $query_post = $pdo->prepare($avert_post);
     $query_post->execute();
 
+    echo "<h2>Liste des sons signalés :</h2>";
 
     while ($result = $query_post->fetch()) {
         echo "<ul>";

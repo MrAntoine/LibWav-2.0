@@ -23,7 +23,7 @@ if ($autorisation === true) {
 
 
 
-    echo "<a href='?action=downloadData'>Consulter mes données</a>";
+    echo "<a href='?action=downloadData'>Télécharger mes données</a>";
 }
 
 ?>

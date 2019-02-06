@@ -36,9 +36,6 @@ $(function() {
     $('form.reportForm').submit(function(event){
         event.preventDefault();
 
-        let mavar = $( this ).find('.reportsound');
-
-        //$.post('vues/likes.php',
         $.post( $(this).attr("action"),
             $(this ).serializeArray(),
             function(data) {
@@ -53,6 +50,23 @@ $(function() {
                 .val('');
 
             });
+    });
+
+
+    $('form.downloadForm').submit(function(){
+
+        $.post( $(this).attr("action"),
+            $(this ).serializeArray(),
+            );
+    });
+
+
+
+
+    $('a#signalements_btn_admin').click(function(){
+
+        $("#signalements_list").load("?action=signalements");
+
     });
 
 
