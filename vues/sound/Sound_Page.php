@@ -116,16 +116,21 @@ if ($autorisation === true) {
 
 
         echo "<div class='sound_item_controls'>";
+
         echo "<form class='reportForm' method='POST' action='?action=reportSound'>";
         echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
         echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $_SESSION['id'] . "'>";
+        echo "<input type='texet'  id='raison' name='raison' value='' placeholder='Saisir la raison du signalement' required>";
+        echo "<input type='checkbox' id='cgu' name='cgu' required> J'accepte les conditions";
         echo "<input type='submit' name='reportsound' value='report' class='reportsound'>";
         echo "</form>";
+
         echo "<form class='downloadForm' method='POST' action='?action=downloadSound'>";
         echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
         echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $_SESSION['id'] . "'>";
         echo "<input type='submit' name='downloadsound' value='download' class='downloadsound'>";
         echo "</form>";
+
         echo "</div>";
 
 
