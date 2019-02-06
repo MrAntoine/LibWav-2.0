@@ -15,5 +15,6 @@ $listeDesActions = array(
     "downloadSound" => "traitements/sound/download_sound.php",
     "register" => "traitements/register.php",
     "connexion" => "traitements/connexion.php",
-    "deconnexion" => "traitements/deconnexion.php"
+    "deconnexion" => "traitements/deconnexion.php",
+    "login" => "vues/login.php"
 );

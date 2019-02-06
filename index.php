@@ -52,6 +52,10 @@ if(isAjax() == false) {
             // echo "<li>Bonjour " . $_SESSION['login'] . "<br/><a href='index.php?action=deconnexion'>Deconnexion</a></li>";
             include('vues/nav.php');
         }
+
+        echo "<a href=\"index.php?action=login\">Login</a>";
+        echo "<a href='index.php?action=deconnexion'>Deconnexion</a>";
+
         ?>
     </header>
 
@@ -111,3 +115,5 @@ if(isAjax() == false) {
     }
 
 }
+?>
+
