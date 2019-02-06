@@ -13,5 +13,7 @@ $listeDesActions = array(
     "downloadData" => "traitements/user/download_data.php",
     "reportSound" => "traitements/sound/report_sound.php",
     "downloadSound" => "traitements/sound/download_sound.php",
-    "register" => "traitement/register.php"
+    "register" => "traitements/register.php",
+    "connexion" => "traitements/connexion.php",
+    "deconnexion" => "traitements/deconnexion.php"
 );
