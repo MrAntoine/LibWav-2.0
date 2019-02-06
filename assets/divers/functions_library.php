@@ -118,11 +118,12 @@ function ConvertPointsToLvl($id_user){
     $sql = "SELECT points FROM user WHERE id=?";
     $query = $pdo->prepare($sql);
     $query->execute(array($id_user));
-    $result = $query->fetch();
-    return $result;
+    $nb_points = $query->fetch();
+    return $nb_points;
     //
     // Si tu as autant de points, mettre le lvl ... etc
     //
+
 }
 
 

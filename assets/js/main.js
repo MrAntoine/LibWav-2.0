@@ -8,6 +8,7 @@ $( document ).ready(function() {
 $(function() {
 
     $('form.likesForm').submit(function(event){
+
         //return false;
         event.preventDefault();
 
@@ -25,7 +26,8 @@ $(function() {
                      $(mavar).css( "background-color", 'red' );
                  }
 
-
+                //$("#div1").load("demo_test.txt");
+                //console.log($( this ).find('.likes').parent());
 
             });
 

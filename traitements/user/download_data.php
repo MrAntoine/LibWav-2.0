@@ -65,11 +65,12 @@ while($result = $query->fetch()) {
     fwrite($Handle, $Data);
 
 
-    print "Données écrites";
     fclose($Handle);
 
+    print "Données écrites et prêtes au téléchargement ";
 
-    header("location:$File");
+    echo "<a href='' download='$File'>Télécharger mes données</a>";
+
 
 
 

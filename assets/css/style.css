@@ -1,10 +1,12 @@
+@import url(footer.css);
+
 @font-face {
     font-family: 'libwav-font';
-    src:  url('fonts/libwav-font.eot?yx5awl');
-    src:  url('fonts/libwav-font.eot?yx5awl#iefix') format('embedded-opentype'),
-    url('fonts/libwav-font.ttf?yx5awl') format('truetype'),
-    url('fonts/libwav-font.woff?yx5awl') format('woff'),
-    url('fonts/libwav-font.svg?yx5awl#libwav-font') format('svg');
+    src:  url('../fonts/libwav-font.eot?yx5awl');
+    src:  url('../fonts/libwav-font.eot?yx5awl#iefix') format('embedded-opentype'),
+    url('../fonts/libwav-font.ttf?yx5awl') format('truetype'),
+    url('../fonts/libwav-font.woff?yx5awl') format('woff'),
+    url('../fonts/libwav-font.svg?yx5awl#libwav-font') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -27,3 +29,38 @@
 .icon-like:before {
     content: "\e900";
 }
+
+
+
+
+
+
+
+
+.postMsg {
+    float:right;
+    margin-top:10px;
+    margin-bottom: 10px;
+    padding:5px;
+    background-color: #fff;
+    color: #000;
+    margin-right: 10px;
+}
+
+.likes {
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    -webkit-mask-image: url(../img/love-song.svg);
+    mask-image: url(../img/love-song.svg);
+}
+
+
+
+.sound_item {
+    width: 40%;
+    height: auto;
+    background-image: url("../img/background-sound");
+    background-size: cover;
+}
+

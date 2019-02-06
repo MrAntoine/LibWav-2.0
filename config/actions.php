@@ -11,5 +11,7 @@ $listeDesActions = array(
     "soundUpload" => "traitements/sound/upload_sound.php",
     "profilConfiguration" => "vues/user/profil_conf.php",
     "downloadData" => "traitements/user/download_data.php",
+    "reportSound" => "traitements/sound/report_sound.php",
+    "downloadSound" => "traitements/sound/download_sound.php",
     "register" => "traitement/register.php"
 );
