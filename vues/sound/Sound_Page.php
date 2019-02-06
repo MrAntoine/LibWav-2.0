@@ -18,21 +18,71 @@ if (isset($_SESSION["id"])) {
 if ($autorisation === true) {
 
     // Affichage des filtres //
+?>
+
+
+    <!-- ON AFFFICHE LES DIFFERENTES CATEGORIES -->
+
+
+    <!-- TR<IE SELON LE TYPE  -->
+
+    <form method="post" action="">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher un titre">
+        <button type="submit" name="search_submit">Chercher</button>
+    </form>
 
 
 
+    <?php
+/*
+
+    $id_type = "romantique";
+    $sql1 = "SELECT * FROM son_categorie WHERE type=?";
+    $query1 = $pdo->prepare($sql1);
+    $query1->execute(array($id_type));
+
+     echo "<h2>Type de son recherché : ".$id_type."</h2>";
+
+    while ($result1 = $query1->fetch()) {
+
+
+        echo" coucou";
+
+
+     }
+*/
+     ?>
+
+
+
+
+
+
+
+
+
+
+
+
+    <?php
     // Bouton upload //
     echo "<a href='?action=uploadSound'>Upload un son</a>";
 
+
+
+
     // Affichage des sons avec le lecteur et differents boutons //
 
-    $contenu = "SELECT * FROM son";
+    echo "<h2>Sons les plus téléchargés : </h2>";
+
+    $contenu = "SELECT * FROM son WHERE nb_telechargements>=5";
     $query_contenu = $pdo->prepare($contenu);
     $query_contenu->execute();
 
 
-
     while ($result = $query_contenu->fetch()) {
+        echo "<div class='sound_item'>";
+
 
         // Affichage des avatars utilisateur //
             //$id = $result["idCreateur"];
@@ -56,14 +106,30 @@ if ($autorisation === true) {
             $style = "style='background-color:red'";// style css
         }
 
-
-        echo "<form method='POST' action='?action=like'>";
+        echo "<div class='sound_item_likes'>";
+        echo "<form class='likesForm' method='POST' action='?action=like'>";
         echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
         echo "<input type='submit' name='like' value='' class='postMsg likes'" . $style . " >";
         echo "</form>";
-        echo "Nombre de likes : " . $totalLikes;
+        echo "<span> Nombre de likes : </span><div class='nb_likes'>" . $totalLikes."</div>";
+        echo"</div>";
 
 
+        echo "<div class='sound_item_controls'>";
+        echo "<form class='reportForm' method='POST' action='?action=reportSound'>";
+        echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
+        echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $_SESSION['id'] . "'>";
+        echo "<input type='submit' name='reportsound' value='report' class='reportsound'>";
+        echo "</form>";
+        echo "<form class='downloadForm' method='POST' action='?action=downloadSound'>";
+        echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
+        echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $_SESSION['id'] . "'>";
+        echo "<input type='submit' name='downloadsound' value='download' class='downloadsound'>";
+        echo "</form>";
+        echo "</div>";
+
+
+        echo "</div>";
     }
 
 
