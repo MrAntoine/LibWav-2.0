@@ -6,8 +6,6 @@
  * Time: 18:58
  */
 
-
-
 $autorisation = false;
 
 if (isset($_SESSION["id"])) {
@@ -23,16 +21,19 @@ if ($autorisation === true) {
     $resultLike = checkLikes($_SESSION['id'],$_POST['idPost']);
 
     if ($resultLike == false) {
-        //style css
+        $data = "unlike";
         addLikes($_SESSION['id'],$_POST['idPost']);
-        header('Location: ' . $_SERVER['HTTP_REFERER'] );
+        //header('Location: ' . $_SERVER['HTTP_REFERER'] );
+
     } else {
-        // style css
+        $data = "like";
         deleteLikes($_SESSION['id'],$_POST['idPost']);
-        header('Location: ' . $_SERVER['HTTP_REFERER'] );
+        //header('Location: ' . $_SERVER['HTTP_REFERER'] );
+
     }
 
-
-
+    echo $data;
 }
+
+
 ?>

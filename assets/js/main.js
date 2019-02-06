@@ -1,0 +1,36 @@
+
+$( document ).ready(function() {
+    console.log( "ready main.js" );
+});
+
+
+//LIKES
+$(function() {
+
+    $('form.likesForm').submit(function(event){
+        //return false;
+        event.preventDefault();
+
+        var color = $( this ).find('.likes').css( "background-color" );
+        let mavar = $( this ).find('.likes');
+        //console.log($(this ).parent().serializeArray());
+
+        //$.post('vues/likes.php',
+        $.post( $(this).attr("action"),
+            $(this ).serializeArray(),
+            function(data) {
+                if( data == 'like'){
+                     $(mavar).css( "background-color", 'black' );
+                 }else {
+                     $(mavar).css( "background-color", 'red' );
+                 }
+
+
+
+            });
+
+    });
+
+
+
+});

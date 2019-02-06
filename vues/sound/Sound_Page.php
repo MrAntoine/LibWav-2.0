@@ -20,21 +20,23 @@ if ($autorisation === true) {
     // Affichage des filtres //
 
 
+
     // Bouton upload //
     echo "<a href='?action=uploadSound'>Upload un son</a>";
 
     // Affichage des sons avec le lecteur et differents boutons //
 
-
     $contenu = "SELECT * FROM son";
     $query_contenu = $pdo->prepare($contenu);
     $query_contenu->execute();
 
+
+
     while ($result = $query_contenu->fetch()) {
 
         // Affichage des avatars utilisateur //
-        $id = $result["idCreateur"];
-        include('vues/user/infos_user_avatar.php');
+            //$id = $result["idCreateur"];
+            //include('vues/user/infos_user_avatar.php');
 
 
        // echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
@@ -51,17 +53,18 @@ if ($autorisation === true) {
         if ($resultLike == false) {
             $style = "style='background-color:black'";
         } else {
-            $style = "style='background-color:#b57600'";// style css
+            $style = "style='background-color:red'";// style css
         }
-        echo "<form method='POST' action='index.php?action=like'>";
-        echo "<input type='hidden' name='idPost' value='" . $result['id'] . "'>";
-        echo "<input type='submit' name='like' value='' class='postMsg likes'" . $style . " ></form>";
+
+
+        echo "<form method='POST' action='?action=like'>";
+        echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
+        echo "<input type='submit' name='like' value='' class='postMsg likes'" . $style . " >";
+        echo "</form>";
         echo "Nombre de likes : " . $totalLikes;
 
 
-
     }
-
 
 
 
