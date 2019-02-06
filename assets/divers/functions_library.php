@@ -133,6 +133,12 @@ function Report($requette,$id_post,$id_demandeur,$raison,$date,$etat){
     $query->execute(array($id_post,$id_demandeur,$raison,$date,$etat));
 }
 
+function AddDownload($id_user){
+        global $pdo;
+        $sql = "UPDATE user SET nb_telechargements=nb_telechargements+1 WHERE id=?";
+        $query = $pdo->prepare($sql);
+        $query->execute(array($id_user));
+}
 
 
 
