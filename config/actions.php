@@ -13,5 +13,6 @@ $listeDesActions = array(
     "downloadData" => "traitements/user/download_data.php",
     "reportSound" => "traitements/sound/report_sound.php",
     "downloadSound" => "traitements/sound/download_sound.php",
+    "menuAdmin" => "vues/admin/admin_menu.php",
     "register" => "traitement/register.php"
 );

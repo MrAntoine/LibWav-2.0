@@ -53,12 +53,20 @@ $(function() {
     });
 
 
-    $('form.downloadForm').submit(function(event){
-       // event.preventDefault();
+    $('form.downloadForm').submit(function(){
 
         $.post( $(this).attr("action"),
             $(this ).serializeArray(),
             );
+    });
+
+
+
+
+    $('a#signalements_btn_admin').click(function(){
+
+        $("#signalements_list").load("?action=signalements");
+
     });
 
 
