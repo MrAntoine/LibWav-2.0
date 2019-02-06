@@ -30,8 +30,31 @@ $(function() {
                 //console.log($( this ).find('.likes').parent());
 
             });
-
     });
+
+
+    $('form.reportForm').submit(function(event){
+        event.preventDefault();
+
+        let mavar = $( this ).find('.reportsound');
+
+        //$.post('vues/likes.php',
+        $.post( $(this).attr("action"),
+            $(this ).serializeArray(),
+            function(data) {
+
+            alert("Signalement soumis");
+
+            // reset des champs
+            $(':input','.reportForm')
+                .removeAttr('checked')
+                .removeAttr('selected')
+                .not(':button, :submit, :reset, :hidden')
+                .val('');
+
+            });
+    });
+
 
 
 

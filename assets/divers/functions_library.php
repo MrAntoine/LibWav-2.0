@@ -126,6 +126,13 @@ function ConvertPointsToLvl($id_user){
 
 }
 
+function Report($requette,$id_post,$id_demandeur,$raison,$date,$etat){
+    global $pdo;
+    $sql = $requette;
+    $query = $pdo->prepare($sql);
+    $query->execute(array($id_post,$id_demandeur,$raison,$date,$etat));
+}
+
 
 
 
