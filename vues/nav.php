@@ -6,6 +6,7 @@
  * Time: 20:56
  */
 
+$autorisation = false;
 
 if (isset($_SESSION["id"])) {
     $role = getUserInfo($_SESSION["id"])['statut'];
