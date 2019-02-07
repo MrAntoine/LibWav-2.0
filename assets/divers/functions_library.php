@@ -142,4 +142,59 @@ function AddDownload($id_user){
 
 
 
+
+
+function AfficheSoundItem($result){
+
+    echo "<div class='sound_item'>";
+
+// Affichage des avatars utilisateur //
+//$id = $result["idCreateur"];
+//include('vues/user/infos_user_avatar.php');
+
+// echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
+    echo "<br/>"."date: ".$result['date_publi'];
+    echo "<br/>"."Titre: ".$result['titre'];
+    echo "<br/>"."Description: ".$result['description'];
+    echo"<br/>";
+
+// Vérifié si un like est deja mis..
+    $totalLikes = countLikes($result['id']);
+    $resultLike = checkLikes($_SESSION['id'],$result['id']);
+    if ($resultLike == false) {
+        $style = "style='background-color:black'";
+    } else {
+        $style = "style='background-color:red'";// style css
+    }
+
+    echo "<div class='sound_item_likes'>";
+        echo "<form class='likesForm' method='POST' action='?action=like'>";
+            echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
+            echo "<input type='submit' name='like' value='' class='postMsg likes'" . $style . " >";
+        echo "</form>";
+        echo "<span> Nombre de likes : </span><div class='nb_likes'>" . $totalLikes."</div>";
+        echo"</div>";
+
+        echo "<div class='sound_item_controls'>";
+        echo "<form class='reportForm' method='POST' action='?action=reportSound'>";
+            echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
+            echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $_SESSION['id'] . "'>";
+            echo "<input type='texet'  id='raison' name='raison' value='' placeholder='Saisir la raison du signalement' required>";
+            echo "<input type='checkbox' id='cgu' name='cgu' required> J'accepte les conditions";
+            echo "<input type='submit' name='reportsound' value='report' class='reportsound'>";
+        echo "</form>";
+
+        echo "<form class='downloadForm' method='POST' action='?action=downloadSound'>";
+            echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
+            echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $_SESSION['id'] . "'>";
+            echo "<input type='submit' name='downloadsound' value='download' class='downloadsound'>";
+        echo "</form>";
+        echo "</div>";
+    echo "</div>";
+
+}
+
+
+
+
 ?>

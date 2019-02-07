@@ -1,7 +1,6 @@
 <?php
 
 $listeDesActions = array(
-    "soundFilter" => "traitement/sound/filter.php",
     "mentionslegales" => "vues/mentions_legales.php",
     "signalements" => "vues/Signalement/Signalements_List.php",
     "son" => "vues/sound/Sound_Page.php",
@@ -17,5 +16,6 @@ $listeDesActions = array(
     "register" => "traitements/register.php",
     "connexion" => "traitements/connexion.php",
     "deconnexion" => "traitements/deconnexion.php",
+    "soundFilter" => "traitements/sound/filter.php",
     "login" => "vues/login.php"
 );

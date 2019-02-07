@@ -62,11 +62,23 @@ $(function() {
 
 
 
-
     $('a#signalements_btn_admin').click(function(){
 
         $("#signalements_list").load("?action=signalements");
 
+    });
+
+
+
+    $('form#form_sound_search').submit(function(event){
+        event.preventDefault();
+
+        $.post( $(this).attr("action"),
+            $(this ).serializeArray(),
+            function(data) {
+                $("#wrapper_sound").append(data);
+
+            });
     });
 
 
