@@ -1,22 +1,18 @@
 <?php
 
-if(isset($_POST["login"]) && isset($_POST['email']) && isset($_POST['mdp'])) {
-    $sql = "INSERT INTO user(login,mdp,email) VALUES(?,PASSWORD(?),?)";
+if(isset($_POST["pseudo"]) && isset($_POST['email']) && isset($_POST['password'])) {
+    $sql = "INSERT INTO user ( id, pseudo, email, password )
+   VALUES
+   ( NULL, ?,?, PASSWORD(?) )";
 
     $query = $pdo->prepare($sql);
-    $query->execute(array($_POST['login'], $_POST['mdp'], $_POST['email']));
-    /*$query ->execute(array(
-        'login'=> $_POST['login'],
-        'mdp' => $_POST['mdp'],
-        'email' => $_POST['email'],
-    ));*/
-    //$line = $query->fetch();
+    $query->execute(array($_POST['pseudo'], $_POST['password'], $_POST['email']));
 
-    //session_start();
+    session_start();
     $id = $pdo->lastInsertId();
     $_SESSION['id'] = $id;
-    $_SESSION['login'] = $_POST['login'];
-    header("Location: index.php?action=mur");
+    $_SESSION['pseudo'] = $_POST['pseudo'];
+    header("Location: index.php?action=son");
 }
 
 ?>

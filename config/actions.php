@@ -14,7 +14,6 @@ $listeDesActions = array(
     "reportSound" => "traitements/sound/report_sound.php",
     "downloadSound" => "traitements/sound/download_sound.php",
     "menuAdmin" => "vues/admin/admin_menu.php",
-    "register" => "traitement/register.php"
     "register" => "traitements/register.php",
     "connexion" => "traitements/connexion.php",
     "deconnexion" => "traitements/deconnexion.php",
