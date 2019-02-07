@@ -1,10 +1,7 @@
 <?php
 
-if(isset($_POST["pseudo"]) && isset($_POST['email']) && isset($_POST['password'])) {
-    $sql = "INSERT INTO user ( id, pseudo, email, password )
-   VALUES
-   ( NULL, ?,?, PASSWORD(?) )";
-
+//if(isset($_POST["pseudo"]) && isset($_POST['email']) && isset($_POST['password'])) {
+    $sql = "INSERT INTO user ( id, pseudo, email, password )VALUES( NULL, ?,?, PASSWORD(?) )";
     $query = $pdo->prepare($sql);
     $query->execute(array($_POST['pseudo'], $_POST['password'], $_POST['email']));
 
@@ -12,7 +9,7 @@ if(isset($_POST["pseudo"]) && isset($_POST['email']) && isset($_POST['password']
     $id = $pdo->lastInsertId();
     $_SESSION['id'] = $id;
     $_SESSION['pseudo'] = $_POST['pseudo'];
-    header("Location: index.php?action=son");
-}
+    //header("Location: index.php?action=son");
+//}
 
 ?>

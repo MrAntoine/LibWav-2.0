@@ -11,7 +11,7 @@ if($line==false){
 } else {
     $_SESSION['id'] = $line['id'];
     $_SESSION['pseudo'] = $line['pseudo'];
-    header("Location: index.php");
+    header("Location: index.php?action=son");
     //CHANGER LE HEADER
 }
 
