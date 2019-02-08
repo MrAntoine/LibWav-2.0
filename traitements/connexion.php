@@ -13,6 +13,8 @@ if($line==false){
     $_SESSION['pseudo'] = $line['pseudo'];
     header("Location: index.php?action=son");
     //CHANGER LE HEADER
+
+    echo "lalala";
 }
 
 
