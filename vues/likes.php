@@ -17,7 +17,7 @@ if (isset($_SESSION["id"])) {
 
 if ($autorisation === true) {
 
-
+    $totalLikes = countLikes($_POST['idPost']);
     $resultLike = checkLikes($_SESSION['id'],$_POST['idPost']);
 
     if ($resultLike == false) {
@@ -32,7 +32,14 @@ if ($autorisation === true) {
 
     }
 
-    echo $data;
+    //echo $data;
+
+    $chartArray = array();
+    $chartArray['ifLike'] = $data;
+    $chartArray['count'] = $totalLikes;
+
+    echo json_encode($chartArray);
+
 }
 
 

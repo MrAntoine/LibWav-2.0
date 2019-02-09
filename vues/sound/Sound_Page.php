@@ -27,41 +27,14 @@ if ($autorisation === true) {
     <!-- TR<IE SELON LE TYPE  -->
 
     <form id='form_sound_search' method="post" action="?action=soundFilter">
-        <input type="text" id="champ_filter" name="champ_filter" placeholder="Rechercher un titre" required>
+        <input type="text" id="champ_filter" name="champ_filter" placeholder="Rechercher un titre">
         <input type="submit" value='Chercher' name="sound_search_submit" id="sound_search_submit">
     </form>
 
 
 
-    <?php
-/*
-
-    $id_type = "romantique";
-    $sql1 = "SELECT * FROM son_categorie WHERE type=?";
-    $query1 = $pdo->prepare($sql1);
-    $query1->execute(array($id_type));
-
-     echo "<h2>Type de son recherché : ".$id_type."</h2>";
-
-    while ($result1 = $query1->fetch()) {
-
-
-        afficheSoundItem($result);
-
-
-     }
-*/
-     ?>
-
-
 
 <section id="wrapper_sound">
-
-</section>
-
-
-
-
 
     <?php
 
@@ -79,9 +52,17 @@ if ($autorisation === true) {
     while ($result = $query_contenu->fetch()) {
         afficheSoundItem($result);
     }
+    ?>
+
+</section>
 
 
 
 
+
+
+
+
+<?php
 }
 ?>

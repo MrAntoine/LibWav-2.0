@@ -8,29 +8,34 @@ $( document ).ready(function() {
 $(function() {
 
     $('form.likesForm').submit(function(event){
-
-        //return false;
         event.preventDefault();
 
-        var color = $( this ).find('.likes').css( "background-color" );
         let mavar = $( this ).find('.likes');
-        //console.log($(this ).parent().serializeArray());
+        let likes = mavar.parents('div.sound_item_likes').find('.nb_likes');
 
-        //$.post('vues/likes.php',
-        $.post( $(this).attr("action"),
-            $(this ).serializeArray(),
-            function(data) {
-                if( data == 'like'){
-                     $(mavar).css( "background-color", 'black' );
-                 }else {
-                     $(mavar).css( "background-color", 'red' );
-                 }
+        $.ajax({
+            type: "POST",
+            url: $(this).attr("action"),
+            data: $(this ).serializeArray(),
+            success: function(data) {
+                data = JSON.parse(data);
+               if(data['ifLike'] == "like"){
+                   // On unlike
+                   $(mavar).css( "background-color", 'black' );
+                   $( this ).find('.likes')
+                   likes.empty().append(data['count']-1);
+               }else {
+                   // On like
+                   $(mavar).css( "background-color", 'red' );
+                   likes.empty().append(data['count']+1);
+               }
 
-                //$("#div1").load("demo_test.txt");
-                //console.log($( this ).find('.likes').parent());
+            }
+        });
 
-            });
     });
+
+
 
 
     $('form.reportForm').submit(function(event){
@@ -61,10 +66,8 @@ $(function() {
     });
 
 
-
     $('a#signalements_btn_admin').click(function(){
-
-        $("#signalements_list").load("?action=signalements");
+            $("#signalements_list").load("?action=signalements");
 
     });
 
@@ -76,7 +79,7 @@ $(function() {
         $.post( $(this).attr("action"),
             $(this ).serializeArray(),
             function(data) {
-                $("#wrapper_sound").append(data);
+                $("#wrapper_sound").empty().append(data);
 
             });
     });
