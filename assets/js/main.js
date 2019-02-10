@@ -119,6 +119,7 @@ $(function() {
 */
 
 
+
     function initAudio() {
         var url = $('#src_player').text();
         song = new Audio(url);
@@ -193,6 +194,23 @@ $(function() {
     $('#volumeSlider').change(function (e) {
         e.preventDefault();
         setVolume(this.value);
+        if(this.value == 0){
+            $('#AudioPlayerSpeak').attr('src','assets/img/mute.svg');
+        }else {
+            $('#AudioPlayerSpeak').attr('src','assets/img/speaker.svg');
+        }
+    });
+
+    // Muted
+    $('#AudioPlayerSpeak').click(function (e) {
+        e.preventDefault();
+        if(song.volume > 0){
+            $(this).attr('src','assets/img/mute.svg');
+            setVolume(0);
+        }else {
+            $(this).attr('src','assets/img/speaker.svg');
+            setVolume(1);
+        }
     });
 
 

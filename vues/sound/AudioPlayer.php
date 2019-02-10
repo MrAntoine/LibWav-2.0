@@ -30,11 +30,13 @@
         <div id="AudiPlayerSongTitle">Demo</div>
         <div id="AudiPlayerSongTime">Demo</div>
         <div id="buttons">
-            <a id="AudioPlayerPlay"><img src="assets/img/play-button.svg"/></a>
-            <a class="cacher" id="AudioPlayerPause"><img src="assets/img/pause-button.svg"/></a>
+            <a id="AudioPlayerPlay"><img src="assets/img/play-button.svg" alt="bouton lecture lecteur audio" class="btn_img"/></a>
+            <a class="cacher" id="AudioPlayerPause"><img src="assets/img/pause-button.svg" alt="bouton pause lecteur audio" class="btn_img"/></a>
         </div>
-
-        <input id="volumeSlider" name="volumeSlider" type="range" min="0" max="1" step="any" value="1">
+        <div id="AudiPlayerSongSound">
+            <img id="AudioPlayerSpeak" src="assets/img/speaker.svg" alt="image volume lecteur audio" class="btn_img">
+            <input id="volumeSlider" name="volumeSlider" type="range" min="0" max="1" step="any" value="1">
+        </div>
         <div class="tracker"></div>
 
 

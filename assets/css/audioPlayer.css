@@ -9,7 +9,7 @@
     padding: 20px;
 }
 
-#buttons a img {
+.btn_img{
     width: 30px;
     height: 30px;
 }
@@ -36,8 +36,8 @@
 
     /* dessionon notre gabarit*/
     grid-template-areas:
-            "buttons   titre           temps         volume"
-            "buttons   barre-temps     barre-temps   volume";
+            "buttons   titre           temps         sound"
+            "buttons   barre-temps     barre-temps   sound";
 
 }
 
@@ -67,8 +67,10 @@
     grid-area: temps;
 }
 
-#volumeSlider {
-    grid-area: volume;
+#AudiPlayerSongSound {
+    grid-area: sound;
+    cursor: pointer;
+    margin:auto;
 }
 
 #seek-bar {
@@ -79,9 +81,7 @@
     background-color:gray;
     display: flex;
     border-radius: 50px;
-    cursor: pointer;
 }
-
 
 #fill{
     height: 5px;
@@ -95,6 +95,11 @@
     border-radius: 50%;
     margin-left: -5px;
     transform: scale(2);
+}
+
+#AudioPlayerSpeak {
+    width: 20px;
+    height:20px;
 }
 
 
