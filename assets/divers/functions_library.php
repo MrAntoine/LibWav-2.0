@@ -153,8 +153,8 @@ function AfficheSoundItem($result){
 //include('vues/user/infos_user_avatar.php');
 
 // echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
-    echo "<br/>"."date: ".$result['date_publi'];
-    echo "<br/>"."Titre: ".$result['titre'];
+    echo "<br/><span class='sound_item_date'>date: ".$result['date_publi']."</span>";
+    echo "<br/><span class='sound_item_titre'>Titre: ".$result['titre']."</span>";
     echo "<br/>"."Description: ".$result['description'];
     echo"<br/>";
 
@@ -180,7 +180,7 @@ function AfficheSoundItem($result){
             echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
             echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $_SESSION['id'] . "'>";
             echo "<input type='texet'  id='raison' name='raison' value='' placeholder='Saisir la raison du signalement' required>";
-            echo "<input type='checkbox' id='cgu' name='cgu' required> J'accepte les conditions";
+            echo "<input type='checkbox' id='cgu' name='cgu' required> <a href='?action=cgu' target='_blank'>J'accepte les conditions</a>";
             echo "<input type='submit' name='reportsound' value='report' class='reportsound'>";
         echo "</form>";
 
@@ -189,6 +189,9 @@ function AfficheSoundItem($result){
             echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $_SESSION['id'] . "'>";
             echo "<input type='submit' name='downloadsound' value='download' class='downloadsound'>";
         echo "</form>";
+
+        echo "<button class='btn_lecture'>Lecture";
+    echo "<input hidden class='src_sound' value='".$result['lien_upload']."'/>";
         echo "</div>";
     echo "</div>";
 

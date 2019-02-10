@@ -17,5 +17,6 @@ $listeDesActions = array(
     "connexion" => "traitements/connexion.php",
     "deconnexion" => "traitements/deconnexion.php",
     "soundFilter" => "traitements/sound/filter.php",
+    "cgu" => "vues/user/cgu.php",
     "login" => "vues/login.php"
 );

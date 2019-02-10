@@ -17,21 +17,10 @@ if (isset($_SESSION["id"])) {
 
 if ($autorisation === true) {
 
-    // Affichage des filtres //
-?>
+    /*  Affichage des filtres */
+    include ("filter_view.php");
 
-
-    <!-- ON AFFFICHE LES DIFFERENTES CATEGORIES -->
-
-
-    <!-- TR<IE SELON LE TYPE  -->
-
-    <form id='form_sound_search' method="post" action="?action=soundFilter">
-        <input type="text" id="champ_filter" name="champ_filter" placeholder="Rechercher un titre">
-        <input type="submit" value='Chercher' name="sound_search_submit" id="sound_search_submit">
-    </form>
-
-
+    ?>
 
 
 <section id="wrapper_sound">
@@ -45,7 +34,8 @@ if ($autorisation === true) {
 
     echo "<h2>Sons les plus téléchargés : </h2>";
 
-    $contenu = "SELECT * FROM son WHERE nb_telechargements>=5";
+    //$contenu = "SELECT * FROM son WHERE nb_telechargements>=5";
+    $contenu = "SELECT * FROM son ";
     $query_contenu = $pdo->prepare($contenu);
     $query_contenu->execute();
 
@@ -57,8 +47,9 @@ if ($autorisation === true) {
 </section>
 
 
-
-
+    <?php
+    include("AudioPlayer.php");
+    ?>
 
 
 

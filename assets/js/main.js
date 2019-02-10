@@ -1,6 +1,10 @@
 
 $( document ).ready(function() {
-    console.log( "ready main.js" );
+    console.log( " JS ready ! " );
+
+
+
+
 });
 
 
@@ -87,4 +91,128 @@ $(function() {
 
 
 
+// AUDIO PLAYER
+
+
+
+    // inner variables
+    var song;
+    var fillBar = document.getElementById("AudioPlayerFill");
+    var tracker = $('.tracker');
+
+    initAudio();
+
+
+/*
+
+// empty tracker slider
+    tracker.slider({
+        range: 'min',
+        min: 0, max: 10,
+        start: function(event,ui) {},
+        slide: function(event, ui) {
+            song.currentTime = ui.value;
+        },
+        stop: function(event,ui) {}
+    });
+
+*/
+
+
+    function initAudio() {
+        var url = $('#src_player').text();
+        song = new Audio(url);
+        // timeupdate event listener
+    /*
+       song.addEventListener('timeupdate',function (){
+            var curtime = parseInt(song.currentTime, 10);
+            tracker.slider('value', curtime);
+        });
+    */
+        song.addEventListener('timeupdate',function(){
+            var position = song.currentTime / song.duration;
+            fillBar.style.width = position * 100 +'%';
+        });
+
+    }
+
+    function setVolume(volume) {
+        song.volume = volume;
+    }
+
+    function playAudio() {
+        song.play();
+       // tracker.slider("option", "max", song.duration);
+        //2 //tracker.slider("option", "value", tracker.slider("value"));
+        $('#AudioPlayerPlay').addClass('cacher');
+        $('#AudioPlayerPause').removeClass('cacher');
+    }
+
+    function stopAudio() {
+        song.pause();
+        $('#AudioPlayerPlay').removeClass('cacher');
+        $('#AudioPlayerPause').addClass('cacher');
+    }
+
+
+
+
+    $('.btn_lecture').click(function(){
+        //let source = $( this ).find('.likes');
+    let fichier = $( this ).find('.src_sound').val();
+    let source = "uploads/sound/"+fichier;
+        event.preventDefault();
+        //$('audio').attr('src',source);
+
+        // Source de la musique
+        $('#src_player').empty().append(source);
+
+        // Titre de la musique
+        var songTitle =  ($( this ).parent().parent().find('.sound_item_titre').text());
+        $('#AudiPlayerSongTitle').empty().append(songTitle); // set the title of song
+        $('#AudiPlayerSongTime').empty().append("Durée : "+ song.duration);
+        stopAudio();
+        initAudio();
+
+
+    });
+
+
+    // play click
+    $('#AudioPlayerPlay').click(function (e) {
+        e.preventDefault();
+        playAudio();
+    });
+    // pause click
+    $('#AudioPlayerPause').click(function (e) {
+        e.preventDefault();
+        stopAudio();
+    });
+
+    // Volume
+    $('#volumeSlider').change(function (e) {
+        e.preventDefault();
+        setVolume(this.value);
+    });
+
+
+
+/*
+    song.addEventListener('timeupdate',function(){
+        var position = song.currentTime / song.duration;
+        fillBar.style.width = position * 100 +'%';
+    });
+
+*/
+
+
+
+
+
+
+
+
+
 });
+
+
