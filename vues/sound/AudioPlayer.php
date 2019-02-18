@@ -27,8 +27,8 @@
 <div id="main_player">
     <div id="player">
         <input hidden id="src_player"/>
-        <div id="AudiPlayerSongTitle">Demo</div>
-        <div id="AudiPlayerSongTime">Demo</div>
+        <div id="AudiPlayerSongTitle">Aucun son sélectionné</div>
+        <div id="AudiPlayerSongTime">Durée : 0</div>
         <div id="buttons">
             <a id="AudioPlayerPlay"><img src="assets/img/play-button.svg" alt="bouton lecture lecteur audio" class="btn_img"/></a>
             <a class="cacher" id="AudioPlayerPause"><img src="assets/img/pause-button.svg" alt="bouton pause lecteur audio" class="btn_img"/></a>
@@ -37,7 +37,7 @@
             <img id="AudioPlayerSpeak" src="assets/img/speaker.svg" alt="image volume lecteur audio" class="btn_img">
             <input id="volumeSlider" name="volumeSlider" type="range" min="0" max="1" step="any" value="1">
         </div>
-        <div class="tracker"></div>
+
 
 
         <div id="seek-bar">

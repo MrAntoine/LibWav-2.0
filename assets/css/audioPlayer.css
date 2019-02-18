@@ -1,3 +1,4 @@
+@import url(btn-range.css);
 
 #main_player {
     background-color: #8cc3e6;
@@ -42,9 +43,6 @@
 }
 
 
-
-
-
 #buttons {
     grid-area: buttons;
     margin: auto;
@@ -83,6 +81,8 @@
     border-radius: 50px;
 }
 
+
+
 #fill{
     height: 5px;
     background-color:royalblue;
@@ -109,42 +109,3 @@
 
 
 
-
-
-
-
-
-.volume {
-    height: 11px;
-    left: 186px;
-    position: absolute;
-    top: 96px;
-    width: 112px;
-}
-.tracker {
-    height: 15px;
-    left: 20px;
-    position: absolute;
-    top: 126px;
-    width: 285px;
-}
-.ui-slider-range {
-    background: transparent url("../images/spr.png") no-repeat scroll 5px -222px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-}
-.ui-slider-handle {
-    cursor: pointer;
-    height: 10px;
-    margin-left: -5px;
-    position: absolute;
-    top: 2px;
-    width: 10px;
-    z-index: 2;
-}
-.volume .ui-slider-handle {
-    background: url("../images/spr.png") no-repeat scroll -201px -188px rgba(0, 0, 0, 0);
-    height: 13px;
-    width: 13px;
-}

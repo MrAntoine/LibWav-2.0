@@ -20,7 +20,7 @@ if ($autorisation === true) {
     $affiche_user = getUserInfo($id);
 
     echo "<a href='index.php?action=profil&id=" . $id . "' class='avatar'>";
-    echo "<img src='uploads/".$affiche_user['avatar']."' alt='Photo de profil' >";
+    echo "<img src='uploads/avatar/".$affiche_user['avatar']."' alt='Photo de profil' class='profil_avatar' >";
     echo " <p>" . $affiche_user["pseudo"] . "</p>";
     echo "</a>";
 

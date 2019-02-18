@@ -176,11 +176,9 @@ function AfficheSoundItem($result){
         echo"</div>";
 
         echo "<div class='sound_item_controls'>";
-        echo "<form class='reportForm' method='POST' action='?action=reportSound'>";
+        echo "<form class='formReport' method='POST' action='?action=soundReport'>";
             echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
             echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $_SESSION['id'] . "'>";
-            echo "<input type='texet'  id='raison' name='raison' value='' placeholder='Saisir la raison du signalement' required>";
-            echo "<input type='checkbox' id='cgu' name='cgu' required> <a href='?action=cgu' target='_blank'>J'accepte les conditions</a>";
             echo "<input type='submit' name='reportsound' value='report' class='reportsound'>";
         echo "</form>";
 

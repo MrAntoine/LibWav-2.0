@@ -46,7 +46,6 @@ if ($autorisation === true) {
 
 </section>
 
-
     <?php
     include("AudioPlayer.php");
     ?>

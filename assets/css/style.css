@@ -92,3 +92,16 @@ body {
     background-size: cover;
 }
 
+.profil_avatar {
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+}
+
+#profil_avatar_conf {
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+}

@@ -170,6 +170,7 @@ $(function() {
 
         // Titre de la musique
         var songTitle =  ($( this ).parent().parent().find('.sound_item_titre').text());
+        var songTime =  ($( this ).parent().parent().find('.sound_item_titre').text());
         $('#AudiPlayerSongTitle').empty().append(songTitle); // set the title of song
         $('#AudiPlayerSongTime').empty().append("Durée : "+ song.duration);
         stopAudio();
@@ -228,9 +229,19 @@ $(function() {
 
 
 
+});
 
 
+/*
+// Avatar apercu
+$('#update_profil_avatar').click(function (e) {
+    e.preventDefault();
+    let photo = ($( this ).parent().find('#profil_avatar_conf').attr('src'));
+    let file = ($( this ).parent().find('#fileToUpload').val());
+    console.log(file);
+        $(this).attr('src',file);
 
 });
+*/
 
 
