@@ -83,7 +83,30 @@ body {
     mask-image: url(../img/love-song.svg);
 }
 
+.reportsound {
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    -webkit-mask-image: url(../img/report-button.svg);
+    mask-image: url(../img/report-button.svg);
+}
 
+
+.downloadsound {
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    -webkit-mask-image: url(../img/download.svg);
+    mask-image: url(../img/download.svg);
+}
+
+.btn_lecture {
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    -webkit-mask-image: url(../img/play-button.svg);
+    mask-image: url(../img/play-button.svg;);
+}
 
 .sound_item {
     width: 40%;

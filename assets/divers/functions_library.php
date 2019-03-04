@@ -179,16 +179,16 @@ function AfficheSoundItem($result){
         echo "<form class='formReport' method='POST' action='?action=soundReport'>";
             echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
             echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $_SESSION['id'] . "'>";
-            echo "<input type='submit' name='reportsound' value='report' class='reportsound'>";
+            echo "<input type='submit' name='reportsound' value='' class='reportsound'>";
         echo "</form>";
 
         echo "<form class='downloadForm' method='POST' action='?action=downloadSound'>";
             echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
             echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $_SESSION['id'] . "'>";
-            echo "<input type='submit' name='downloadsound' value='download' class='downloadsound'>";
+            echo "<input type='submit' name='downloadsound' value='' class='downloadsound'>";
         echo "</form>";
 
-        echo "<button class='btn_lecture'>Lecture";
+        echo "<button class='btn_lecture'>";
     echo "<input hidden class='src_sound' value='".$result['lien_upload']."'/>";
         echo "</div>";
     echo "</div>";
