@@ -6,7 +6,6 @@
  * Time: 18:27
  */
 
-
 $autorisation = false;
 
 if (isset($_SESSION["id"])) {
@@ -26,7 +25,6 @@ if ($autorisation === true) {
     $id_demandeur = $_POST['idReporter'];
     $raison = $_POST['raison'];
     $etat = "attente";
-
 
     Report($requette,$id_post,$id_demandeur,$raison,$date,$etat);
 

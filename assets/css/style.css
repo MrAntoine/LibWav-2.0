@@ -1,4 +1,6 @@
+@import url(normalize.css);
 @import url(footer.css);
+@import url(audioPlayer.css);
 
 @font-face {
     font-family: 'libwav-font';
@@ -32,6 +34,32 @@
 
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   /* font-family: 'Montserrat', sans-serif;*/
+}
+
+body {
+    background-color: #F2F2F2;
+    margin: 0;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -60,7 +88,20 @@
 .sound_item {
     width: 40%;
     height: auto;
-    background-image: url("../img/background-sound");
+    background-image: url("../img/background-sound.jpg");
     background-size: cover;
 }
 
+.profil_avatar {
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+}
+
+#profil_avatar_conf {
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+}

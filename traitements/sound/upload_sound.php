@@ -122,7 +122,7 @@ if ($autorisation === true) {
                 $description = "";
             }
             $file = $_FILES["fichier"]["name"]/*.".".$type_file*/;
-            $sql2 = "INSERT INTO son VALUES(NULL,?,?,?,?,?,0)";
+            $sql2 = "INSERT INTO son VALUES(NULL,?,?,?,?,?,0,0)";
             $query2 = $pdo->prepare($sql2);
             $query2->execute(array($file,$_POST['post_title'], $description, $_SESSION['id'], $date));
 

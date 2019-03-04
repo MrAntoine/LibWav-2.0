@@ -11,11 +11,14 @@ $listeDesActions = array(
     "profilConfiguration" => "vues/user/profil_conf.php",
     "downloadData" => "traitements/user/download_data.php",
     "reportSound" => "traitements/sound/report_sound.php",
+    "soundReport" => "traitements/sound/sound_report.php",
     "downloadSound" => "traitements/sound/download_sound.php",
     "menuAdmin" => "vues/admin/admin_menu.php",
     "register" => "traitements/register.php",
+    "setAvatar" => "traitements/user/setAvatar.php",
     "connexion" => "traitements/connexion.php",
     "deconnexion" => "traitements/deconnexion.php",
     "soundFilter" => "traitements/sound/filter.php",
+    "cgu" => "vues/user/cgu.php",
     "login" => "vues/login.php"
 );

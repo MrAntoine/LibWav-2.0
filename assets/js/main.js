@@ -1,6 +1,10 @@
 
 $( document ).ready(function() {
-    console.log( "ready main.js" );
+    console.log( " JS ready ! " );
+
+
+
+
 });
 
 
@@ -8,29 +12,34 @@ $( document ).ready(function() {
 $(function() {
 
     $('form.likesForm').submit(function(event){
-
-        //return false;
         event.preventDefault();
 
-        var color = $( this ).find('.likes').css( "background-color" );
         let mavar = $( this ).find('.likes');
-        //console.log($(this ).parent().serializeArray());
+        let likes = mavar.parents('div.sound_item_likes').find('.nb_likes');
 
-        //$.post('vues/likes.php',
-        $.post( $(this).attr("action"),
-            $(this ).serializeArray(),
-            function(data) {
-                if( data == 'like'){
-                     $(mavar).css( "background-color", 'black' );
-                 }else {
-                     $(mavar).css( "background-color", 'red' );
-                 }
+        $.ajax({
+            type: "POST",
+            url: $(this).attr("action"),
+            data: $(this ).serializeArray(),
+            success: function(data) {
+                data = JSON.parse(data);
+               if(data['ifLike'] == "like"){
+                   // On unlike
+                   $(mavar).css( "background-color", 'black' );
+                   $( this ).find('.likes')
+                   likes.empty().append(data['count']-1);
+               }else {
+                   // On like
+                   $(mavar).css( "background-color", 'red' );
+                   likes.empty().append(data['count']+1);
+               }
 
-                //$("#div1").load("demo_test.txt");
-                //console.log($( this ).find('.likes').parent());
+            }
+        });
 
-            });
     });
+
+
 
 
     $('form.reportForm').submit(function(event){
@@ -61,10 +70,8 @@ $(function() {
     });
 
 
-
     $('a#signalements_btn_admin').click(function(){
-
-        $("#signalements_list").load("?action=signalements");
+            $("#signalements_list").load("?action=signalements");
 
     });
 
@@ -76,7 +83,7 @@ $(function() {
         $.post( $(this).attr("action"),
             $(this ).serializeArray(),
             function(data) {
-                $("#wrapper_sound").append(data);
+                $("#wrapper_sound").empty().append(data);
 
             });
     });
@@ -84,4 +91,157 @@ $(function() {
 
 
 
+// AUDIO PLAYER
+
+
+
+    // inner variables
+    var song;
+    var fillBar = document.getElementById("AudioPlayerFill");
+    var tracker = $('.tracker');
+
+    initAudio();
+
+
+/*
+
+// empty tracker slider
+    tracker.slider({
+        range: 'min',
+        min: 0, max: 10,
+        start: function(event,ui) {},
+        slide: function(event, ui) {
+            song.currentTime = ui.value;
+        },
+        stop: function(event,ui) {}
+    });
+
+*/
+
+
+
+    function initAudio() {
+        var url = $('#src_player').text();
+        song = new Audio(url);
+        // timeupdate event listener
+    /*
+       song.addEventListener('timeupdate',function (){
+            var curtime = parseInt(song.currentTime, 10);
+            tracker.slider('value', curtime);
+        });
+    */
+        song.addEventListener('timeupdate',function(){
+            var position = song.currentTime / song.duration;
+            fillBar.style.width = position * 100 +'%';
+        });
+
+    }
+
+    function setVolume(volume) {
+        song.volume = volume;
+    }
+
+    function playAudio() {
+        song.play();
+       // tracker.slider("option", "max", song.duration);
+        //2 //tracker.slider("option", "value", tracker.slider("value"));
+        $('#AudioPlayerPlay').addClass('cacher');
+        $('#AudioPlayerPause').removeClass('cacher');
+    }
+
+    function stopAudio() {
+        song.pause();
+        $('#AudioPlayerPlay').removeClass('cacher');
+        $('#AudioPlayerPause').addClass('cacher');
+    }
+
+
+
+
+    $('.btn_lecture').click(function(){
+        //let source = $( this ).find('.likes');
+    let fichier = $( this ).find('.src_sound').val();
+    let source = "uploads/sound/"+fichier;
+        event.preventDefault();
+        //$('audio').attr('src',source);
+
+        // Source de la musique
+        $('#src_player').empty().append(source);
+
+        // Titre de la musique
+        var songTitle =  ($( this ).parent().parent().find('.sound_item_titre').text());
+        var songTime =  ($( this ).parent().parent().find('.sound_item_titre').text());
+        $('#AudiPlayerSongTitle').empty().append(songTitle); // set the title of song
+        $('#AudiPlayerSongTime').empty().append("Durée : "+ song.duration);
+        stopAudio();
+        initAudio();
+
+
+    });
+
+
+    // play click
+    $('#AudioPlayerPlay').click(function (e) {
+        e.preventDefault();
+        playAudio();
+    });
+    // pause click
+    $('#AudioPlayerPause').click(function (e) {
+        e.preventDefault();
+        stopAudio();
+    });
+
+    // Volume
+    $('#volumeSlider').change(function (e) {
+        e.preventDefault();
+        setVolume(this.value);
+        if(this.value == 0){
+            $('#AudioPlayerSpeak').attr('src','assets/img/mute.svg');
+        }else {
+            $('#AudioPlayerSpeak').attr('src','assets/img/speaker.svg');
+        }
+    });
+
+    // Muted
+    $('#AudioPlayerSpeak').click(function (e) {
+        e.preventDefault();
+        if(song.volume > 0){
+            $(this).attr('src','assets/img/mute.svg');
+            setVolume(0);
+        }else {
+            $(this).attr('src','assets/img/speaker.svg');
+            setVolume(1);
+        }
+    });
+
+
+
+/*
+    song.addEventListener('timeupdate',function(){
+        var position = song.currentTime / song.duration;
+        fillBar.style.width = position * 100 +'%';
+    });
+
+*/
+
+
+
+
+
+
 });
+
+
+/*
+// Avatar apercu
+$('#update_profil_avatar').click(function (e) {
+    e.preventDefault();
+    let photo = ($( this ).parent().find('#profil_avatar_conf').attr('src'));
+    let file = ($( this ).parent().find('#fileToUpload').val());
+    console.log(file);
+        $(this).attr('src',file);
+
+});
+*/
+
+

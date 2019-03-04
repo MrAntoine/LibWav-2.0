@@ -25,50 +25,42 @@ while($result = $query->fetch()) {
     */
 
 
-
     $File = $result['nom'] . "-" . $result['prenom'] . "-" . date('j.m.Y') . ".txt";
-    $Handle = fopen($File, 'w');
-
-    $Data = "Votre pseudo : " . $result['pseudo'] . "\n";
-    fwrite($Handle, $Data);
-    $Data = "Votre nom : " . $result['nom'] . "\n";
-    fwrite($Handle, $Data);
-    $Data = "Votre prénom : " . $result['prenom'] . "\n";
-    fwrite($Handle, $Data);
-    $Data = "Votre email : " . $result['email'] . "\n";
-    fwrite($Handle, $Data);
-    $Data = "Votre sexe : " . $result['sexe'] . "\n";
-    fwrite($Handle, $Data);
-    $Data = "Votre date de naissance : " . $result['anniversaire'] . "\n";
-    fwrite($Handle, $Data);
-    $Data = "Votre région : " . $result['region'] . "\n";
-    fwrite($Handle, $Data);
-    $Data = "Votre pays : " . $result['pays'] . "\n";
-    fwrite($Handle, $Data);
-
-    $Data = "Votre statut : " . $result['statut'] . "\n";
-    fwrite($Handle, $Data);
-
-    $Data = "Date de création du compte : " . $result['created_at'] . "\n";
-    fwrite($Handle, $Data);
-
-    $Data = "Votre temps total de connexion : " . $result['temps_connexion'] . "\n";
-    fwrite($Handle, $Data);
-
-    $Data = "Votre nombre de téléchargements : " . $result['nb_telechargements'] . "\n";
-    fwrite($Handle, $Data);
-
-    $Data = "Votre nombre de points : " . $result['points'] . "\n";
-    fwrite($Handle, $Data);
-
-    $Data = "©Libwav\n";
-    fwrite($Handle, $Data);
 
 
-    fclose($Handle);
+        $Handle = fopen($File, 'w');
 
-    // print "Données écrites et prêtes au téléchargement ";
-    //echo "<a href='' download='$File'>Télécharger mes données</a>";
+        $Data = "Votre pseudo : " . $result['pseudo'] . "\n";
+        fwrite($Handle, $Data);
+        $Data = "Votre nom : " . $result['nom'] . "\n";
+        fwrite($Handle, $Data);
+        $Data = "Votre prénom : " . $result['prenom'] . "\n";
+        fwrite($Handle, $Data);
+        $Data = "Votre email : " . $result['email'] . "\n";
+        fwrite($Handle, $Data);
+        $Data = "Votre sexe : " . $result['sexe'] . "\n";
+        fwrite($Handle, $Data);
+        $Data = "Votre date de naissance : " . $result['anniversaire'] . "\n";
+        fwrite($Handle, $Data);
+        $Data = "Votre région : " . $result['region'] . "\n";
+        fwrite($Handle, $Data);
+        $Data = "Votre pays : " . $result['pays'] . "\n";
+        fwrite($Handle, $Data);
+        $Data = "Votre statut : " . $result['statut'] . "\n";
+        fwrite($Handle, $Data);
+        $Data = "Date de création du compte : " . $result['created_at'] . "\n";
+        fwrite($Handle, $Data);
+        $Data = "Votre temps total de connexion : " . $result['temps_connexion'] . "\n";
+        fwrite($Handle, $Data);
+        $Data = "Votre nombre de téléchargements : " . $result['nb_telechargements'] . "\n";
+        fwrite($Handle, $Data);
+        $Data = "Votre nombre de points : " . $result['points'] . "\n";
+        fwrite($Handle, $Data);
+        $Data = "©Libwav\n";
+        fwrite($Handle, $Data);
+
+        fclose($Handle);
+
 
 
     // TELECHARGEMENT AUTOMATIQUE DU FICHIER
@@ -96,6 +88,8 @@ while($result = $query->fetch()) {
     readfile($File);
 
 
+    // suppression du fichier :
+    //unlink($File);
 
 
 
