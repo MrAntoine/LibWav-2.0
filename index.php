@@ -53,8 +53,6 @@ if(isAjax() == false) {
             include('vues/nav.php');
         }
 
-        echo "<a href=\"index.php?action=login\">Login</a>";
-        echo "<a href='index.php?action=deconnexion'>Deconnexion</a>";
 
         ?>
     </header>
@@ -115,6 +113,8 @@ if(isAjax() == false) {
     }
 
 }
+
+
 
 ?>
 

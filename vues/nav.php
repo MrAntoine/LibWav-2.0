@@ -17,18 +17,22 @@ if (isset($_SESSION["id"])) {
 
 
 
+
 if ($autorisation === true) { ?>
 
     <a href='?action=profil'>Mon Profil</a>
     <a href='?action=profilConfiguration'>Paramètres</a>
-
-
+    <a href='?action=deconnexion'>Deconnexion</a>
 
 <?php
+
     if ($role >= roleUser("modo")) {
         echo "<a href='?action=menuAdmin'>Menu Admin </a>";
     }
 
 
 }
+
 ?>
+
+
