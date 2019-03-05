@@ -33,6 +33,7 @@ if ($autorisation === true) {
 
 
     <section id="filtres_categories">
+        <h3>Rechercher par catégorie :</h3>
         <?php
         /*
 
