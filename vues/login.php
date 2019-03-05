@@ -24,4 +24,5 @@ echo "<input type=\"submit\" name=\"send\" value=\"Être enfin inscrit(e) sur Li
         </form>
     </div></div>";
 
+
 ?>
