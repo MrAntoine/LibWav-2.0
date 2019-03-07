@@ -55,5 +55,7 @@ if ($autorisation === true) {
     readfile($chemin . $Fichier_a_telecharger);
 
 
+}else {
+    echo "Vous devez être connecté pour télécharger les sons";
 }
 ?>

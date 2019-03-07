@@ -14,21 +14,23 @@ if(!isset($_POST['champ_filter']) || ($_POST['champ_filter'] == NULL)) {
         $filtre = $_POST['champ_filter'];
     }
 
-    echo "<h2>Sons dans la catégorie : ".$filtre ."</h2>";
+    echo "<h2>Sons correspondant au titre : ".$filtre ."</h2>";
 
    // $contenu = "SELECT * FROM son WHERE id IN (SELECT content_id FROM son_categorie WHERE categorie_name=?)";
 
     $contenu = "SELECT * FROM son WHERE titre LIKE Concat('%',?,'%') ";
     $query_contenu = $pdo->prepare($contenu);
     $query_contenu->execute(array($filtre));
-
-    if ($query_contenu->fetch()) {
+    $nb = 0;
         while ($result = $query_contenu->fetch()) {
+            $nb++;
             afficheSoundItem($result);
         }
-    }else {
-        echo "Aucun résultat";
-    }
+
+        if($nb == 0){
+            echo "Aucun résultat";
+        }
+
 
 }
 

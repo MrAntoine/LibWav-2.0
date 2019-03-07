@@ -146,6 +146,13 @@ function AddDownload($id_user){
 
 function AfficheSoundItem($result){
 
+    if ($_SESSION ) {
+        $idSession = $_SESSION['id'];
+    } else {
+        $idSession = 0;
+    }
+
+
     echo "<div class='sound_item'>";
 
 // Affichage des avatars utilisateur //
@@ -160,7 +167,7 @@ function AfficheSoundItem($result){
 
 // Vérifié si un like est deja mis..
     $totalLikes = countLikes($result['id']);
-    $resultLike = checkLikes($_SESSION['id'],$result['id']);
+    $resultLike = checkLikes($idSession,$result['id']);
     if ($resultLike == false) {
         $style = "style='background-color:black'";
     } else {
@@ -178,13 +185,13 @@ function AfficheSoundItem($result){
         echo "<div class='sound_item_controls'>";
         echo "<form class='formReport' method='POST' action='?action=soundReport'>";
             echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
-            echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $_SESSION['id'] . "'>";
+            echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $idSession . "'>";
             echo "<input type='submit' name='reportsound' value='' class='reportsound'>";
         echo "</form>";
 
         echo "<form class='downloadForm' method='POST' action='?action=downloadSound'>";
             echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
-            echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $_SESSION['id'] . "'>";
+            echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $idSession . "'>";
             echo "<input type='submit' name='downloadsound' value='' class='downloadsound'>";
         echo "</form>";
 

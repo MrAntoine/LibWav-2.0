@@ -128,3 +128,8 @@ body {
     width: auto;
     height: auto;
 }
+
+#btn-upload-son {
+    background: cornflowerblue;
+}
+
