@@ -111,6 +111,12 @@ if ($autorisation === true) {
 
         if ($erreur === 0){
 
+            /*$categoriename = "SELECT id_categorie FROM son_categorie WHERE categorie_name = $_POST['post_categorie']";
+            $querycat = $pdo->prepare($categoriename);
+            $querycat->execute();
+            $resultatCategorie = $query->fetch();
+            */
+
             // on copie le fichier dans le dossier de destination
             move_uploaded_file($tmp_file, $content_dir . $name_file);
 
@@ -122,9 +128,11 @@ if ($autorisation === true) {
                 $description = "";
             }
             $file = $_FILES["fichier"]["name"]/*.".".$type_file*/;
-            $sql2 = "INSERT INTO son VALUES(NULL,?,?,?,?,?,0,0)";
+            $sql2 = "INSERT INTO son VALUES(NULL,?,?,?,?,?,?,0)";
             $query2 = $pdo->prepare($sql2);
-            $query2->execute(array($file,$_POST['post_title'], $description, $_SESSION['id'], $date));
+            $query2->execute(array($file,$_POST['post_title'], $description, $_SESSION['id'], $date, $_POST['post_categorie']));
+
+
 
             echo "<script type='text/javascript'>alert(\"Upload Successfull\");</script>";
 

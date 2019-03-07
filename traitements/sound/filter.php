@@ -16,7 +16,7 @@ if(!isset($_POST['categorie_name']) || ($_POST['categorie_name'] == NULL)) {
 
     echo "<h2>Sons correspondant à la catégorie : ".$filtre ."</h2>";
 
-    $contenu = "SELECT * FROM son WHERE id IN (SELECT content_id FROM son_categorie WHERE categorie_name=?)";
+    $contenu = "SELECT * FROM son WHERE id_son_categorie IN (SELECT id_categorie FROM son_categorie WHERE categorie_name=?)";
     $query_contenu = $pdo->prepare($contenu);
     $query_contenu->execute(array($filtre));
     $nb = 0;
@@ -31,6 +31,5 @@ if(!isset($_POST['categorie_name']) || ($_POST['categorie_name'] == NULL)) {
 
 
 }
-
 
 ?>

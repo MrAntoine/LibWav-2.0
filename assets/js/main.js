@@ -89,6 +89,20 @@ $(function() {
     });
 
 
+  /*
+    $('form#form_sound_search2').submit(function(event){
+        event.preventDefault();
+
+        $.post( $(this).attr("action"),
+            $(this ).serializeArray(),
+            function(data) {
+                $("#wrapper_sound").empty().append(data);
+                console.log(data);
+
+            });
+    });
+*/
+
 
 
 // AUDIO PLAYER
@@ -243,5 +257,15 @@ $('#update_profil_avatar').click(function (e) {
 
 });
 */
+
+
+
+
+/////////////   FILTER    ////////////
+
+/* Categories */
+
+
+
 
 

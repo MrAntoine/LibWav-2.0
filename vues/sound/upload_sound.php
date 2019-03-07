@@ -7,7 +7,6 @@
  */
 
 
-
 $autorisation = false;
 
 if (isset($_SESSION["id"])) {
@@ -33,15 +32,31 @@ if ($autorisation === true) {
   */
 
 
-    echo "
-<form method=\"post\" enctype=\"multipart/form-data\" action=\"index.php?action=soundUpload\">
- <p> 
- <input type=\"file\" name=\"fichier\" size=\"30\">
-<input type='text' name='post_title' placeholder='Entrez un titre' required>
-<input type='checkbox' name='conditions_utilisation' required>J'accepte les conditions générales d'utilisation, et d'upload de fichier sonore
-  <input type=\"submit\" name=\"upload\" value=\"Uploader\"> 
-  </p> 
-  </form>";
+    $sql = "SELECT DISTINCT categorie_name FROM son_categorie";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+
+    ?>
+
+    <form method="post" enctype="multipart/form-data" action="index.php?action=soundUpload">
+        <p>
+            <input type="file" name="fichier" size="30">
+            <input type='text' name='post_title' placeholder='Entrez un titre' required>
+            <select name='post_categorie' placeholder='Choisir une catégorie' required>
+                <?php
+                while ($result = $query->fetch()) {
+                    echo "<option>" . $result['categorie_name'] . "</option> ";
+                }
+                ?>
+            </select>
+            <input type='checkbox' name='conditions_utilisation' required>J'accepte les conditions générales
+            d'utilisation, et d'upload de fichier sonore
+            <input type="submit" name="upload" value="Uploader">
+        </p>
+    </form>
+
+    <?php
 }
 
 ?>
