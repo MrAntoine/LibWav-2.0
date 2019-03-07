@@ -140,6 +140,15 @@ function AddDownload($id_user){
         $query->execute(array($id_user));
 }
 
+function Statistique($a, $b="*"){
+    global $pdo;
+    $sql = "SELECT COUNT($b) FROM $a";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    $result = $query->fetch();
+    return $result['COUNT(*)'];
+}
+
 
 
 

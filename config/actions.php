@@ -22,5 +22,6 @@ $listeDesActions = array(
     "soundFilterSearch" => "traitements/sound/filter_search.php",
     "tutoriels" => "vues/tuto/TutoPage.php",
     "cgu" => "vues/user/cgu.php",
+    "statistiques" => "vues/admin/stats_générales.php",
     "login" => "vues/login.php"
 );

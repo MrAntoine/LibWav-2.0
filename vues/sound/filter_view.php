@@ -39,7 +39,7 @@ if ($autorisation === true) {
 
             //$sql = "SELECT * FROM son_categorie GROUP BY categorie_name ";
 
-            $sql = "SELECT categorie_name FROM son_categorie WHERE id_categorie IN (SELECT id_son_categorie FROM son)";
+            $sql = "SELECT categorie_name FROM son_categorie WHERE id IN (SELECT id_son_categorie FROM son)";
 
             //$sql = "SELECT categorie_name FROM son_categorie WHERE id_categorie IN (SELECT * FROM son GROUP BY id_son_categorie) ";
             $query = $pdo->prepare($sql);

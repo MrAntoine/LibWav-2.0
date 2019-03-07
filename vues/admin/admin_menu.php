@@ -7,6 +7,6 @@
  */
 
 echo "<a id='signalements_btn_admin'>Afficher la liste des signalements</a> <div id='signalements_list'></div>";
-
+echo "<a id='stats_btn_admin'>Statistiques générales</a> <div id='stats_list'></div>";
 
 ?>
