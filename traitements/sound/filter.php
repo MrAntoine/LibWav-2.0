@@ -6,19 +6,17 @@
  * Time: 19:24
  */
 
-if(!isset($_POST['champ_filter']) || ($_POST['champ_filter'] == NULL)) {
+if(!isset($_POST['categorie_name']) || ($_POST['categorie_name'] == NULL)) {
     exit(header('Location: ?action=son'));
 
 }else {
-    if(isset($_POST['champ_filter'])) {
-        $filtre = $_POST['champ_filter'];
+    if(isset($_POST['categorie_name'])) {
+        $filtre = $_POST['categorie_name'];
     }
 
-    echo "<h2>Sons correspondant au titre : ".$filtre ."</h2>";
+    echo "<h2>Sons correspondant à la catégorie : ".$filtre ."</h2>";
 
-   // $contenu = "SELECT * FROM son WHERE id IN (SELECT content_id FROM son_categorie WHERE categorie_name=?)";
-
-    $contenu = "SELECT * FROM son WHERE titre LIKE Concat('%',?,'%') ";
+    $contenu = "SELECT * FROM son WHERE id IN (SELECT content_id FROM son_categorie WHERE categorie_name=?)";
     $query_contenu = $pdo->prepare($contenu);
     $query_contenu->execute(array($filtre));
     $nb = 0;

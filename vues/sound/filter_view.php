@@ -25,7 +25,7 @@ if ($autorisation === true) {
 
     <!-- TR<IE SELON LE TYPE  -->
 
-    <form id='form_sound_search' method="post" action="?action=soundFilter">
+    <form id='form_sound_search' method="post" action="?action=soundFilterSearch">
         <input required type="text" id="champ_filter" name="champ_filter" placeholder="Rechercher un titre">
         <input type="submit" value='Chercher' name="sound_search_submit" id="sound_search_submit">
     </form>
@@ -35,7 +35,7 @@ if ($autorisation === true) {
     <section id="filtres_categories">
         <h3>Rechercher par catégorie :</h3>
         <?php
-        /*
+
 
             $sql = "SELECT * FROM son_categorie GROUP BY categorie_name ";
             $query = $pdo->prepare($sql);
@@ -47,7 +47,7 @@ if ($autorisation === true) {
 
             }
             echo "</form>";
-            */
+
         ?>
     </section>
 
