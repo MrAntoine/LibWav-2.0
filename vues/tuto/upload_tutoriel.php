@@ -5,13 +5,17 @@
  * Date: 19/01/2019
  * Time: 15:32
  */
+
+
 $autorisation = false;
+
 if (isset($_SESSION["id"])) {
     $role = getUserInfo($_SESSION["id"])['statut'];
     if ($role >= roleUser("user")) {
         $autorisation = true;
     }
 }
+
 if ($autorisation === true) {
     /*  echo"<br/><br/><br/><br/>";
       echo "<form method='POST' action='index.php?action=soundUpload' enctype='multipart/form-data>'";
@@ -26,22 +30,18 @@ if ($autorisation === true) {
       echo "<br/>";
       echo "<input type='submit' name='upload' value='Upload'></form>";
   */
-    $sql = "SELECT DISTINCT categorie_name FROM son_categorie";
-    $query = $pdo->prepare($sql);
-    $query->execute();
+
+
+
+
     ?>
 
-    <form method="post" enctype="multipart/form-data" action="index.php?action=soundUpload">
+    <form method="post" enctype="multipart/form-data" action="index.php?action=tutorielUpload">
         <p>
-            <input type="file" name="fichier" size="30">
+            <input type='text' name='post_video' placeholder='Entrez le lien de la vidéo' required>
             <input type='text' name='post_title' placeholder='Entrez un titre' required>
-            <select name='post_categorie' placeholder='Choisir une catégorie' required>
-                <?php
-                while ($result = $query->fetch()) {
-                    echo "<option>" . $result['categorie_name'] . "</option> ";
-                }
-                ?>
-            </select>
+            <textarea rows="4" cols="50" name="post_description" maxlength="100" placeholder='Entrez une courte description' required></textarea>
+            <textarea rows="4" cols="50" name="post_contenu" placeholder='Entrez le contenu' required></textarea>
             <input type='checkbox' name='conditions_utilisation' required>J'accepte les conditions générales
             d'utilisation, et d'upload de fichier sonore
             <input type="submit" name="upload" value="Uploader">
@@ -50,4 +50,5 @@ if ($autorisation === true) {
 
     <?php
 }
+
 ?>

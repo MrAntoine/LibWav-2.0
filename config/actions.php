@@ -8,6 +8,8 @@ $listeDesActions = array(
     "profil" => "vues/user/profil.php",
     "uploadSound" => "vues/sound/upload_sound.php",
     "soundUpload" => "traitements/sound/upload_sound.php",
+    "uploadTutoriel" => "vues/tuto/upload_tutoriel.php",
+    "tutorielUpload" => "traitements/tuto/upload_tutoriel.php",
     "profilConfiguration" => "vues/user/profil_conf.php",
     "downloadData" => "traitements/user/download_data.php",
     "reportSound" => "traitements/sound/report_sound.php",
@@ -23,5 +25,6 @@ $listeDesActions = array(
     "tutoriels" => "vues/tuto/TutoPage.php",
     "cgu" => "vues/user/cgu.php",
     "statistiques" => "vues/admin/stats_générales.php",
+    "singleTuto" => "vues/tuto/single_tuto.php",
     "login" => "vues/login.php"
 );

@@ -87,7 +87,7 @@ $(function() {
 
             });
     });
-
+    aller plus haut
 
   /*
     $('form#form_sound_search2').submit(function(event){
@@ -102,6 +102,28 @@ $(function() {
             });
     });
 */
+
+
+
+
+
+  /*   VIDEOS     */
+
+    $('a.tutoriel_item').click(function(){
+        event.preventDefault();
+
+        $.post( $(this).attr("href"),
+            $(this ).serializeArray(),
+            function(data) {
+                $("#wrapper_tutoriel").empty().append(data);
+
+            });
+
+        $("#wrapper_tutoriel").load("?action=singleTuto");
+
+    });
+
+
 
 
 
