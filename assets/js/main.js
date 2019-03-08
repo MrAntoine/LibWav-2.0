@@ -133,7 +133,7 @@ $(function() {
             function(data) {
                 alert("Commentaire envoyé");
                 $("#form_comment").find("input[type=text], textarea").val("");
-                $("#wrapper_comment").append();
+              //  $("#wrapper_comment").append().load("vues/tuto/single_tuto.php #wrapper_comment");
             });
 
        /* var $this = $(this);
