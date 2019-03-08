@@ -128,12 +128,15 @@ $(function() {
     $('form#form_comment').on('submit', function(e) {
         e.preventDefault();
 
+        let url = document.location.href;
+        let id = url.length-1
         $.post( $(this).attr("action"),
             $(this ).serializeArray(),
             function(data) {
                 alert("Commentaire envoyé");
                 $("#form_comment").find("input[type=text], textarea").val("");
-              //  $("#wrapper_comment").append().load("vues/tuto/single_tuto.php #wrapper_comment");
+                $("#wrapper_comment").load("?action=singleTuto&id="+ url.substr(id) +" #wrapper_comment");
+                console.log(url);
             });
 
        /* var $this = $(this);
