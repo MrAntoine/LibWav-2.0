@@ -136,28 +136,7 @@ $(function() {
                 alert("Commentaire envoyé");
                 $("#form_comment").find("input[type=text], textarea").val("");
                 $("#wrapper_comment").load("?action=singleTuto&id="+ url.substr(id) +" #wrapper_comment");
-                console.log(url);
             });
-
-       /* var $this = $(this);
-        // Envoi de la requête HTTP en mode asynchrone
-        $.ajax({
-            url: $this.attr('action'), // On récupère l'action (ici action.php)
-            type: $this.attr('method'), // On récupère la méthode (post)
-            data: $this.serialize(), // On sérialise les données = Envoi des valeurs du formulaire
-            dataType: 'json', // JSON
-            success: function(json) { // Si ça c'est passé avec succès
-                // ici on teste la réponse
-                if(json.reponse === 'ok') {
-                    alert('Connexion OK');
-                    // On peut aussi rediriger vers l'index
-                    window.location.href = 'index.php';
-                } else {
-                    alert('Erreur : '+ json.reponse);
-                }
-            }
-        });*/
-
     });
 
 
