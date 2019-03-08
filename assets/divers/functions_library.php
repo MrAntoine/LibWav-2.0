@@ -252,7 +252,7 @@ function AfficheTutorielItem($result)
     echo "</form>";
     echo "<span> Nombre de likes : </span><div class='nb_likes'>" . $totalLikes . "</div>";
     echo "</div>";
-    */
+
 
     echo "<div class='sound_item_controls'>";
     echo "<form class='formReport' method='POST' action='?action=soundReport'>";
@@ -260,12 +260,66 @@ function AfficheTutorielItem($result)
     echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $idSession . "'>";
     echo "<input type='submit' name='reportsound' value='' class='reportsound'>";
     echo "</form>";
-
-
     echo "</div>";
+    */
+
     echo "</a>";
 
 }
+
+
+
+function AfficheComment($idpost) {
+    global $pdo;
+    //$sql = "SELECT * FROM commentaires WHERE id IN (SELECT idCommentaire FROM lien_commentaire WHERE idPost=?)";
+    $sql = "SELECT * FROM commentaires WHERE id_Post=?";
+    $query = $pdo->prepare($sql);
+    $query->execute(array($idpost));
+
+    while ($result = $query->fetch()){
+        $id = $result["idCreateur"];
+        echo "<div class='commentaire_tuto'>";
+        echo "<p>".$result['contenu']."</p>";
+        echo "<span>".$result['date_publi']."</span>";
+        echo "<p>".InfoUserAvatar($id)."</p>";
+
+        echo "</div>";
+    }
+}
+
+/*
+
+function AddComment($idpost) {
+    global $pdo;
+    $sql = "INSERT INTO commentaires VALUES(NULL,?,?)";
+    //$sql = "SELECT * FROM commentaires WHERE id IN (SELECT idCommentaire FROM lien_commentaire WHERE idPost=?)";
+    $query = $pdo->prepare($sql);
+    $query->execute(array($idpost));
+
+    while ($result = $query->fetch()){
+        $id = $result["idCreateur"];
+        echo "<div class='commentaire_tuto'>";
+        echo "<p>".$result['contenu']."</p>";
+        echo "<span>".$result['date_publi']."</span>";
+
+        echo "</div>";
+    }
+}
+
+*/
+
+
+function InfoUserAvatar($id) {
+    $affiche_user = getUserInfo($id);
+
+    echo "<a href='index.php?action=profil&id=" . $id . "' class='avatar'>";
+    echo "<img src='uploads/avatar/".$affiche_user['avatar']."' alt='Photo de profil' class='profil_avatar' >";
+    echo " <p>" . $affiche_user["pseudo"] . "</p>";
+    echo "</a>";
+
+}
+
+
 
 
 
