@@ -9,6 +9,7 @@
 
 
 $sql = "SELECT COUNT(*) FROM son";
+// $sql = "SELECT COUNT(*) FROM user HAVING SUM(nb_telechargements)";
 $query = $pdo->prepare($sql);
 $query->execute();
 $result =$query->fetch();

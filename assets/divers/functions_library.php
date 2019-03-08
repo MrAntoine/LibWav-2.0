@@ -322,6 +322,48 @@ function InfoUserAvatar($id) {
 
 
 
+function CompleteProfil() {
+    global $pdo;
+    $sql = "SELECT * FROM user WHERE id=? ";
+    $query = $pdo->prepare($sql);
+    $query->execute(array($_SESSION['id']));
+
+    $result = $query->fetch();
+
+    $pComplete = 0;
+        if($result['prenom'] !== NULL ){
+            $pComplete = $pComplete + 14;
+        }
+        if($result['nom'] !== NULL ){
+            $pComplete =$pComplete + 14;
+        }
+        if($result['avatar'] !== NULL ){
+            $pComplete =$pComplete + 14;
+        }
+        if($result['sexe'] !== NULL ){
+            $pComplete = $pComplete +14;
+        }
+        if($result['anniversaire'] !== NULL ){
+            $pComplete = $pComplete +15;
+        }
+        if($result['region'] !== NULL ){
+            $pComplete = $pComplete +15;
+        }
+        if($result['pays'] !== NULL ){
+            $pComplete = $pComplete +14;
+        }
+
+
+
+    if($pComplete < 100){
+        echo "<div id='alerte-bandeau'>";
+        echo "<a href='?action=profilConfiguration'>";
+        echo "Votre profil est compléter à ".$pComplete."%";
+        echo "</a>";
+        echo "</div>";
+    }
+}
+
 
 
 ?>

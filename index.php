@@ -49,6 +49,7 @@ if(isAjax() == false) {
         <!-- <h3>FoxBook</h3> -->
         <?php
         if (isset($_SESSION['id'])) {
+            CompleteProfil();
             // echo "<li>Bonjour " . $_SESSION['login'] . "<br/><a href='index.php?action=deconnexion'>Deconnexion</a></li>";
             include('vues/nav.php');
         }
