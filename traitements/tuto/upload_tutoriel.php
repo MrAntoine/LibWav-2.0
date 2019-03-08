@@ -30,6 +30,14 @@ $erreur = 0;
 
             // on copie le fichier dans le dossier de destination
 
+            /*  On modifie le watch en /embed/     */
+            $lien = $_POST["post_video"];
+            $lien = substr($lien,32); //Ici on supprime les 3 premiers caractères et il ne restera que 4567
+            echo $lien;
+            $prefix = "https://www.youtube.com/embed/";
+            $url = $prefix.$lien;
+            echo $url;
+
 
             $date = date('j.m.Y');
             if (isset($_POST["post_description"])) {
@@ -41,7 +49,7 @@ $erreur = 0;
 
             $sql2 = "INSERT INTO tutos VALUES(NULL,?,?,?,?,?,?,0,NULL)";
             $query2 = $pdo->prepare($sql2);
-            $query2->execute(array($_POST['post_title'], $description, $_POST["post_video"], $_POST["post_contenu"], $_SESSION['id'], $date));
+            $query2->execute(array($_POST['post_title'], $description, $url, $_POST["post_contenu"], $_SESSION['id'], $date));
 
 
             echo "<script type='text/javascript'>alert(\"Upload Successfull\");</script>";
