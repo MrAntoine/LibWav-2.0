@@ -57,7 +57,7 @@ if (isset($_SESSION["id"])) {
     ?>
 
     <section id="commentaires">
-       Commentaires à venir
+        <h3>LES COMMENTAIRES :</h3>
 
         <form id='form_comment' method='post' action='?action=AddComment' >
            <?php $id = $_SESSION["id"]; include('vues/user/infos_user_avatar.php');?>
