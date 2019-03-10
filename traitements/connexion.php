@@ -9,12 +9,11 @@ $line = $query->fetch();
 if($line==false){
     header("Location: index.php?action=login");
 } else {
-    //$_SESSION['id'] = $line['id'];
+    $_SESSION['id'] = $line['id'];
     $_SESSION['pseudo'] = $line['pseudo'];
     header("Location: index.php?action=son");
     //CHANGER LE HEADER
 
-    echo "lalala";
 }
 
 

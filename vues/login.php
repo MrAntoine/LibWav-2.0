@@ -19,10 +19,13 @@ echo "<div class=\"\">
 echo "<form method=\"post\" action=\"index.php?action=register\" name=\"creation\">
             <input type=\"text\" required name=\"pseudo\" placeholder=\"Votre pseudo\">
             <input type=\"email\" required name=\"email\" placeholder=\"Votre e-mail\">
-            <input type=\"password\" required name=\"password\" placeholder=\"Votre mot de passe\">";
+            <input type=\"password\" required name=\"password\" placeholder=\"Votre mot de passe\">
+            <input type=\"password\" required name=\"passwordconf\" placeholder=\"Confirmez votre mot de passe\">";
 echo "<input type=\"submit\" name=\"send\" value=\"Être enfin inscrit(e) sur LibWav!\">
         </form>
     </div></div>";
 
 
+
 ?>
+
