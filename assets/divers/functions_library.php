@@ -222,7 +222,7 @@ function AfficheTutorielItem($result)
     }
 
 
-    echo "<a class='tutoriel_item' href='?action=singleTuto&id=".$result['id']."''>";
+    echo "<a class='tutoriel_item' href='?action=tutoriels&id=".$result['id']."''>";
 
 // Affichage des avatars utilisateur //
 //$id = $result["idCreateur"];
@@ -272,7 +272,7 @@ function AfficheTutorielItem($result)
 function AfficheComment($idpost) {
     global $pdo;
     //$sql = "SELECT * FROM commentaires WHERE id IN (SELECT idCommentaire FROM lien_commentaire WHERE idPost=?)";
-    $sql = "SELECT * FROM commentaires WHERE id_Post=?";
+    $sql = "SELECT * FROM commentaires WHERE id_Post=? ";
     $query = $pdo->prepare($sql);
     $query->execute(array($idpost));
 
@@ -327,9 +327,7 @@ function CompleteProfil() {
     $sql = "SELECT * FROM user WHERE id=? ";
     $query = $pdo->prepare($sql);
     $query->execute(array($_SESSION['id']));
-
     $result = $query->fetch();
-
     $pComplete = 0;
         if($result['prenom'] !== NULL ){
             $pComplete = $pComplete + 14;
@@ -352,8 +350,6 @@ function CompleteProfil() {
         if($result['pays'] !== NULL ){
             $pComplete = $pComplete +14;
         }
-
-
 
     if($pComplete < 100){
         echo "<div id='alerte-bandeau'>";

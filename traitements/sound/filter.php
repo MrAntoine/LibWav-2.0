@@ -32,4 +32,6 @@ if(!isset($_POST['categorie_name']) || ($_POST['categorie_name'] == NULL)) {
 
 }
 
+
 ?>
+

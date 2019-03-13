@@ -39,7 +39,6 @@ if ($autorisation === true) {
         echo "</div>";
     }*/
 
-    echo "OK";
 
 
 }

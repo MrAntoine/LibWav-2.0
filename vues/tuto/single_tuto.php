@@ -33,7 +33,7 @@ if (isset($_SESSION["id"])) {
 
         $source = $result['video_lien'];
 
-        echo "<iframe width='420' height='315' src='".$source."'> </iframe>";
+        echo "<iframe allow='fullscreen' width='420' height='315' src='".$source."'> </iframe>";
 
 
 

@@ -25,7 +25,7 @@ $listeDesActions = array(
     "tutoriels" => "vues/tuto/TutoPage.php",
     "cgu" => "vues/user/cgu.php",
     "statistiques" => "vues/admin/stats_générales.php",
-    "singleTuto" => "vues/tuto/single_tuto.php",
+   // "singleTuto" => "vues/tuto/single_tuto.php",
     "AddComment" => "traitements/tuto/addComment.php",
     "login" => "vues/login.php"
 );
