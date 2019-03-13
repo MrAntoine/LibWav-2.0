@@ -133,3 +133,19 @@ body {
     background: cornflowerblue;
 }
 
+
+
+#wrapper_report {
+    background: red;
+    width: 100%;
+    height: 100vh;
+    display: table;
+    position: fixed;
+    z-index: 99999999999999999;
+}
+
+    .modal-dialog {
+        display: table-cell;
+        vertical-align: middle;
+        background-color: rgba(0, 0, 0, 0.8);
+    }

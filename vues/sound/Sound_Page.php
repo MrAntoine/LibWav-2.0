@@ -42,6 +42,9 @@ include("filter_view.php");
 
     </section>
 
+    <section id="wrapper_report">
+    </section>
+
 <?php
 include("AudioPlayer.php");
 ?>

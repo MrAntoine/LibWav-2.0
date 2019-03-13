@@ -40,7 +40,16 @@ $(function() {
     });
 
 
+    $('form.formReport').submit(function(event){
+        event.preventDefault();
 
+        $.post( $(this).attr("action"),
+            $(this ).serializeArray(),
+            function(data) {
+                $("#wrapper_report").empty().append(data);
+                playTmp();
+            });
+    });
 
     $('form.reportForm').submit(function(event){
         event.preventDefault();
@@ -88,7 +97,7 @@ $(function() {
             });
     });
 
-  /*
+/*
     $('form#form_sound_search2').submit(function(event){
         event.preventDefault();
 
@@ -97,7 +106,7 @@ $(function() {
             function(data) {
                 $("#wrapper_sound").empty().append(data);
                 console.log(data);
-
+                playTmp();
             });
     });
 */
