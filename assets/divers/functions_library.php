@@ -188,7 +188,7 @@ function AfficheSoundItem($result){
             echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
             echo "<input type='submit' name='like' value='' class='postMsg likes'" . $style . " >";
         echo "</form>";
-        echo "<span> Nombre de likes : </span><div class='nb_likes'>" . $totalLikes."</div>";
+        echo "<div class='nb_likes'>" . $totalLikes."</div>";
         echo"</div>";
 
         echo "<div class='sound_item_controls'>";

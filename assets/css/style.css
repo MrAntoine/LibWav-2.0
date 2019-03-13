@@ -1,11 +1,12 @@
-    @import url(normalize.css);
+@import url(normalize.css);
 @import url(footer.css);
 @import url(audioPlayer.css);
+@import url(sound_page.css);
 
 @font-face {
     font-family: 'libwav-font';
-    src:  url('../fonts/libwav-font.eot?yx5awl');
-    src:  url('../fonts/libwav-font.eot?yx5awl#iefix') format('embedded-opentype'),
+    src: url('../fonts/libwav-font.eot?yx5awl');
+    src: url('../fonts/libwav-font.eot?yx5awl#iefix') format('embedded-opentype'),
     url('../fonts/libwav-font.ttf?yx5awl') format('truetype'),
     url('../fonts/libwav-font.woff?yx5awl') format('woff'),
     url('../fonts/libwav-font.svg?yx5awl#libwav-font') format('svg');
@@ -32,18 +33,34 @@
     content: "\e900";
 }
 
-
-
 html {
     scroll-behavior: smooth;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   /* font-family: 'Montserrat', sans-serif;*/
+    /* font-family: 'Montserrat', sans-serif;*/
+    font-size: 14px;
 }
+
+
+
+/*  CLASSES   (utilisation : var(--main-bg-color) ) */
+:root {
+    /*Couleurs*/
+    --titre-color: brown;
+    --sous-titre-color: brown;
+    --contenu-color: brown;
+    /*Font-size*/
+    --titre-size: brown;
+    --sous-titre-size: brown;
+    --contenu-size: brown;
+}
+/**/
+
+
 
 body {
     background-color: #F2F2F2;
@@ -52,68 +69,10 @@ body {
     overflow-y: scroll;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.postMsg {
-    float:right;
-    margin-top:10px;
-    margin-bottom: 10px;
-    padding:5px;
-    background-color: #fff;
-    color: #000;
-    margin-right: 10px;
+.row {
+    position: relative;
 }
 
-.likes {
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    -webkit-mask-image: url(../img/love-song.svg);
-    mask-image: url(../img/love-song.svg);
-}
-
-.reportsound {
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    -webkit-mask-image: url(../img/report-button.svg);
-    mask-image: url(../img/report-button.svg);
-}
-
-
-.downloadsound {
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    -webkit-mask-image: url(../img/download.svg);
-    mask-image: url(../img/download.svg);
-}
-
-.btn_lecture {
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    -webkit-mask-image: url(../img/play-button.svg);
-    mask-image: url(../img/play-button.svg;);
-}
-
-.sound_item {
-    width: 40%;
-    height: auto;
-    background-image: url("../img/background-sound.jpg");
-    background-size: cover;
-}
 
 .profil_avatar {
     max-width: 100px;
@@ -134,26 +93,46 @@ body {
 }
 
 
-
 #wrapper_report {
     background: red;
     width: 100%;
     height: 100vh;
-    display: table;
+   /* display: flex;*/
+    display: none;
     position: fixed;
     z-index: 99999999999999999;
+    top:0;
+    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
-    .modal-dialog {
-        display: table-cell;
-        vertical-align: middle;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
+#wrapper_report > a {
+    right:0;
+    top:0;
+    color:green;
+}
+
+#wrapper_report #div_report {
+   margin:auto;
+    background-color: yellow;
+    padding: 20px;
+}
+
+#wrapper_report #div_report .reportForm {
+
+}
 
 
-    #alerte-bandeau{
-        background: red;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-    }
+
+.modal-dialog {
+    display: table-cell;
+    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#alerte-bandeau {
+    background: red;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}

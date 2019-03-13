@@ -17,7 +17,7 @@ if (isset($_SESSION["id"])) {
 }
 
 if ($autorisation === true) {
-
+    echo "<div id='div_report'>";
     echo "<form class='reportForm' method='POST' action='?action=reportSound'>";
     echo "<input type='hidden'  id='postid' name='idPost' value='" . $_POST['idPost'] . "'>";
     echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $_SESSION['id'] . "'>";
@@ -25,6 +25,7 @@ if ($autorisation === true) {
     echo "<input type='checkbox' id='cgu' name='cgu' required> <a href='?action=cgu' target='_blank'>J'accepte les conditions</a>";
     echo "<input type='submit' name='reportsound' value='report' class='reportsound'>";
     echo "</form>";
+    echo "</div>";
 
 }
 ?>

@@ -6,8 +6,9 @@
     height: auto;
     text-align: center;
     z-index: 999;
-    position: relative;
+    position: fixed;
     padding: 20px;
+    bottom: 0;
 }
 
 .btn_img{

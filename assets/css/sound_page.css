@@ -1,0 +1,146 @@
+#page_sound {
+    display: flex;
+}
+
+#wrapper_sound{
+    width: 100%;
+}
+
+#wrapper_sound h3 {
+    text-align: center;
+}
+
+
+
+
+
+/* SIDE BAR  */
+
+#wrapper_filtre {
+    width: 100%;
+    position: relative;
+}
+
+#filtre_sidebar {
+    background-color: blueviolet;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+#del_filtres {
+    padding: 8px;
+    text-align: center;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+ }
+
+form#form_sound_search {
+     text-align: center;
+     padding: 10px;
+ }
+
+form#form_sound_search label {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+#filtres_categories h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+#filtres_categories form.form_sound_search2 input[type=submit] {
+    font-size: 1rem;
+    padding:5px;
+    margin:5px;
+    text-align: center;
+}
+
+#btn-upload-son {
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* SIDE BAR END */
+
+
+
+/*  SOUND ITEM    */
+
+.sound_item_likes {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/*.postMsg {
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #fff;
+    color: #000;
+    margin-right: 10px;
+}*/
+
+.nb_likes {
+    margin-top:auto;
+    margin-bottom: auto;
+}
+
+.likes {
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    -webkit-mask-image: url(../img/love-song.svg);
+    mask-image: url(../img/love-song.svg);
+}
+
+.reportsound {
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    -webkit-mask-image: url(../img/report-button.svg);
+    mask-image: url(../img/report-button.svg);
+}
+
+.downloadsound {
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    -webkit-mask-image: url(../img/download.svg);
+    mask-image: url(../img/download.svg);
+}
+
+.btn_lecture {
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    -webkit-mask-image: url(../img/play-button.svg);
+    mask-image: url(../img/play-button.svg;);
+}
+
+.sound_item {
+    width: 100%;
+    height: auto;
+    background-image: url("../img/background-sound.jpg");
+    background-size: cover;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 20px;
+}
+
+.sound_item_controls {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+
+/* SOUND ITEM END */
+

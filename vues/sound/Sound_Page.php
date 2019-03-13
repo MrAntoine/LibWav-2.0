@@ -15,20 +15,28 @@ if (isset($_SESSION["id"])) {
     }
 }
 
+echo "<div id='page_sound'>";
+
+
+echo "<section id='wrapper_filtre'>";
 /*  Affichage des filtres */
 include("filter_view.php");
+
+/* Upload */
+if ($autorisation === true) {
+    // Bouton upload //
+    echo "<a id='btn-upload-son' href='?action=uploadSound'>Upload un son</a>";
+}
+
+echo "</section>";
 
 ?>
     <section id="wrapper_sound">
         <?php
 
-        if ($autorisation === true) {
-            // Bouton upload //
-            echo "<a id='btn-upload-son' href='?action=uploadSound'>Upload un son</a>";
-        }
         // Affichage des sons avec le lecteur et differents boutons //
 
-        echo "<h2>Sons les plus téléchargés : </h2>";
+        echo "<h3>Sons les plus téléchargés : </h3>";
 
         //$contenu = "SELECT * FROM son WHERE nb_telechargements>=5";
         $contenu = "SELECT * FROM son ";
@@ -43,9 +51,13 @@ include("filter_view.php");
     </section>
 
     <section id="wrapper_report">
+        <a>X</a>
     </section>
 
+
+
 <?php
+echo "</div>";
 include("AudioPlayer.php");
 ?>
 

@@ -19,22 +19,19 @@ if (isset($_SESSION["id"])) {
 if ($autorisation === true) {
 ?>
 
-
-    <!-- ON AFFFICHE LES DIFFERENTES CATEGORIES -->
-
+<section id="filtre_sidebar">
 
     <!-- TR<IE SELON LE TYPE  -->
-
     <form id='form_sound_search' method="post" action="?action=soundFilterSearch">
+        <label>Recherche par titre :</label>
         <input required type="text" id="champ_filter" name="champ_filter" placeholder="Rechercher un titre">
         <input type="submit" value='Chercher' name="sound_search_submit" id="sound_search_submit">
     </form>
 
-
+    <!-- ON AFFFICHE LES DIFFERENTES CATEGORIES -->
     <section id="filtres_categories">
         <h3>Rechercher par catégorie :</h3>
         <?php
-
 
             //$sql = "SELECT * FROM son_categorie GROUP BY categorie_name ";
 
@@ -53,6 +50,11 @@ if ($autorisation === true) {
 
         ?>
     </section>
+
+    <!-- ON RESET LA RECHERCHE -->
+    <a id="del_filtres" href='?action=son'>Supprimer les filtres</a>
+
+</section>
 
 
 
