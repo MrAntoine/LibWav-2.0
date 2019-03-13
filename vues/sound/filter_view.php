@@ -44,13 +44,13 @@ if ($autorisation === true) {
             //$sql = "SELECT categorie_name FROM son_categorie WHERE id_categorie IN (SELECT * FROM son GROUP BY id_son_categorie) ";
             $query = $pdo->prepare($sql);
             $query->execute();
-            echo "<form id='form_sound_search2' method=\"post\" action=\"?action=soundFilter\">";
             while ($result = $query->fetch()) {
+                echo "<form id='form_sound_search2' method='post' action='?action=soundFilter'>";
+                echo "<input type='hidden' name='categorie_name' value='" . $result['categorie_name'] . "'/>";
+                echo "<input type='submit' class='categorie_name' value='" . $result['categorie_name'] . "'><br/>";
 
-                echo "<input type='submit' name='categorie_name' class='categorie_name' value='".$result['categorie_name']."'><br/>";
-
+                echo "</form>";
             }
-            echo "</form>";
 
         ?>
     </section>

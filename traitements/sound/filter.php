@@ -6,8 +6,10 @@
  * Time: 19:24
  */
 
+//var_dump($_POST);
+
 if(!isset($_POST['categorie_name']) || ($_POST['categorie_name'] == NULL)) {
-    exit(header('Location: ?action=son'));
+    //exit(header('Location: ?action=son'));
 
 }else {
     if(isset($_POST['categorie_name'])) {
