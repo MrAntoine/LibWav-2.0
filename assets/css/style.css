@@ -130,9 +130,21 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+
+
+/*   BANDEAU ALERTE   */
 #alerte-bandeau {
     background: red;
     padding: 20px;
     display: flex;
     justify-content: space-between;
 }
+
+#alerte-bandeau > a {
+    text-decoration: none;
+    margin: auto;
+    color: black;
+    font-weight: normal;
+    font-size: 1rem;
+}
+/* BANDEAU ALERTE END */

@@ -22,11 +22,13 @@ if ($autorisation === true) {
 <section id="filtre_sidebar">
 
     <!-- TR<IE SELON LE TYPE  -->
+    <section id="filtres_recherche">
+        <h3>Recherche par titre :</h3>
     <form id='form_sound_search' method="post" action="?action=soundFilterSearch">
-        <label>Recherche par titre :</label>
         <input required type="text" id="champ_filter" name="champ_filter" placeholder="Rechercher un titre">
         <input type="submit" value='Chercher' name="sound_search_submit" id="sound_search_submit">
     </form>
+    </section>
 
     <!-- ON AFFFICHE LES DIFFERENTES CATEGORIES -->
     <section id="filtres_categories">

@@ -17,8 +17,19 @@
 /* SIDE BAR  */
 
 #wrapper_filtre {
-    width: 100%;
+    width: 60%;
     position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#filtres_recherche  {
+
+}
+
+#filtres_recherche h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 
 #filtre_sidebar {
