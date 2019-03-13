@@ -72,21 +72,56 @@ if ($autorisation === true) {
 
 
     echo "<label>Vous êtes né(e) le: </label>";
-
-
-
-
-
-    echo " <p> Anniversaire: ";
     if ($affiche_user['anniversaire']=="0000-00-00"){
         echo "<input type=\"text\" placeholder=\"JJ\" name=\"jour\" maxlength=\"2\"/>
               <input type=\"text\" placeholder=\"MM\" name=\"mois\" maxlength=\"2\"/>
               <input type=\"text\" placeholder=\"AAAA\" name=\"année\" maxlength=\"4\"/>";
     }else {
-        echo $affiche_user["anniversaire"] . "</p>";
+        echo $affiche_user["anniversaire"];
     };
+
+
+    echo "<br /><label>Vous venez de : </label>";
+    if ($affiche_user['pays'] == NULL){
+        echo "<input type='text' name='pays' />";
+    }else{
+        echo $affiche_user['pays'];
+    }
+
+    echo ", ";
+
+    if ($affiche_user['region'] == NULL){
+        echo "<select name='region'>
+                    <option>Auvergne-Rhône-Alpes</option>
+                    <option>Bourgogne-Franche-Comté</option>
+                    <option>Bretagne</option>
+                    <option>Centre-Val de Loire</option>
+                    <option>Corse</option>
+                    <option>Grand Est</option>
+                    <option>Guadeloupe</option>
+                    <option>Guyane</option>
+                    <option>Hauts-de-France</option>
+                    <option>Île-de-France</option>
+                    <option>Martinique</option>
+                    <option>Mayotte</option>
+                    <option>Normandie</option>
+                    <option>Nouvelle-Aquitaine</option>
+                    <option>Occitanie</option>
+                    <option>Pays de la Loire</option>
+                    <option>Provence-Alpes-Côte d'Azur</option>
+                    <option>La Réunion</option>
+                    <option>Autre</option>
+                </select>";
+    }else{
+        echo $affiche_user['region'];
+    };
+
+    echo "<br/><input type='submit' value='Enregistrer les modifications' />";
+    echo "</form>";
+
 
     echo "<br /><a href='?action=downloadData'>Télécharger mes données</a>";
 }
+
 
 ?>
