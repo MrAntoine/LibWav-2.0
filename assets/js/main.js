@@ -84,7 +84,7 @@ $(function() {
             $(this ).serializeArray(),
             function(data) {
                 $("#wrapper_sound").empty().append(data);
-
+                playTmp();
             });
     });
 
@@ -143,9 +143,31 @@ $(function() {
 
 
 
-
-
 // AUDIO PLAYER
+    const playTmp = function(){
+        $('.btn_lecture').click(function () {
+            //let source = $( this ).find('.likes');
+            let fichier = $(this).find('.src_sound').val();
+            let source = "uploads/sound/" + fichier;
+            console.log(fichier);
+            event.preventDefault();
+            //$('audio').attr('src',source);
+
+            // Source de la musique
+            $('#src_player').empty().append(source);
+
+            // Titre de la musique
+            var songTitle = ($(this).parent().parent().find('.sound_item_titre').text());
+            var songTime = ($(this).parent().parent().find('.sound_item_titre').text());
+            $('#AudiPlayerSongTitle').empty().append(songTitle); // set the title of song
+            $('#AudiPlayerSongTime').empty().append("Durée : " + song.duration);
+            stopAudio();
+            initAudio();
+
+
+        });
+    }
+
 
 
 
@@ -211,29 +233,6 @@ $(function() {
 
 
 
-
-    $('.btn_lecture').click(function(){
-        //let source = $( this ).find('.likes');
-    let fichier = $( this ).find('.src_sound').val();
-    let source = "uploads/sound/"+fichier;
-        event.preventDefault();
-        //$('audio').attr('src',source);
-
-        // Source de la musique
-        $('#src_player').empty().append(source);
-
-        // Titre de la musique
-        var songTitle =  ($( this ).parent().parent().find('.sound_item_titre').text());
-        var songTime =  ($( this ).parent().parent().find('.sound_item_titre').text());
-        $('#AudiPlayerSongTitle').empty().append(songTitle); // set the title of song
-        $('#AudiPlayerSongTime').empty().append("Durée : "+ song.duration);
-        stopAudio();
-        initAudio();
-
-
-    });
-
-
     // play click
     $('#AudioPlayerPlay').click(function (e) {
         e.preventDefault();
@@ -282,8 +281,9 @@ $(function() {
 
 
 
-
 });
+
+
 
 
 /*
