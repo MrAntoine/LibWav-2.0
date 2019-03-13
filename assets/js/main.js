@@ -104,10 +104,14 @@ $(function() {
             $(this ).serializeArray(),
             function(data) {
                 $("#wrapper_sound").empty().append(data);
-                console.log(data);
                 playTmp();
             });
 
+    });
+
+    $('.btn_lecture').click(function (event) {
+        event.preventDefault();
+        playTmp();
     });
 
 
