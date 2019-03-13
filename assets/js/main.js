@@ -287,7 +287,10 @@ $(function() {
 */
 
 
-
+    $('#alerte-bandeau-croix').click(function(){
+        $(this).parent('#alerte-bandeau').css( "display", "none");
+        console.log($(this).parent('#alerte-bandeau'));
+    });
 
 
 });

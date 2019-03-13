@@ -356,6 +356,7 @@ function CompleteProfil() {
         echo "<a href='?action=profilConfiguration'>";
         echo "Votre profil est compléter à ".$pComplete."%";
         echo "</a>";
+        echo "<button id='alerte-bandeau-croix'>X</button>";
         echo "</div>";
     }
 }

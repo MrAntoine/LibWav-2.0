@@ -149,3 +149,11 @@ body {
         vertical-align: middle;
         background-color: rgba(0, 0, 0, 0.8);
     }
+
+
+    #alerte-bandeau{
+        background: red;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
