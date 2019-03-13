@@ -25,9 +25,16 @@ if (isset($_SESSION["id"])) {
 }
 
 if ($autorisation === true) {
+    if ($affiche_user["sexe"] != NULL ){
+        echo "<p> Sexe :".$affiche_user["sexe"]."</p>";
+    };
 
-    echo " <p> Sexe: " . $affiche_user["sexe"] . "</p>";
-    echo " <p> Anniversaire: " . $affiche_user["anniversaire"] . "</p>";
+
+    if ($affiche_user["anniversaire"] !="0000-00-00" ){
+        echo "<p> Anniversaire :".$affiche_user["anniversaire"]."</p>";
+    };
+
+
     echo " <p> Compte créé le: " . $affiche_user["created_at"] . "</p>";
     echo " <p> nombre de téléchargements: " . $affiche_user["nb_telechargements"] . "</p>";
 
@@ -36,11 +43,17 @@ if ($autorisation === true) {
             echo "<br/>"."Signalé : ".$total." fois";
     }
 
-
-
-
+echo "<a href=\"index.php?action=profilConfiguration\"><button>Modifier mes données</button></a>";
 
 } else {
     echo needConnect();
 }
+
+
+
+
 ?>
+
+
+
+

@@ -115,6 +115,8 @@ if(isAjax() == false) {
 
 }
 
+//$_SESSION['id']=1;
+echo $_SESSION['id'];
 
 
 ?>

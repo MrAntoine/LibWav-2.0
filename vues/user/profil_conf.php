@@ -40,5 +40,28 @@ if ($autorisation === true) {
 
     echo "<a href='?action=downloadData'>Télécharger mes données</a>";
 }
+echo "<form method='POST' action='index.php?action=changements'>";
+
+    echo " <p> Sexe: ";
+    if ($affiche_user["sexe"] == NULL ){
+        echo "<select name='sexe'>
+                    <option>Homme</option>
+                    <option>Femme</option>
+                    <option>Autre</option>
+                </select>";
+    }else{
+        echo $affiche_user["sexe"] . "</p>";
+    };
+
+    echo " <p> Anniversaire: ";
+    if ($affiche_user['anniversaire']=="0000-00-00"){
+        echo "<input type=\"text\" placeholder=\"JJ\" name=\"jour\" maxlength=\"2\"/>
+              <input type=\"text\" placeholder=\"MM\" name=\"mois\" maxlength=\"2\"/>
+              <input type=\"text\" placeholder=\"AAAA\" name=\"année\" maxlength=\"4\"/>";
+    }else {
+        echo $affiche_user["anniversaire"] . "</p>";
+    };
+
+
 
 ?>
