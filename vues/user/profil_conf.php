@@ -40,7 +40,7 @@ if ($autorisation === true) {
 
     echo "<label>Changer votre pseudo : </label>";
     if (getUserInfo($_SESSION["id"])['pseudo'] != NULL) {
-        echo "<input type='text' name='pseudo' placeholder='" . getUserInfo($_SESSION['id'])['pseudo'] . "'><br />";
+        echo "<input type='text' name='pseudo' required placeholder='" . getUserInfo($_SESSION['id'])['pseudo'] . "'><br />";
     };
 
 
@@ -71,14 +71,13 @@ if ($autorisation === true) {
 
 
 
-    echo "<label>Vous êtes né(e) le: </label>";
-    if ($affiche_user['anniversaire']=="0000-00-00"){
-        echo "<input type=\"text\" placeholder=\"JJ\" name=\"jour\" maxlength=\"2\"/>
-              <input type=\"text\" placeholder=\"MM\" name=\"mois\" maxlength=\"2\"/>
-              <input type=\"text\" placeholder=\"AAAA\" name=\"année\" maxlength=\"4\"/>";
+    echo "<br/><label>Vous êtes né(e) le: </label>";
+    if ($affiche_user['anniversaire']=="0000-00-00") {
+        echo "<input type=\"date\" name=\"anniversaire\" value=\"date('Y-m-d')\" />";
     }else {
         echo $affiche_user["anniversaire"];
-    };
+    }
+
 
 
     echo "<br /><label>Vous venez de : </label>";
@@ -92,6 +91,7 @@ if ($autorisation === true) {
 
     if ($affiche_user['region'] == NULL){
         echo "<select name='region'>
+                    <option>Sélectionnez une région...</option>
                     <option>Auvergne-Rhône-Alpes</option>
                     <option>Bourgogne-Franche-Comté</option>
                     <option>Bretagne</option>
@@ -116,7 +116,7 @@ if ($autorisation === true) {
         echo $affiche_user['region'];
     };
 
-    echo "<br/><input type='submit' value='Enregistrer les modifications' />";
+    echo "<br/><input type='submit' value='Enregistrer les modifications'/>";
     echo "</form>";
 
 
