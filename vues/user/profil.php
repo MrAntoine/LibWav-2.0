@@ -43,9 +43,7 @@ if ($autorisation === true) {
             echo "<br/>"."Signalé : ".$total." fois";
     }
 
-    echo "<input type='submit'>";
-
-echo "</form>";
+echo "<a href=\"index.php?action=profilConfiguration\"><button>Modifier mes données</button></a>";
 
 } else {
     echo needConnect();
