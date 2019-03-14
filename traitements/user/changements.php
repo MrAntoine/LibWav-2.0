@@ -10,6 +10,10 @@ $id = $_SESSION['id'];
         $query->execute(array ('pseudo' => $pseudo, 'id' => $_SESSION['id']));
     };
 
+    if(($_POST["pseudo"])== NULL){
+        echo "Votre pseudo ne peut pas être vide, veuillez le saisir !";
+    }
+
     if(($_POST["nom"])!= NULL){
         $nom = $_POST["nom"];
 
@@ -19,12 +23,13 @@ $id = $_SESSION['id'];
     };
 
     if(($_POST["prenom"])!= NULL){
-        $prenom= $_POST["prenom"];
+    $prenom= $_POST["prenom"];
 
-        $sql = "UPDATE user SET prenom = :prenom WHERE id= :id";
-        $query = $pdo->prepare($sql);
-        $query->execute(array ('prenom' => $prenom, 'id' => $_SESSION['id']));
+    $sql = "UPDATE user SET prenom = :prenom WHERE id= :id";
+    $query = $pdo->prepare($sql);
+    $query->execute(array ('prenom' => $prenom, 'id' => $_SESSION['id']));
     };
+
 
     if(($_POST["sexe"])!= NULL){
     $sexe = $_POST["sexe"];

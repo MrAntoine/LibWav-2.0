@@ -1,0 +1,255 @@
+@font-face {
+    font-family: "Brusher";
+    src: url('../fonts/Brusher.ttf');
+}
+
+body {
+    font-size: 14px;
+    text-align: justify;
+    margin: auto 50px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+div:first-child {
+
+}
+/* HEADER */
+.header {
+    margin: auto;
+    text-align: right;
+}
+
+/* NAVBAR - MENU 4 ONGLETS*/
+.navbar {
+    color: red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    border: solid 1px red;
+    margin: 20px auto;
+    grid-template-areas:
+            "first second third fourth";
+}
+
+
+.navbar #first {
+    grid-area: "first" ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px dotted green;
+    background-image: url(../img/guitar.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.navbar #second {
+    grid-area: "second" ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px dotted green;
+    background-image: url(../img/guitar.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar #third {
+    grid-area: "third" ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px dotted green;
+    background-image: url(../img/guitar.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar #fourth {
+    grid-area: "fourth" ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px dotted green;
+    background-image: url(../img/guitar.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.hidden {
+    display: none;
+    font-family: "Brusher";
+}
+
+span {
+    background-color: #204264;
+    padding: 0px;
+    padding-top: 50px;
+    display: block;
+    opacity: 0.8;
+
+}
+
+#first:hover .hidden {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: -5px;
+}
+#second:hover .hidden {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: -5px;
+}
+#third:hover .hidden {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: -5px;
+}
+#fourth:hover .hidden {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: -5px;
+}
+
+/* PRESENTATION SITE*/
+#presentation {
+    margin: auto;
+}
+
+#presentation article {
+    margin: auto 20px;
+}
+
+/* EQUIPE */
+#equipe .equipe {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 150px;
+    text-align: center;
+    border: solid 1px purple;
+    margin: 20px 100px;
+    grid-template-areas:
+            "img1 text1 rien1"
+            "rien2 text2 img2"
+            "img3 text3 rien3"
+            "rien4 text4 img4";
+}
+
+#equipe .equipe .imgleft {
+    margin: auto;
+    border: 1px solid blue;
+}
+
+#equipe .equipe .text {
+    margin: auto;
+    border: solid 1px yellow;
+    text-align: justify;
+    padding: 10px;
+
+}
+
+#equipe .equipe .text .person {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#equipe .equipe .text .role {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#equipe .equipe .imgright {
+    margin: auto;
+    border: 1px solid deeppink;
+}
+
+
+
+/** FOOTER **/
+footer {
+    margin: auto;
+}
+#barres hr{
+    margin: 5px 0px;
+}
+
+#barres .barrefine {
+    height: 2px;
+    color: purple;
+    background: purple;
+}
+
+#barres .barreforte {
+    height: 5px;
+    color: deeppink;
+    background: deeppink;
+}
+
+.colonnes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    text-align: center;
+    border: solid 1px darkolivegreen;
+    margin: auto 100px;
+    grid-template-areas:
+            "plus infos onglets";
+}
+
+.colonnes ul li{
+    list-style: none;
+}
+
+.plus {
+    grid-area: plus;
+    border: 1px solid deeppink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infos {
+    grid-area: infos;
+    border: 1px solid hotpink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.onglets {
+    grid-area: onglets;
+    border: 1px solid lightpink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

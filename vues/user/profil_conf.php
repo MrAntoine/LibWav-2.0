@@ -40,7 +40,7 @@ if ($autorisation === true) {
 
     echo "<label>Changer votre pseudo : </label>";
     if (getUserInfo($_SESSION["id"])['pseudo'] != NULL) {
-        echo "<input type='text' name='pseudo' required placeholder='" . getUserInfo($_SESSION['id'])['pseudo'] . "'><br />";
+        echo "<input type='text' name='pseudo' placeholder='" . getUserInfo($_SESSION['id'])['pseudo'] . "'><br />";
     };
 
 
@@ -57,6 +57,7 @@ if ($autorisation === true) {
     } else {
         echo "<input type='text' name='prenom'><br />";
     }
+
 
     echo "<label>Vous êtes : </label>";
     if($affiche_user["sexe"] == NULL ){
