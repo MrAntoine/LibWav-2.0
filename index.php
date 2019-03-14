@@ -106,7 +106,7 @@ if(isAjax() == false) {
     } else {
         $action = "login";
     }
-    // Est ce que cette action existe dans la liste des actions
+    // Est ce que cette action existe dans la liste des actiqsons
     if (array_key_exists($action, $listeDesActions) == false) {
         include("vues/404.php"); // NON : page 404
     } else {

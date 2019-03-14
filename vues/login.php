@@ -5,7 +5,7 @@ echo "<div class=\"wrapper\"><div class=\"\">
         <img src=\"LOGO\" alt=\"Logo\" class=\"\">
         <h1>Connectez-vous !</h1>";
 echo "<form action=\"index.php?action=connexion\" method=\"POST\">
-<input type=\"text\" placeholder=\"Votre pseudo\" name=\"pseudo\" required>
+<input type=\"text\" placeholder=\"Votre email\" name=\"email\" required>
 <input type=\"password\" placeholder=\"Votre mot de passe\" name=\"password\" required>
 
 <input type=\"submit\" value=\"Se connecter\">

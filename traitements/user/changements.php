@@ -1,7 +1,7 @@
 <?php
 
 $id = $_SESSION['id'];
-echo $id;
+//echo $id;
     if(($_POST["pseudo"])!= NULL){
         $pseudo = $_POST["pseudo"];
 
