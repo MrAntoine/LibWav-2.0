@@ -1,12 +1,20 @@
 @font-face {
-    font-family: "Brusher";
-    src: url('../fonts/Brusher.ttf');
+    font-family: "Titre";
+    src: url('../fonts/Richela Kids.otf');
 }
 
+@font-face {
+    font-family: "Menu";
+    src: url('../fonts/ShreeDev0714-01.ttf');
+}
+
+
+
 body {
-    font-size: 14px;
+    font-size: 16px;
     text-align: justify;
     margin: auto 50px;
+    font-family: "Courier";
 }
 
 a {
@@ -35,9 +43,28 @@ div:first-child {
 }
 /* HEADER */
 .header {
+    font-family: Menu;
     margin: auto;
     text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1rem;
 }
+
+#subheader{
+    margin-top: -15px;
+    font-size: 12px;
+}
+
+#subheader div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+
 
 /* NAVBAR - MENU 4 ONGLETS*/
 .navbar {
@@ -46,7 +73,7 @@ div:first-child {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 200px;
     border: solid 1px red;
-    margin: 20px auto;
+    margin:auto;
     grid-template-areas:
             "first second third fourth";
 }
@@ -102,7 +129,7 @@ div:first-child {
 }
 .hidden {
     display: none;
-    font-family: "Brusher";
+    font-family: "Titre";
 }
 
 span {

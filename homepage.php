@@ -1,11 +1,5 @@
 <link rel="stylesheet" href="./assets/css/homepage.css" type="text/css">
 <?php
-/**
- * Created by PhpStorm.
- * User: Utilisateur
- * Date: 22/01/2019
- * Time: 09:03
- */
 
 ?>
 <header class="header">
@@ -14,16 +8,22 @@
     <a href="#equipe">Équipe</a>
     <a href="#footer">Footer</a>
 
+<?php
+    echo "<form action=\"index.php?action=connexion\" method=\"POST\">
+        <input type=\"text\" placeholder=\"Votre email\" name=\"email\" required>
+        <input type=\"password\" placeholder=\"Votre mot de passe\" name=\"password\" required>
 
-
-    <input type="text" class="login" placeholder="Pseudo" />
-    <input type="text" class="login" placeholder="Mot de passe" />
-    <a href="#">Mot de passe oublié ?</a>
-    <?php
-    echo "<a href=\"index.php?action=register\">Inscription</a>";
-    ?>
-
+        <input type=\"submit\" value=\"Se connecter\">
+    </form>";
+?>
 </header>
+<div id="subheader">
+<?php
+    echo "<div id='mdp'> Mot de passé oublié ?</div>";
+    echo "<div id='inscription'><a href='index.php?action=login'>Pas encore inscrit(e) ?</a></div>";
+?>
+</div>
+
 
 <br><br><br>
 <nav>
