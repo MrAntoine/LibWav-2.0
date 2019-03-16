@@ -2,15 +2,10 @@
 <?php
 
 ?>
-BLEU FONCÉ : #2b4570<br>
-BLEU CLAIR : #46bbec<br>
-JAUNE : #fae31f<br>
-ROSE : #e39172<br>
 <header class="header">
     <a href="#"><img src="" alt="logo"></a>
     <a href="#presentation">Présentation</a>
     <a href="#equipe">Équipe</a>
-    <a href="#footer">Footer</a>
 
 <?php
     echo "<form action=\"index.php?action=connexion\" method=\"POST\">
@@ -83,8 +78,8 @@ ROSE : #e39172<br>
         </div>
 
         <div class="text" id="text2">
-            <div class="person">Antoine Vanderbrecht</div>
-            <div class="role">Chef de projet</div>
+            <div class="person">Léa Traccoen</div>
+            <div class="role">Dév Front</div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae luctus magna, a bibendum magna. Etiam
             feugiat nulla sit amet augue mollis rhoncus. Vivamus tristique viverra sollicitudin. Quisque venenatis
             pulvinar gravida. Sed egestas volutpat porta. Nullam semper hendrerit turpis in dictum. Fusce vel porttitor
@@ -103,8 +98,8 @@ ROSE : #e39172<br>
         </div>
 
         <div class="text" id="text3">
-            <div class="person">Antoine Vanderbrecht</div>
-            <div class="role">Chef de projet</div>
+            <div class="person">Élise Rob</div>
+            <div class="role">Design & Contenu</div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae luctus magna, a bibendum magna. Etiam
             feugiat nulla sit amet augue mollis rhoncus. Vivamus tristique viverra sollicitudin. Quisque venenatis
             pulvinar gravida. Sed egestas volutpat porta. Nullam semper hendrerit turpis in dictum. Fusce vel porttitor
@@ -120,8 +115,8 @@ ROSE : #e39172<br>
         </div>
 
         <div class="text" id="text4">
-            <div class="person">Antoine Vanderbrecht</div>
-            <div class="role">Chef de projet</div>
+            <div class="person">Léa Lefebvre</div>
+            <div class="role">Design & Contenu</div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae luctus magna, a bibendum magna. Etiam
             feugiat nulla sit amet augue mollis rhoncus. Vivamus tristique viverra sollicitudin. Quisque venenatis
             pulvinar gravida. Sed egestas volutpat porta. Nullam semper hendrerit turpis in dictum. Fusce vel porttitor

@@ -6,6 +6,8 @@
 @font-face {
     font-family: "Menu";
     src: url('../fonts/ShreeDev0714-01.ttf');
+    src: url('../fonts/ShreeDev0714-Bold.ttf');
+
 }
 
 /* COULEURS :
@@ -238,9 +240,9 @@ span {
 #equipe .equipe {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: 150px;
+    grid-template-rows: 200px 200px 200px 200px;
     text-align: center;
-    border: solid 1px purple;
+    /*border: solid 1px purple;*/
     margin: 20px 100px;
     grid-template-areas:
             "img1 text1 rien1"
@@ -249,37 +251,89 @@ span {
             "rien4 text4 img4";
 }
 
+.equipe img {
+    width: 150px;
+    height: 150px;
+}
+
 #equipe .equipe .imgleft {
     margin: auto;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
 }
 
 #equipe .equipe .text {
     margin: auto;
-    border: solid 1px yellow;
+    /*border: solid 1px yellow;*/
     text-align: justify;
-    padding: 10px;
-
+    padding : 10px;
 }
 
 #equipe .equipe .text .person {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    font-family: "Menu";
+    font-size: 20px;
+    font-weight: 900;
 }
 
 #equipe .equipe .text .role {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    font-family: "Menu";
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 5px;
 }
 
 #equipe .equipe .imgright {
     margin: auto;
-    border: 1px solid deeppink;
+    /*border: 1px solid deeppink;*/
 }
 
+/* Léa T */
+#equipe .equipe #text2 .person {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
 
+#equipe .equipe #text2 .role {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+/* COULEURS PERSONNES */
+#text1 .person, #text1 .role {
+    color: #2b4570;
+}
+
+#text2 .person, #text2 .role {
+    color: #46bbec;
+}
+
+#text3 .person, #text3 .role {
+    color: #fae37f;
+}
+
+#text4 .person, #text4 .role {
+    color: #e39172;
+}
+
+/* Léa L */
+#equipe .equipe #text4 .person {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#equipe .equipe #text4 .role {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
 
 /** FOOTER **/
 footer {
@@ -291,14 +345,14 @@ footer {
 
 #barres .barrefine {
     height: 2px;
-    color: purple;
-    background: purple;
+    color: black;
+    background: black;
 }
 
 #barres .barreforte {
     height: 5px;
-    color: deeppink;
-    background: deeppink;
+    color: black;
+    background: black;
 }
 
 .colonnes {
