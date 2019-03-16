@@ -8,6 +8,8 @@
 
 $autorisation = false;
 
+
+
 if (isset($_SESSION["id"])) {
     $role = getUserInfo($_SESSION["id"])['statut'];
     if ($role >= roleUser("user")) {
@@ -20,16 +22,18 @@ if (isset($_SESSION["id"])) {
 
 if ($autorisation === true) { ?>
 
+
+    <a href='index.php'><img src="" alt="LibWav"/></a>
+    <a href='?action=homepage'>Qui sommes-nous ?</a>
     <a href='?action=profil'>Mon Profil</a>
-    <a href='?action=profilConfiguration'>Paramètres</a>
+    <!--<a href='?action=profilConfiguration'>Paramètres</a>-->
     <a href='?action=deconnexion'>Deconnexion</a>
 
-<?php
+    <?php
 
     if ($role >= roleUser("modo")) {
         echo "<a href='?action=menuAdmin'>Menu Admin </a>";
     }
-
 
 }
 

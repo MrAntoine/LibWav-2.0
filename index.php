@@ -10,6 +10,7 @@ if(isAjax() == false) {
     ?>
 
 
+
     <!DOCTYPE html>
     <html lang="fr">
 
@@ -23,6 +24,8 @@ if(isAjax() == false) {
         <!-- CSS -->
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/css/404.css" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/general.css" type="text/css">
+
 
         <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>

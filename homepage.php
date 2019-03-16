@@ -1,10 +1,6 @@
 <link rel="stylesheet" href="./assets/css/homepage.css" type="text/css">
 <?php
-include("config/config.php");
-include("config/bd.php"); // commentaire
-include("assets/divers/balises.php");
-include("assets/divers/functions_library.php");
-include("config/actions.php");
+
 ?>
 <header class="header">
     <a href="#"><img src="" alt="logo"></a>

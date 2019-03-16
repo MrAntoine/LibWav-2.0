@@ -1,10 +1,6 @@
 <link rel="stylesheet" href="./assets/css/articles.css" type="text/css">
 <?php
-include("config/config.php");
-include("config/bd.php"); // commentaire
-include("assets/divers/balises.php");
-include("assets/divers/functions_library.php");
-include("config/actions.php");
+
 ?>
 <div id="articles">
     <h1 class="back">Articles</h1>
