@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "Titre";
+    src: url('../fonts/Richela Kids.otf');
+}
+
+@font-face {
+    font-family: "Menu";
+    src: url('../fonts/ShreeDev0714-01.ttf');
+
+}
+
+/* COULEURS :
+    BLEU FONCÉ : #2b4570
+    BLEU CLAIR : #46bbec
+    JAUNE : #fae31f
+    ROSE : #e39172
+*/
+
+body {
+    font-size: 16px;
+    text-align: justify;
+    margin: auto 50px;
+    font-family: "Courier";
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.back {
+    font-size: 50px;
+    font-family: "Titre";
+    position: absolute;
+    margin: 0;
+    opacity: 0.3;
+    letter-spacing: 15px;
+    -webkit-transform:scaleY(1.4);
+    -moz-transform:scaleY(1.4);
+    -o-transform:scaleY(1.4);
+    margin-top: 10px;
+
+}
+
+.front {
+    font-family: "Menu";
+    position: relative;
+    font-size: 40px;
+    color: black;
+    letter-spacing: 21px;
+    padding-top: 15px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+/* ARTICLES */
+
+#articles {
+    margin: auto;
+}
+
+#articles .back {
+    color: #fae31f;
+}
+
+
+#articles article {
+    margin: auto 20px;
+}
+/*
+#articles #imgleft {
+    width: 300px;
+    height: 500px;
+    border: 1px solid black;
+    //position: absolute;
+}
+
+#articles #littleimg {
+    width: 600px;
+    height: 200px;
+    border: 1px dotted grey;
+}*/
+
+#articles #contenu {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.2fr;
+    grid-template-rows: 200px 200px 200px;
+    border: solid 1px red;
+    margin: 40px auto;
+    grid-template-areas:
+        "imgleft litimg text"
+        "imgleft text text"
+        "imgleft text text";
+}
+
+#contenu #imgleft {
+    grid-area: "imgleft" ;
+    border: 1px solid purple;
+    height: 500px;
+    width: auto;
+}
+
+#contenu #litimg {
+    grid-area: "litimg" ;
+    border: 1px solid deeppink;
+    width: 600px;
+    height: auto;
+}
+
+#contenu #text {
+    grid-area: "text" ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-startx;
+    border: 1px solid blue;
+}

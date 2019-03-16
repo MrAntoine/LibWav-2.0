@@ -1,6 +1,10 @@
 <link rel="stylesheet" href="./assets/css/homepage.css" type="text/css">
 <?php
-
+include("config/config.php");
+include("config/bd.php"); // commentaire
+include("assets/divers/balises.php");
+include("assets/divers/functions_library.php");
+include("config/actions.php");
 ?>
 <header class="header">
     <a href="#"><img src="" alt="logo"></a>
@@ -98,7 +102,7 @@
         </div>
 
         <div class="text" id="text3">
-            <div class="person">Élise Rob</div>
+            <div class="person">Élise Robitaillé</div>
             <div class="role">Design & Contenu</div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae luctus magna, a bibendum magna. Etiam
             feugiat nulla sit amet augue mollis rhoncus. Vivamus tristique viverra sollicitudin. Quisque venenatis

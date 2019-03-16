@@ -6,7 +6,6 @@
 @font-face {
     font-family: "Menu";
     src: url('../fonts/ShreeDev0714-01.ttf');
-    src: url('../fonts/ShreeDev0714-Bold.ttf');
 
 }
 
@@ -50,7 +49,7 @@ ul li {
     font-family: "Titre";
     position: absolute;
     margin: 0;
-    opacity: 0.5;
+    opacity: 0.3;
     letter-spacing: 15px;
     -webkit-transform:scaleY(1.4);
     -moz-transform:scaleY(1.4);
