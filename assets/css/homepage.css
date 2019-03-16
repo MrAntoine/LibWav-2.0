@@ -8,7 +8,12 @@
     src: url('../fonts/ShreeDev0714-01.ttf');
 }
 
-
+/* COULEURS :
+    BLEU FONCÉ : #2b4570
+    BLEU CLAIR : #46bbec
+    JAUNE : #fae31f
+    ROSE : #e39172
+*/
 
 body {
     font-size: 16px;
@@ -38,9 +43,33 @@ ul li {
 
 }
 
-div:first-child {
+.back {
+    font-size: 50px;
+    font-family: "Titre";
+    position: absolute;
+    margin: 0;
+    opacity: 0.5;
+    letter-spacing: 15px;
+    -webkit-transform:scaleY(1.4);
+    -moz-transform:scaleY(1.4);
+    -o-transform:scaleY(1.4);
+    margin-top: 10px;
 
 }
+
+.front {
+    font-family: "Menu";
+    position: relative;
+    font-size: 40px;
+    color: black;
+    letter-spacing: 21px;
+    padding-top: 15px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+
+}
+
+
 /* HEADER */
 .header {
     font-family: Menu;
@@ -50,6 +79,7 @@ div:first-child {
     flex-direction: row;
     justify-content: space-between;
     padding-top: 1rem;
+
 }
 
 #subheader{
@@ -68,12 +98,11 @@ div:first-child {
 
 /* NAVBAR - MENU 4 ONGLETS*/
 .navbar {
-    color: red;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 200px;
     border: solid 1px red;
-    margin:auto;
+    margin: 40px auto;
     grid-template-areas:
             "first second third fourth";
 }
@@ -89,7 +118,6 @@ div:first-child {
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
-
 }
 
 .navbar #second {
@@ -133,12 +161,27 @@ div:first-child {
 }
 
 span {
-    background-color: #204264;
+    background-color: black;
     padding: 0px;
     padding-top: 50px;
     display: block;
     opacity: 0.8;
+}
 
+#first span {
+    background-color: #2b4570;
+}
+
+#second span {
+    background-color: #46bbec;
+}
+
+#third span {
+    background-color: #fae31f;
+}
+
+#fourth span {
+    background-color: #e39172;
 }
 
 #first:hover .hidden {
@@ -146,36 +189,52 @@ span {
     text-align: center;
     font-size: 40px;
     margin-bottom: -5px;
+    color: #2b4570;
 }
+
 #second:hover .hidden {
     display: block;
     text-align: center;
     font-size: 40px;
     margin-bottom: -5px;
+    color: #46bbec;
 }
 #third:hover .hidden {
     display: block;
     text-align: center;
     font-size: 40px;
     margin-bottom: -5px;
+    color: #fae37f;
 }
+
 #fourth:hover .hidden {
     display: block;
     text-align: center;
     font-size: 40px;
     margin-bottom: -5px;
+    color: #e39172;
 }
+
 
 /* PRESENTATION SITE*/
 #presentation {
     margin: auto;
 }
 
+#presentation .back {
+    color: #2b4570;
+}
+
+
 #presentation article {
     margin: auto 20px;
 }
 
 /* EQUIPE */
+#equipe .back {
+    color: #46bbec;
+}
+
 #equipe .equipe {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;

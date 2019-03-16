@@ -2,6 +2,10 @@
 <?php
 
 ?>
+BLEU FONCÉ : #2b4570<br>
+BLEU CLAIR : #46bbec<br>
+JAUNE : #fae31f<br>
+ROSE : #e39172<br>
 <header class="header">
     <a href="#"><img src="" alt="logo"></a>
     <a href="#presentation">Présentation</a>
@@ -24,8 +28,6 @@
 ?>
 </div>
 
-
-<br><br><br>
 <nav>
     <div class="navbar">
         <div id="first"><div class="hidden">Banque Son</div><span></span></div>
@@ -36,7 +38,8 @@
 </nav>
 
 <div id="presentation">
-    <h1>Présentation</h1>
+    <h1 class="back">Présentation</h1>
+    <h1 class="front">Présentation</h1>
     <article>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae luctus magna, a bibendum magna. Etiam
         feugiat nulla sit amet augue mollis rhoncus. Vivamus tristique viverra sollicitudin. Quisque venenatis pulvinar
@@ -52,10 +55,11 @@
 </div>
 
 
-<div id="equipe">
-    <h1>Équipe</h1>
-    <article class="equipe">
 
+<div id="equipe">
+    <h1 class="back">Équipe</h1>
+    <h1 class="front">Équipe</h1>
+    <article class="equipe">
         <!--Antoine-->
         <div class="imgleft" id="img1">
             <img src="" alt="photo Antoine">
