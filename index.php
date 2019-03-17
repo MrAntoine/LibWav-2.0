@@ -73,16 +73,19 @@ if(isAjax() == false) {
         </ul>
     </nav> -->
 
+    <!--
     <div class="container-fluid" style="left: 0px;">
         <div class="row">
             <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">-->
-            <div class="col-md-12 main">
+    <!--
+    <div class="col-md-12 main">-->
                 <?php
+
                 // Quelle est l'action à faire ?
                 if (isset($_GET["action"])) {
                     $action = $_GET["action"];
                 } else {
-                    $action = "login";
+                    $action = "son";
                 }
                 // Est ce que cette action existe dans la liste des actions
                 if (array_key_exists($action, $listeDesActions) == false) {
@@ -93,10 +96,10 @@ if(isAjax() == false) {
                 ob_end_flush(); // Je ferme le buffer, je vide la mémoire et affiche tout ce qui doit l'être
                 ?>
 
-
+    <!--
             </div>
         </div>
-    </div>
+    </div>-->
 
 
     <?php
@@ -107,7 +110,7 @@ if(isAjax() == false) {
     </body>
     </html>
     <?php
-} else {
+} /*else {
     if (isset($_GET["action"])) {
         $action = $_GET["action"];
     } else {
@@ -120,7 +123,7 @@ if(isAjax() == false) {
         include($listeDesActions[$action]); // Oui, on la charge
     }
 
-}
+}*/
 
 //$_SESSION['id']=1;
 //echo $_SESSION['id'];

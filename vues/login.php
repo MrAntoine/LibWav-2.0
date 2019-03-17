@@ -1,6 +1,8 @@
 <?php
 
 //LOGIN
+
+/*
 echo "<div class=\"wrapper\"><div class=\"\">
         <h1>Connectez-vous !</h1>";
 echo "<form action=\"index.php?action=connexion\" method=\"POST\">
@@ -11,10 +13,10 @@ echo "<form action=\"index.php?action=connexion\" method=\"POST\">
 </form>";
 
 echo "<br><br><br>";
-
+*/
 //CREATION COMPTE
 echo "<div class=\"\">
-        <h2>Pas encore inscrit(e) ?</h2><h3>Mais qu'attendez-vous ?</h3><h1>Inscrivez-vous vite ! </h1>";
+        <h1>Pas encore inscrit(e) ?</h1><h2>Mais qu'attendez-vous ?</h2><h1>Inscrivez-vous vite ! </h1>";
 echo "<form method=\"post\" action=\"index.php?action=register\" name=\"creation\">
             <input type=\"text\" required name=\"pseudo\" placeholder=\"Votre pseudo\">
             <input type=\"email\" required name=\"email\" placeholder=\"Votre e-mail\">
