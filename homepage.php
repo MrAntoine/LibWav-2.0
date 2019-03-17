@@ -2,36 +2,8 @@
 <?php
 
 ?>
-<header class="header">
-    <a href="#"><img src="" alt="logo"></a>
-    <a href="#presentation">Présentation</a>
-    <a href="#equipe">Équipe</a>
 
-<?php
-    echo "<form action=\"index.php?action=connexion\" method=\"POST\">
-        <input type=\"text\" placeholder=\"Votre email\" name=\"email\" required>
-        <input type=\"password\" placeholder=\"Votre mot de passe\" name=\"password\" required>
-
-        <input type=\"submit\" value=\"Se connecter\">
-    </form>";
-?>
-</header>
-<div id="subheader">
-<?php
-    echo "<div id='mdp'> Mot de passé oublié ?</div>";
-    echo "<div id='inscription'><a href='index.php?action=login'>Pas encore inscrit(e) ?</a></div>";
-?>
 </div>
-
-<nav>
-    <div class="navbar">
-        <div id="first"><div class="hidden">Banque Son</div><span></span></div>
-        <div id="second"><div class="hidden">Tutoriels</div><span></span></div>
-        <div id="third"><div class="hidden">Articles</div><span></span></div>
-        <div id="fourth"><div class="hidden">Communauté</div><span></span></div>
-    </div>
-</nav>
-
 <div id="presentation">
     <h1 class="back">Présentation</h1>
     <h1 class="front">Présentation</h1>

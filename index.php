@@ -54,8 +54,12 @@ if(isAjax() == false) {
         if (isset($_SESSION['id'])) {
             CompleteProfil();
             // echo "<li>Bonjour " . $_SESSION['login'] . "<br/><a href='index.php?action=deconnexion'>Deconnexion</a></li>";
-            include('vues/nav.php');
+            include('vues/navco.php');
+        }else {
+            include('vues/navpasco.php');
         }
+
+
 
 
         ?>

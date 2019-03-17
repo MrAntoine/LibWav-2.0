@@ -44,18 +44,6 @@ ul li {
 
 }
 
-#mainnav{
-    font-family: "Menu";
-    margin: auto;
-    text-align: right;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 1rem;
-    margin-bottom: 20px;
-
-}
-
 .back {
     font-size: 50px;
     font-family: "Titre";
@@ -82,3 +70,148 @@ ul li {
 
 }
 
+/* MAINNAV */
+
+#mainnav{
+    font-family: "Menu";
+    margin: auto;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1rem;
+    margin-bottom: 20px;
+
+}
+
+#subheader{
+    margin-top: -15px;
+    font-size: 12px;
+}
+
+#subheader div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+
+/* NAVBAR - MENU 4 ONGLETS*/
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    border: solid 1px red;
+    margin: 40px auto;
+    grid-template-areas:
+            "first second third fourth";
+}
+
+
+.navbar #first {
+    grid-area: "first" ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px dotted green;
+    background-image: url(../img/guitar.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar #second {
+    grid-area: "second" ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px dotted green;
+    background-image: url(../img/guitar.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar #third {
+    grid-area: "third" ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px dotted green;
+    background-image: url(../img/guitar.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar #fourth {
+    grid-area: "fourth" ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px dotted green;
+    background-image: url(../img/guitar.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.hidden {
+    display: none;
+    font-family: "Titre";
+}
+
+span {
+    background-color: black;
+    padding: 0px;
+    padding-top: 50px;
+    display: block;
+    opacity: 0.8;
+}
+
+#first span {
+    background-color: #2b4570;
+}
+
+#second span {
+    background-color: #46bbec;
+}
+
+#third span {
+    background-color: #fae31f;
+}
+
+#fourth span {
+    background-color: #e39172;
+}
+
+#first:hover .hidden {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: -5px;
+    color: #2b4570;
+}
+
+#second:hover .hidden {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: -5px;
+    color: #46bbec;
+}
+#third:hover .hidden {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: -5px;
+    color: #fae37f;
+}
+
+#fourth:hover .hidden {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: -5px;
+    color: #e39172;
+}
