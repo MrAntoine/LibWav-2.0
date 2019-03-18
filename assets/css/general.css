@@ -31,6 +31,7 @@ a {
 a:hover {
     text-decoration: none;
     color: black;
+    font-weight: bolder;
 }
 
 ul {
@@ -93,9 +94,33 @@ ul li {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-
 }
 
+
+
+
+/* NAV SPE */
+
+#banque:hover {
+    color: #2b4570;
+    font-weight: bolder;
+}
+
+#tutos:hover {
+    color: #46bbec;
+    font-weight: bolder;
+}
+
+#articles:hover {
+    color: #fae31f;
+    font-weight: bolder;
+}
+
+#articles:hover {
+    color: #e39172;
+    font-weight: bolder;
+
+}
 
 /* NAVBAR - MENU 4 ONGLETS*/
 .navbar {
@@ -215,3 +240,5 @@ span {
     margin-bottom: -5px;
     color: #e39172;
 }
+
+
