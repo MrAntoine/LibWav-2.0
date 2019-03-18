@@ -14,50 +14,58 @@
 #articles article {
     margin: auto 20px;
 }
-/*
-#articles #imgleft {
-    width: 300px;
-    height: 500px;
-    border: 1px solid black;
-    //position: absolute;
-}
 
-#articles #littleimg {
-    width: 600px;
-    height: 200px;
-    border: 1px dotted grey;
-}*/
-
-#articles #contenu {
+#articles #content {
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1.2fr;
-    grid-template-rows: 200px 200px 200px;
+    //grid-template-columns: 0.7fr 1.5fr 1fr;
+    //grid-template-rows: 200px 200px 200px;
     border: solid 1px red;
     margin: 40px auto;
     grid-template-areas:
-        "imgleft litimg text"
-        "imgleft text text"
-        "imgleft text text";
+        "imgleft chapo chapo"
+        "imgleft contentright contentright"
+        "contentleft contentleft imgright";
 }
 
-#contenu #imgleft {
-    grid-area: "imgleft" ;
-    border: 1px solid purple;
-    height: 500px;
-    width: auto;
-}
-
-#contenu #litimg {
-    grid-area: "litimg" ;
-    border: 1px solid deeppink;
-    width: 600px;
-    height: auto;
-}
-
-#contenu #text {
-    grid-area: "text" ;
+#content #imgleft {
+    grid-area: imgleft;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-startx;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid purple;
+}
+
+#content #chapo {
+    grid-area: chapo;
+    font-family: "Menu";
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: justify;
+    border: 1px solid green;
+}
+
+#content #contentleft {
+    grid-area: contentleft;
+    display: flex;
+    flex-direction: row;
+    justify-content: justify;
+    border: 1px solid purple;
+}
+
+#content #imgright {
+    grid-area: imgright;
+    display: flex;
+    flex-direction: row;
+    justify-content: justify;
+    border: 1px solid deeppink;
+}
+
+#content #contentright {
+    grid-area: contentright;
+    display: flex;
+    flex-direction: row;
+    justify-content: justify;
     border: 1px solid blue;
 }
