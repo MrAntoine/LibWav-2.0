@@ -9,10 +9,9 @@
 
 
         //session_start();
-        //$id = $pdo->lastInsertId();
-        $_SESSION['id'] = $line['id'];
-        $_SESSION['pseudo'] = $line['pseudo'];
-        $_SESSION['password'] = $line['password'];
+        $id = $pdo->lastInsertId();
+        $_SESSION['id'] = $id;
+        $_SESSION['email'] = $_POST['email'];
         header("Location: index.php?action=son");
     }
 
