@@ -10,7 +10,6 @@ if(isAjax() == false) {
     ?>
 
 
-
     <!DOCTYPE html>
     <html lang="fr">
 
@@ -34,7 +33,7 @@ if(isAjax() == false) {
     </head>
 
 
-    <body>
+<body>
 
 
     <?php
@@ -48,69 +47,67 @@ if(isAjax() == false) {
     ?>
 
 
-    <header id="main-header">
-        <!-- <h3>FoxBook</h3> -->
-        <?php
-        if (isset($_SESSION['id'])) {
-            CompleteProfil();
-            // echo "<li>Bonjour " . $_SESSION['login'] . "<br/><a href='index.php?action=deconnexion'>Deconnexion</a></li>";
+<header id="main-header">
+    <!-- <h3>FoxBook</h3> -->
+    <?php
+
+    if (isset($_SESSION['id'])) {
+        CompleteProfil();
             include('vues/navco.php');
-        }else {
+    } else {
             include('vues/navpasco.php');
         }
 
 
-
-
         ?>
-    </header>
+        </header>
 
 
-    <!-- <nav>
-        <ul>
-            <li><a href="index.php?action=page2">Va voir la page 2</a></li>
-            <li> <a href="index.php?action=enregistrement">Créer un compte</a> </li>
-        </ul>
-    </nav> -->
+        <!-- <nav>
+            <ul>
+                <li><a href="index.php?action=page2">Va voir la page 2</a></li>
+                <li> <a href="index.php?action=enregistrement">Créer un compte</a> </li>
+            </ul>
+        </nav> -->
 
-    <!--
-    <div class="container-fluid" style="left: 0px;">
-        <div class="row">
-            <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">-->
-    <!--
-    <div class="col-md-12 main">-->
-                <?php
+        <!--
+        <div class="container-fluid" style="left: 0px;">
+            <div class="row">
+                <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">-->
+        <!--
+        <div class="col-md-12 main">-->
+        <?php
 
-                // Quelle est l'action à faire ?
-                if (isset($_GET["action"])) {
-                    $action = $_GET["action"];
-                } else {
-                    $action = "son";
-                }
-                // Est ce que cette action existe dans la liste des actions
-                if (array_key_exists($action, $listeDesActions) == false) {
-                    include("vues/404.php"); // NON : page 404
-                } else {
-                    include($listeDesActions[$action]); // Oui, on la charge
-                }
-                ob_end_flush(); // Je ferme le buffer, je vide la mémoire et affiche tout ce qui doit l'être
-                ?>
+        // Quelle est l'action à faire ?
+        if (isset($_GET["action"])) {
+            $action = $_GET["action"];
+        } else {
+            $action = "son";
+        }
+        // Est ce que cette action existe dans la liste des actions
+        if (array_key_exists($action, $listeDesActions) == false) {
+            include("vues/404.php"); // NON : page 404
+        } else {
+            include($listeDesActions[$action]); // Oui, on la charge
+        }
+        ob_end_flush(); // Je ferme le buffer, je vide la mémoire et affiche tout ce qui doit l'être
+        ?>
 
-    <!--
+        <!--
+                </div>
             </div>
-        </div>
-    </div>-->
+        </div>-->
 
 
-    <?php
-    include('vues/footer.php');
-    ?>
+        <?php
+        include('vues/footer.php');
+        ?>
 
 
-    </body>
-    </html>
-    <?php
-} /*else {
+        </body>
+        </html>
+        <?php
+    } /*else {
     if (isset($_GET["action"])) {
         $action = $_GET["action"];
     } else {
@@ -127,6 +124,8 @@ if(isAjax() == false) {
 
 //$_SESSION['id']=1;
 //echo $_SESSION['id'];
+
+
 
 
 ?>
