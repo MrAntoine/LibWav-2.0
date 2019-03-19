@@ -29,11 +29,33 @@ if ($autorisation === true) {
 <nav>
     <div class="navbar">
 
-        <div id="first"><div class="hidden">Banque Son</div><span>Banque Son</span></div>
-        <div id="second"><div class="hidden">Tutoriels</div><span>Tutoriels</span></div>
-        <div id="third"><div class="hidden">Articles</div><span>Articles</span></div>
-        <div id="fourth"><div class="hidden">Communauté</div><span>Communauté</span></div>
+        <a href="?action=son">
+            <div id="first">
+                <div class="hidden">Banque Son</div>
+                <span>Banque Son</span>
+            </div>
+        </a>
 
+        <a href="?action=tutos">
+            <div id="second">
+                <div class="hidden">Tutoriels</div>
+                <span>Tutoriels</span>
+            </div>
+        </a>
+
+        <a href="?action=articles">
+            <div id="third">
+                <div class="hidden">Articles</div>
+                <span>Articles</span>
+            </div>
+        </a>
+
+        <a href="?action=communaute">
+            <div id="fourth">
+                <div class="hidden">Communauté</div>
+                <span>Communauté</span>
+            </div>
+        </a>
 
 
         <!--<div id="first"><div class="hidden">Banque Son</div><span></span></div>

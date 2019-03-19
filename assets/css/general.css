@@ -127,128 +127,164 @@ ul li {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 200px;
-    border: solid 1px red;
     margin: 40px auto;
     grid-template-areas:
             "first second third fourth";
+
+}
+
+.navbar a:hover{
+    font-weight: normal;
+}
+
+.navbar .hidden {
+    display: none;
+    font-family: "Titre";
+    font-size: 40px;
+    position: absolute;
+    top: 221px;
 }
 
 
-.navbar #first {
-    grid-area: "first" ;
+.navbar span {
+    padding: 5px;
+    display: block;
+    opacity: 0.8;
+    font-family: "Titre";
+    font-size: 40px;
+    position: relative;
+    color: rgba(0,0,0,0.8);
+
+}
+
+/* FIRST */
+.navbar #first{
+    grid-area: first;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border: 1px dotted green;
     background-image: url(../img/test.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
+    padding-top: 150px;
 }
 
-.navbar #second {
-    grid-area: "second" ;
+.navbar #first:hover .hidden {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    border: 1px dotted green;
-    background-image: url(../img/guitar.png);
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
+    flex-direction: row;
+    justify-content: center;
+    left: 125px;
+
 }
 
-.navbar #third {
-    grid-area: "third" ;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    border: 1px dotted green;
-    background-image: url(../img/guitar.png);
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.navbar #fourth {
-    grid-area: "fourth" ;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    border: 1px dotted green;
-    background-image: url(../img/guitar.png);
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.hidden {
-    display: none;
-    font-family: "Titre";
-}
-
-span {
-    background-color: black;
-    padding: 0px;
-    display: block;
-    opacity: 0.8;
-}
-
-#first span {
+.navbar #first span {
     background-color: #2b4570;
     display: flex;
-    justify-content: center;
     flex-direction: row;
-    color: rgba(0,0,0,1);
-    font-family: "Titre";
-    font-size: 40px;
-    padding: 5px;
+    justify-content: center;
 }
 
-#second span {
+.navbar #first:hover span {
+    color: #2b4570;
+}
+
+
+/* SECOND */
+.navbar #second{
+    grid-area: first;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url(../img/test.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 150px;
+}
+
+.navbar #second:hover .hidden {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    left: 505px;
+
+}
+
+.navbar #second span {
     background-color: #46bbec;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-#third span {
-    background-color: #fae31f;
-}
-
-#fourth span {
-    background-color: #e39172;
-}
-
-#first:hover .hidden {
-    display: block;
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: -5px;
-    color: #2b4570;
-}
-
-#first:hover span {
-    color: #2b4570;
-}
-
-#second:hover .hidden {
-    display: block;
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: -5px;
+.navbar #second:hover span {
     color: #46bbec;
-}
-#third:hover .hidden {
-    display: block;
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: -5px;
-    color: #fae37f;
+
 }
 
-#fourth:hover .hidden {
-    display: block;
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: -5px;
+
+/* THIRD */
+
+.navbar #third{
+    grid-area: first;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url(../img/test.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 150px;
+}
+
+.navbar #third:hover .hidden {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    left: 870px;
+}
+
+.navbar #third span {
+    background-color: #fae31f;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navbar #third:hover span {
+    color: #fae31f;
+}
+
+/* FOURTH */
+
+.navbar #fourth{
+    grid-area: first;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url(../img/test.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 150px;
+}
+
+.navbar #fourth:hover .hidden {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    left: 1170px;
+}
+
+.navbar #fourth span {
+    background-color: #e39172;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navbar #fourth:hover span {
     color: #e39172;
 }
-
 
