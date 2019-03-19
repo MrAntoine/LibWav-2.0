@@ -101,22 +101,22 @@ ul li {
 
 /* NAV SPE */
 
-#banque:hover {
+#pagebanque:hover {
     color: #2b4570;
     font-weight: bolder;
 }
 
-#tutos:hover {
+#pagetutos:hover {
     color: #46bbec;
     font-weight: bolder;
 }
 
-#articles:hover {
+#pagearticles:hover {
     color: #fae31f;
     font-weight: bolder;
 }
 
-#articles:hover {
+#pagecommunaute:hover {
     color: #e39172;
     font-weight: bolder;
 
@@ -140,8 +140,8 @@ ul li {
     flex-direction: column;
     justify-content: flex-end;
     border: 1px dotted green;
-    background-image: url(../img/guitar.png);
-    background-size: 50%;
+    background-image: url(../img/test.jpg);
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -189,13 +189,19 @@ ul li {
 span {
     background-color: black;
     padding: 0px;
-    padding-top: 50px;
     display: block;
     opacity: 0.8;
 }
 
 #first span {
     background-color: #2b4570;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    color: rgba(0,0,0,1);
+    font-family: "Titre";
+    font-size: 40px;
+    padding: 5px;
 }
 
 #second span {
@@ -215,6 +221,10 @@ span {
     text-align: center;
     font-size: 40px;
     margin-bottom: -5px;
+    color: #2b4570;
+}
+
+#first:hover span {
     color: #2b4570;
 }
 
