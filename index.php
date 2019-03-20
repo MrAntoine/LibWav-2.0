@@ -58,8 +58,6 @@ if(isAjax() == false) {
     } else {
             include('vues/nav.php');
         }
-
-
         ?>
         </header>
 

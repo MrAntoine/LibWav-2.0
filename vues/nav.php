@@ -25,7 +25,6 @@ if ($autorisation === true) {
 
 }
 
-$page = basename($_SERVER["PHP_SELF"]);
 
 //$_SESSION['id']=21;
 //echo $_SESSION['id'];
@@ -35,13 +34,21 @@ $page = basename($_SERVER["PHP_SELF"]);
     <a href='index.php'><img src="./assets/img/logo.jpg" alt="LibWav" id="logo"/></a>
     <a href='?action=homepage' class="maintext">Qui sommes-nous ?</a>
     <?php
-    if(isset($_SESSION['id']) || $page == 'profil') {
+    if(isset($_GET['action'])) {
+            $action = $_GET['action'];
+            if($action = 'profil'){
+                echo "";
+            }else {
         ?>
         <a href='?action=son' id="pagebanque" class="maintext">Banque Son</a>
         <a href='?action=tutoriels' id="pagetutos" class="maintext">Tutoriels</a>
         <a href='?action=articles' id="pagearticles" class="maintext">Articles</a>
         <a href='?action=communaute' id="pagecommunaute" class="maintext">Communauté</a>
         <?php
+            }
+    }
+    if($action = 'profilConfiguration'){
+        echo "";
     }
     if(isset($_SESSION['id'])) {
         ?>
@@ -82,46 +89,56 @@ $page = basename($_SERVER["PHP_SELF"]);
 </div>
 
 <?php
-if($page == 'profil') {
-    echo "";
-}else {
+    if(isset($_GET['action'])) {
+        $action = $_GET['action'];
+        if ($action == 'profil') {
+            echo "";
+        } else {
+            ?>
 
-    ?>
+            <nav>
+                <div class="navbar">
+                    <a href="?action=son">
+                        <div id="first">
+                            <div class="hidden">Banque Son</div>
+                            <span>Banque Son</span>
+                        </div>
+                    </a>
 
-    <nav>
-        <div class="navbar">
-            <a href="?action=son">
-                <div id="first">
-                    <div class="hidden">Banque Son</div>
-                    <span>Banque Son</span>
+                    <a href="?action=tutos">
+                        <div id="second">
+                            <div class="hidden">Tutoriels</div>
+                            <span>Tutoriels</span>
+                        </div>
+                    </a>
+
+                    <a href="?action=articles">
+                        <div id="third">
+                            <div class="hidden">Articles</div>
+                            <span>Articles</span>
+                        </div>
+                    </a>
+
+                    <a href="?action=communaute">
+                        <div id="fourth">
+                            <div class="hidden">Communauté</div>
+                            <span>Communauté</span>
+                        </div>
+                    </a>
+
                 </div>
-            </a>
+            </nav>
+            <?php
 
-            <a href="?action=tutos">
-                <div id="second">
-                    <div class="hidden">Tutoriels</div>
-                    <span>Tutoriels</span>
-                </div>
-            </a>
+        }
+    }
 
-            <a href="?action=articles">
-                <div id="third">
-                    <div class="hidden">Articles</div>
-                    <span>Articles</span>
-                </div>
-            </a>
-
-            <a href="?action=communaute">
-                <div id="fourth">
-                    <div class="hidden">Communauté</div>
-                    <span>Communauté</span>
-                </div>
-            </a>
-
-        </div>
-    </nav>
-    <?php
-}
+    if(isset($_GET['action'])) {
+        $action = $_GET['action'];
+        if ($action == 'profilConfiguration') {
+            echo "";
+        }
+    }
 ?>
 
 
