@@ -18,20 +18,13 @@ if (isset($_SESSION["id"])) {
 }
 
 
-if ($autorisation === true) {
-    if ($role >= roleUser("modo")) {
-        echo "<a href='?action=menuAdmin'>Menu Admin </a>";
-    }
-
-}
-
 
 //$_SESSION['id']=21;
 //echo $_SESSION['id'];
 ?>
 
 <div id="mainnav">
-    <a href='index.php'><img src="./assets/img/logo.jpg" alt="LibWav" id="logo"/></a>
+    <a href='index.php'><img src="./assets/img/logo.png" alt="LibWav" id="logo"/></a>
     <a href='?action=homepage' class="maintext">Qui sommes-nous ?</a>
     <?php
     if(isset($_GET['action'])) {
@@ -54,6 +47,13 @@ if ($autorisation === true) {
         ?>
         <a href='?action=profil' class="maintext">Mon Profil</a>
         <?php
+    }
+
+    if ($autorisation === true) {
+        if ($role >= roleUser("modo")) {
+            echo "<a href='?action=menuAdmin' class=\"maintext\">Menu Admin </a>";
+        }
+
     }
     if(isset($_SESSION['id'])){
         ?>
