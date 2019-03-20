@@ -45,6 +45,9 @@ ul li {
 
 }
 
+
+
+
 .back {
     font-size: 50px;
     font-family: "Titre";
@@ -76,13 +79,28 @@ ul li {
 #mainnav{
     font-family: "Menu";
     margin: auto;
-    text-align: right;
+    text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 1rem;
     margin-bottom: 20px;
+}
 
+#logo {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: -10px;
+    padding: 0px;
+}
+
+
+.maintext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #subheader{
@@ -95,11 +113,6 @@ ul li {
     flex-direction: row;
     justify-content: flex-end;
 }
-
-
-
-
-/* NAV SPE */
 
 #pagebanque:hover {
     color: #2b4570;

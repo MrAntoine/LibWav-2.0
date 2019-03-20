@@ -54,9 +54,9 @@ if(isAjax() == false) {
 
     if (isset($_SESSION['id'])) {
         CompleteProfil();
-            include('vues/navco.php');
+            include('vues/nav.php.php');
     } else {
-            include('vues/navpasco.php');
+            include('vues/nav.php');
         }
 
 
