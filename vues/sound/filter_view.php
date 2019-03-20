@@ -21,9 +21,10 @@ if ($autorisation === true) {
 
 <section id="filtre_sidebar">
 
+    <h2>Recherche</h2>
     <!-- TR<IE SELON LE TYPE  -->
     <section id="filtres_recherche">
-        <h3>Recherche par titre :</h3>
+        <h3>Par titre :</h3>
     <form id='form_sound_search' method="post" action="?action=soundFilterSearch">
         <input required type="text" id="champ_filter" name="champ_filter" placeholder="Rechercher un titre">
         <input type="submit" value='Chercher' name="sound_search_submit" id="sound_search_submit">
@@ -32,7 +33,7 @@ if ($autorisation === true) {
 
     <!-- ON AFFFICHE LES DIFFERENTES CATEGORIES -->
     <section id="filtres_categories">
-        <h3>Rechercher par catégorie :</h3>
+        <h3>Par catégorie :</h3>
         <?php
 
             //$sql = "SELECT * FROM son_categorie GROUP BY categorie_name ";

@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="../../assets/css/general.css" type="text/css">
+<link rel="stylesheet" href="../../assets/css/sound_page.css" type="text/css">
+
+
 <?php
 /**
  * Created by PhpStorm.
