@@ -45,8 +45,65 @@ ul li {
 
 }
 
+input[type="text"] {
+    background: transparent;
+    border: 1px solid #2b4570;
+    padding: 5px;
+    -webkit-border-radius: 12pt;
+    -moz-border-radius: 12pt;
+    border-radius: 12pt;
+}
 
+input[type="text"]::placeholder {
+    color: #2b4570;
+    padding-left: 10px;
+}
 
+input[type="text"]:focus {
+    outline: none;
+    background-color: #2b4570;
+    color: #fae31f;
+    padding-left: 10px;
+
+}
+
+input[type="password"] {
+    background: transparent;
+    border: 1px solid #2b4570;
+    padding: 5px;
+    -webkit-border-radius: 12pt;
+    -moz-border-radius: 12pt;
+    border-radius: 12pt;
+}
+
+input[type="password"]::placeholder {
+    color: #2b4570;
+    padding-left: 10px;
+}
+
+input[type="password"]:focus {
+    outline: none;
+    background-color: #2b4570;
+    color: #fae31f;
+    padding-left: 10px;
+
+}
+
+input[type="submit"] {
+    color: #46bbec;
+    background: transparent;
+    border: 1px solid #e39172;
+    padding: 10px;
+    -webkit-border-radius: 12pt;
+    -moz-border-radius: 12pt;
+    border-radius: 12pt;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background: #e39172;
+    color: #2b4570;
+}
 
 .back {
     font-size: 50px;

@@ -18,6 +18,13 @@ if (isset($_SESSION["id"])) {
 }
 
 
+if ($autorisation === true) {
+    if ($role >= roleUser("modo")) {
+        echo "<a href='?action=menuAdmin'>Menu Admin </a>";
+    }
+
+}
+
 
 //$_SESSION['id']=21;
 //echo $_SESSION['id'];
@@ -47,13 +54,6 @@ if (isset($_SESSION["id"])) {
         ?>
         <a href='?action=profil' class="maintext">Mon Profil</a>
         <?php
-    }
-
-    if ($autorisation === true) {
-        if ($role >= roleUser("modo")) {
-            echo "<a href='?action=menuAdmin' class=\"maintext\">Menu Admin </a>";
-        }
-
     }
     if(isset($_SESSION['id'])){
         ?>
