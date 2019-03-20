@@ -155,7 +155,7 @@ ul li {
     font-family: "Titre";
     font-size: 40px;
     position: absolute;
-    top: 221px;
+    top: 270px;
     color: white;
 }
 
@@ -288,7 +288,7 @@ ul li {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    left: 1170px;
+    left: 1175px;
 }
 
 .navbar #fourth span {
