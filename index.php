@@ -48,8 +48,7 @@ if(isAjax() == false) {
     ?>
 
 
-<header id="main-header">
-    <!-- <h3>FoxBook</h3> -->
+
     <?php
 
     if (isset($_SESSION['id'])) {
@@ -58,8 +57,10 @@ if(isAjax() == false) {
     } else {
             include('vues/nav.php');
         }
+        
         ?>
-        </header>
+
+
 
 
         <!-- <nav>

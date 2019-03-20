@@ -88,13 +88,6 @@ if ($autorisation === true) {
     ?>
 </div>
 
-<?php
-    if(isset($_GET['action'])) {
-        $action = $_GET['action'];
-        if ($action == 'profil') {
-            echo "";
-        } else {
-            ?>
 
             <nav>
                 <div class="navbar">
@@ -130,8 +123,13 @@ if ($autorisation === true) {
             </nav>
             <?php
 
-        }
-    }
+
+     if(isset($_GET['action'])) {
+         $action = $_GET['action'];
+         if ($action == 'profil') {
+             echo "";
+         }
+     }
 
     if(isset($_GET['action'])) {
         $action = $_GET['action'];
