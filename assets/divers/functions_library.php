@@ -185,7 +185,7 @@ function AfficheSoundItem($result){
 
     echo "<div class='sound_item_likes'>";
         echo "<form class='likesForm' method='POST' action='?action=like'>";
-            echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
+            echo "<input type='hidden'  class='postid' name='idPost' value='" . $result['id'] . "'>";
             echo "<input type='submit' name='like' value='' class='postMsg likes'" . $style . " >";
         echo "</form>";
         echo "<div class='nb_likes'>" . $totalLikes."</div>";
@@ -193,14 +193,14 @@ function AfficheSoundItem($result){
 
         echo "<div class='sound_item_controls'>";
         echo "<form class='formReport' method='POST' action='?action=soundReport'>";
-            echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
-            echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $idSession . "'>";
+            echo "<input type='hidden'  class='postid' name='idPost' value='" . $result['id'] . "'>";
+            echo "<input type='hidden'  class='reporterid' name='idReporter' value='" . $idSession . "'>";
             echo "<input type='submit' name='reportsound' value='' class='reportsound'>";
         echo "</form>";
 
         echo "<form class='downloadForm' method='POST' action='?action=downloadSound'>";
-            echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
-            echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $idSession . "'>";
+            echo "<input type='hidden'  class='postid' name='idPost' value='" . $result['id'] . "'>";
+            echo "<input type='hidden'  class='reporterid' name='idReporter' value='" . $idSession . "'>";
             echo "<input type='submit' name='downloadsound' value='' class='downloadsound'>";
         echo "</form>";
 
@@ -359,6 +359,29 @@ function CompleteProfil() {
         echo "<button id='alerte-bandeau-croix'>X</button>";
         echo "</div>";
     }
+}
+
+
+function AffichePageLimit($offset, $limit) {
+    global $pdo;
+    $contenu = "SELECT * FROM son LIMIT $offset, $limit";
+    $query_contenu = $pdo->prepare($contenu);
+    $query_contenu->execute();
+
+    while ($result = $query_contenu->fetch()) {
+        afficheSoundItem($result);
+    }
+
+}
+
+function AfficheNbPage($nb_sons){
+    $nb_page = ($nb_sons / 10);
+    echo "<div id='wrapper_nb_page'>";
+    for($i=1; $i<=$nb_page;$i++){
+        echo "<a class='numero_page' href='?action=son&p=".$i."'>$i</a>";
+    }
+    echo"</div>";
+
 }
 
 

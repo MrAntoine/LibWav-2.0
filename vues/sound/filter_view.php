@@ -7,16 +7,6 @@
  */
 
 
-$autorisation = false;
-
-if (isset($_SESSION["id"])) {
-    $role = getUserInfo($_SESSION["id"])['statut'];
-    if ($role >= roleUser("user")) {
-        $autorisation = true;
-    }
-}
-
-if ($autorisation === true) {
 ?>
 
 <section id="filtre_sidebar">
@@ -59,8 +49,3 @@ if ($autorisation === true) {
 
 </section>
 
-
-
-<?php
-}
-?>

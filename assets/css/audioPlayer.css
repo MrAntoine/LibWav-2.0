@@ -47,6 +47,7 @@
 #buttons {
     grid-area: buttons;
     margin: auto;
+    cursor: pointer;
     /*background-image: url(../images/meubles/nouvellecollection.jpg);
     background-size: cover;
     font-size: 20px;

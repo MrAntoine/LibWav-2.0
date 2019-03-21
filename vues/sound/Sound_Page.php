@@ -38,11 +38,53 @@ echo "</section>";
     <section id="wrapper_sound">
         <?php
 
+
+        $contenu = "SELECT * FROM son ";
+        $query_contenu = $pdo->prepare($contenu);
+        $query_contenu->execute();
+        $nb_sons =0;
+        while ($result = $query_contenu->fetch()) {
+            $nb_sons++;
+        }
+
+
+        if (count($_GET) >= 2) {
+            if ($_GET['p']) {
+                $page = $_GET['p'];
+            }
+        } else {
+            $page = 0;
+        };
+
+        switch ($page) {
+            case 0:
+                $offset = 0;
+                $limit = 10;
+                break;
+            case 1:
+                $offset = 10;
+                $limit = 10;
+                break;
+            case 2:
+                $offset = 20;
+                $limit = 10;
+                break;
+            case 3:
+                $offset = 30;
+                $limit = 10;
+                break;
+        }
+
+
+        AfficheNbPage($nb_sons);
+
         // Affichage des sons avec le lecteur et differents boutons //
 
         echo "<h3>Sons les plus téléchargés : </h3>";
 
         //$contenu = "SELECT * FROM son WHERE nb_telechargements>=5";
+
+        /*
         $contenu = "SELECT * FROM son ";
         $query_contenu = $pdo->prepare($contenu);
         $query_contenu->execute();
@@ -50,6 +92,13 @@ echo "</section>";
         while ($result = $query_contenu->fetch()) {
             afficheSoundItem($result);
         }
+        */
+
+
+
+        AffichePageLimit($offset, $limit);
+
+        AfficheNbPage($nb_sons);
         ?>
 
     </section>

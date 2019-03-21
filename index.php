@@ -107,7 +107,7 @@ if(isAjax() == false) {
         </body>
         </html>
         <?php
-    } /*else {
+    } else {
     if (isset($_GET["action"])) {
         $action = $_GET["action"];
     } else {
@@ -120,7 +120,7 @@ if(isAjax() == false) {
         include($listeDesActions[$action]); // Oui, on la charge
     }
 
-}*/
+}
 
 //$_SESSION['id']=1;
 //echo $_SESSION['id'];

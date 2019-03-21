@@ -84,6 +84,18 @@ $(function() {
 
     });
 
+/*
+    $('.numero_page').click(function(event){
+        event.preventDefault();
+
+        $.get( $(this).attr("href"),
+            function(data) {
+            console.log(data);
+                $("#wrapper_sound").empty().append(data);
+                playTmp();
+            });
+    });
+*/
 
 
     $('form#form_sound_search').submit(function(event){
