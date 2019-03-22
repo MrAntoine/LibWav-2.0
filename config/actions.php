@@ -30,5 +30,6 @@ $listeDesActions = array(
     "login" => "vues/login.php",
     "changements" => "traitements/user/changements.php",
     "homepage" => "homepage.php",
-    "articles" => "vues/articles.php"
+    "articles" => "vues/articles.php",
+    "communaute" => "vues/communaute.php"
 );
