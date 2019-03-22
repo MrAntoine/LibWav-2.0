@@ -67,7 +67,7 @@ if (isset($_SESSION["id"])) {
             }
 
         }
-
+/*
         ?>
 
         <section id="commentaires">
@@ -75,8 +75,8 @@ if (isset($_SESSION["id"])) {
 
             <form id='form_comment' method='post' action='?action=AddComment' >
                 <?php $id = $_SESSION["id"]; include('vues/user/infos_user_avatar.php');?>
-                <input type='hidden' name='post_id_article' value='<?php echo $id_article; ?>'>
-                <textarea name='post_contenu_article' placeholder='Entrez votre commentaire' required></textarea>
+                <input type='hidden' name='post_id_comment' value='<?php echo $id_article; ?>'>
+                <textarea name='post_contenu_comment' placeholder='Entrez votre commentaire' required></textarea>
                 <input type='submit' value='Commenter'>
             </form>
             <div id='wrapper_comment'>
@@ -85,6 +85,7 @@ if (isset($_SESSION["id"])) {
         </section>
 
         <?php
+*/
     }else {
 
     if ($autorisation === true) {
@@ -93,7 +94,7 @@ if (isset($_SESSION["id"])) {
     }
     // Affichage des sons avec le lecteur et differents boutons //
 
-    echo "<h2>Sons les plus téléchargés : </h2>";
+    echo "<h2>Tout les articles: </h2>";
 
     //$contenu = "SELECT * FROM son WHERE nb_telechargements>=5";
     $contenu = "SELECT * FROM articles ";
