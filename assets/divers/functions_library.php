@@ -267,6 +267,62 @@ function AfficheTutorielItem($result)
 
 }
 
+function AfficheArticleItem($result)
+{
+
+    if ($_SESSION) {
+        $idSession = $_SESSION['id'];
+    } else {
+        $idSession = 0;
+    }
+
+
+    echo "<a class='article_item' href='?action=article&id=".$result['id']."''>";
+
+// Affichage des avatars utilisateur //
+//$id = $result["idCreateur"];
+//include('vues/user/infos_user_avatar.php');
+
+// echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
+    echo "<br/><img class='article_item_image' src='/uploads/article/".$result['image']."' alt='miniature article'>";
+    echo "<br/><span class='article_item_date'>date: " . $result['date_publi'] . "</span>";
+    echo "<br/><span class='article_item_titre'>Titre: " . $result['titre'] . "</span>";
+    echo "<br/>" . "Description: " . $result['description'];
+    echo "<br/>";
+
+// Vérifié si un like est deja mis..
+    $totalLikes = countLikes($result['id']);
+    $resultLike = checkLikes($idSession, $result['id']);
+    if ($resultLike == false) {
+        $style = "style='background-color:black'";
+    } else {
+        $style = "style='background-color:red'";// style css
+    }
+
+
+    /*
+    echo "<div class='article_item_likes'>";
+    echo "<form class='likesForm' method='POST' action='?action=like'>";
+    echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
+    echo "<input type='submit' name='like' value='' class='postMsg likes'" . $style . " >";
+    echo "</form>";
+    echo "<span> Nombre de likes : </span><div class='nb_likes'>" . $totalLikes . "</div>";
+    echo "</div>";
+
+
+    echo "<div class='sound_item_controls'>";
+    echo "<form class='formReport' method='POST' action='?action=soundReport'>";
+    echo "<input type='hidden'  id='postid' name='idPost' value='" . $result['id'] . "'>";
+    echo "<input type='hidden'  id='reporterid' name='idReporter' value='" . $idSession . "'>";
+    echo "<input type='submit' name='reportsound' value='' class='reportsound'>";
+    echo "</form>";
+    echo "</div>";
+    */
+
+    echo "</a>";
+
+}
+
 
 
 function AfficheComment($idpost) {
