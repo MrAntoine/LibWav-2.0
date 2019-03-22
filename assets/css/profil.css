@@ -1,0 +1,53 @@
+/*#profil {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto 100px;
+}*/
+
+
+#grille {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 50px;
+    grid-template-areas:
+            "photo  nom"
+            "photo  sexe"
+            "photo  anniv";
+
+    margin: auto 500px;
+}
+
+
+.profil_avatar {
+    border: 1px solid purple;
+    /*max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;*/
+    grid-area: photo;
+}
+
+#nom {
+    grid-area: nom;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: "Titre";
+    font-size: 30px;
+}
+
+#sexe {
+    grid-area: sexe;
+}
+
+#anniv {
+    grid-area: anniv;
+}
+
+
+#subgrille {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
