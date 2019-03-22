@@ -98,7 +98,7 @@ if ($autorisation === true) {
                         </div>
                     </a>
 
-                    <a href="?action=tutos">
+                    <a href="?action=tutoriels">
                         <div id="second">
                             <div class="hidden">Tutoriels</div>
                             <span>Tutoriels</span>
