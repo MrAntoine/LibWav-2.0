@@ -1,3 +1,16 @@
+@import url(404.css);
+@import url(articles.css);
+@import url(audioPlayer.css);
+@import url(btn-range.css);
+@import url(communaute.css);
+@import url(footer.css);
+@import url(homepage.css);
+@import url(normalize.css);
+@import url(profil.css);
+@import url(sound_page.css);
+@import url(style.css);
+@import url(tutos.css);
+
 @font-face {
     font-family: "Titre";
     src: url('../fonts/Richela Kids.otf');

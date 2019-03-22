@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="./assets/css/profil.css" type="text/css">
+
+
 <?php
 /**
  * Created by PhpStorm.
@@ -14,6 +17,7 @@ if (!isset($_GET["id"]) || ($_GET["id"]) == ($_SESSION["id"])) {
 } else {
     $id = $_GET["id"];
 }
+echo "<div id='profil'><div id='grille'>";
 include('vues/user/infos_user_avatar.php');
 
 
@@ -24,17 +28,21 @@ if (isset($_SESSION["id"])) {
     }
 }
 
+echo " <p id='nom'>" . $affiche_user["pseudo"] . "</p>";
+
 if ($autorisation === true) {
     if ($affiche_user["sexe"] != NULL ){
-        echo "<p> Sexe :".$affiche_user["sexe"]."</p>";
+        echo "<p id='sexe'> Sexe :".$affiche_user["sexe"]."</p>";
     };
 
 
     if ($affiche_user["anniversaire"] !="0000-00-00" ){
-        echo "<p> Anniversaire :".$affiche_user["anniversaire"]."</p>";
+        echo "<p id='anniv'> Anniversaire :".$affiche_user["anniversaire"]."</p>";
     };
 
+    echo "</div>";
 
+    echo "<div id='subgrille'>";
     echo " <p> Compte créé le: " . $affiche_user["created_at"] . "</p>";
     echo " <p> nombre de téléchargements: " . $affiche_user["nb_telechargements"] . "</p>";
 
@@ -44,11 +52,11 @@ if ($autorisation === true) {
     }
 
 echo "<a href=\"index.php?action=profilConfiguration\"><button>Modifier mes données</button></a>";
-
+    echo "</div>";
 } else {
     echo needConnect();
 }
-
+echo "</div>";
 
 
 
