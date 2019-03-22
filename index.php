@@ -25,6 +25,8 @@ if(isAjax() == false) {
         <link href="assets/css/404.css" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/general.css" type="text/css">
         <link rel="stylesheet" href="./assets/css/articles.css" type="text/css">
+        <link rel="stylesheet" href="./assets/css/tutos.css" type="text/css">
+        <link rel="stylesheet" href="./assets/css/communaute.css" type="text/css">
 
 
         <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>

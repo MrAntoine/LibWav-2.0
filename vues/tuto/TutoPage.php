@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="../../assets/css/general.css" type="text/css">
+<link rel="stylesheet" href="../../assets/css/tutos.css" type="text/css">
+
+
 <?php
 /**
  * Created by PhpStorm.
@@ -37,7 +41,7 @@ if (isset($_GET["id"]) && $_GET["id"] >= 1) {
 
         echo "<a href='?action=tutoriels'>Retour à la liste des tutoriels</a> </br>";
 
-        echo "<iframe allow='fullscreen' width='420' height='315' src='" . $source . "'> </iframe>";
+        echo "<iframe allow='fullscreen' width='420' height='315' src='" . $source . "' id=\'video\'> </iframe>";
 
 
         // echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
@@ -82,7 +86,7 @@ if (isset($_GET["id"]) && $_GET["id"] >= 1) {
         }
         // Affichage des sons avec le lecteur et differents boutons //
 
-        echo "<h2>Sons les plus téléchargés : </h2>";
+        echo "<h2>Nos derniers tutos :</h2>";
 
         //$contenu = "SELECT * FROM son WHERE nb_telechargements>=5";
         $contenu = "SELECT * FROM tutos ";

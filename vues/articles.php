@@ -3,9 +3,10 @@
 
 ?>
 <div id="articles">
-    <h1 class="back">Articles</h1>
-    <h1 class="front">Articles</h1>
+   <!-- <h1 class="back">Articles</h1>
+    <h1 class="front">Articles</h1> -->
     <article>
+        <h2>Titre de l'article</h2>
         <div id="content">
             <img src="" alt="image article" id="imgleft">
             <div id="chapo">

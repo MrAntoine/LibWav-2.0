@@ -19,18 +19,20 @@ if (isset($_SESSION["id"])) {
     }
 }
 
+if ($autorisation === true) {
+    // Bouton upload //
+    echo "<a id='btn-upload-son' href='?action=uploadSound'>Ajouter un son à la banque</a>";
+}
 echo "<div id='page_sound'>";
+
+
+/* Upload */
 
 
 echo "<section id='wrapper_filtre'>";
 /*  Affichage des filtres */
 include("filter_view.php");
 
-/* Upload */
-if ($autorisation === true) {
-    // Bouton upload //
-    echo "<a id='btn-upload-son' href='?action=uploadSound'>Upload un son</a>";
-}
 
 echo "</section>";
 

@@ -4,6 +4,11 @@
 #wrapper_filtre  {
     padding: 20px;
     margin: 20px;
+    margin-top: 10px;
+    border: 1px dotted #2b4570;
+    -webkit-border-radius: 12pt;
+    -moz-border-radius: 12pt;
+    border-radius: 12pt;
 }
 
 #wrapper_filtre h2 {
@@ -19,17 +24,58 @@
 
 #wrapper_sound{
     width: 100%;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 10px;
+    border: 1px solid #2b4570;
+    -webkit-border-radius: 12pt;
+    -moz-border-radius: 12pt;
+    border-radius: 12pt;
 }
+
+/*#wrapper_sound div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}*/
 
 #wrapper_sound h3 {
     text-align: center;
+    color: #2b4570;
+    margin-bottom: 15px;
+}
+
+#wrapper_sound h3 {
+    margin-bottom: 0px;
 }
 
 
 
 
 
-/* SIDE BAR  */
+/* UPLOAD */
+#btn-upload-son {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px;
+    text-align: center;
+    margin: 0px auto 20px auto;
+    /*margin-left: 130px;
+    margin-right: 130px;*/
+    background-color: #fae31f;
+    border-radius: 12pt;
+    width: 300px;
+    height: 50px;
+}
+
+#btn-upload-son:hover {
+    background-color: #2b4570;
+    color: white;
+}
+
+
+/* SIDE BAR  LEFT */
 
 #wrapper_filtre {
     width: 60%;
@@ -109,47 +155,9 @@ form #form_sound_search label {
     justify-content: space-between;
 }
 
-/*
-#btn-upload-son {
-    padding: 8px;
-    width: 100%;
-    text-align: center;
-    background-color: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 20px auto 50px auto;
 
 
-}
-
-#btn-upload-son:hover {
-    background-color: #fae31f;
-    border-radius: 12pt;
-
-}
-*/
-
-#btn-upload-son {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 8px;
-    text-align: center;
-    margin-left: 130px;
-    margin-right: 130px;
-
-}
-
-#btn-upload-son:hover {
-    background-color: #fae31f;
-    border-radius: 12pt;
-    padding: 8px;
-}
-
-
-/* SIDE BAR END */
-
+/* SIDE BAR RIGHT */
 
 
 /*  SOUND ITEM    */
@@ -209,11 +217,17 @@ form #form_sound_search label {
 .sound_item {
     width: 100%;
     height: auto;
-    background-image: url("../img/background-sound.jpg");
-    background-size: cover;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    background-image: linear-gradient(to top, #2b4570, #336090, #3a7daf, #409cce, #46bbec);
+    /*margin-top: 5px;
+    margin-bottom: 5px;*/
     padding: 20px;
+    border-radius: 12pt;
+    margin-bottom: 20px;
+}
+
+
+.sound_item_date {
+
 }
 
 .sound_item_controls {
@@ -221,6 +235,7 @@ form #form_sound_search label {
     flex-direction: row-reverse;
     justify-content: space-between;
 }
+
 
 
 /* SOUND ITEM END */
