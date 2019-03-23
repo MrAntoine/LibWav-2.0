@@ -30,7 +30,7 @@ if ($autorisation === true) {
     echo " <label for='actual__img'>Photo de profil actuelle :</label><br />";
     echo "<img src='uploads/avatar/" . $affiche_user['avatar'] . "' alt='Photo de profil' id='profil_avatar_conf'>";
     echo "<br><br>";
-    echo "<label for='fileToUpload' class='choisirbox'>Choisir ma nouvelle photo de profil</label><br />";
+    echo "<label for='fileToUpload' class='choisirbox'>Choisir ma nouvelle photo de profil</label>";
     echo "<input type='file' name='fileToUpload' id='fileToUpload' required>";
     echo "<br><br>";
     echo "<input type='submit' name='submit_avatar' id='update_profil_avatar' value='Mettre à jour ma photo de profil'>";

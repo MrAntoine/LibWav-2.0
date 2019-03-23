@@ -1,3 +1,10 @@
+#profil_conf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Menu";
+}
+
 #profil_conf h2 {
     text-align: left;
     color: #2b4570;
@@ -8,18 +15,17 @@
     margin-bottom: 0px;
 }
 
-#profil_conf {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
 #profil_conf #photoprofil {
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
+}
+
+#profil_avatar_conf {
+    -webkit-border-radius: 12pt;
+    -moz-border-radius: 12pt;
+    border-radius: 12pt;
 }
 
 
