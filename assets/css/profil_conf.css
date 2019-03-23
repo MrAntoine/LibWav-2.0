@@ -12,8 +12,11 @@
 }
 
 #profil_conf h3 {
-    margin-bottom: 0px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    text-align: center;
 }
+
 
 #profil_conf #photoprofil {
     display: flex;
@@ -28,7 +31,80 @@
     border-radius: 12pt;
 }
 
-
 #fileToUpload {
     display: none;
+}
+
+#dataperso {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 30px 30px 30px 30px 30px ;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    grid-template-areas:
+            "changer_pseudo     pseudo"
+            "changer_nom        nom"
+            "changer_prenom     prenom"
+;
+
+    margin: auto 500px;
+    border: 1px solid blue;
+}
+
+
+#changer_pseudo {
+    grid-area: changer_pseudo;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: auto;
+    margin-right: 0px;
+}
+
+#pseudo {
+    grid-area: pseudo;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+#changer_nom {
+    grid-area: changer_nom;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: auto;
+    margin-right: 0px;
+}
+
+.nom {
+    grid-area: nom;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#changer_prenom {
+    grid-area: changer_prenom;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: auto;
+    margin-right: 0px;
+}
+
+.prenom {
+    grid-area: prenom;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+
+#downloaddata {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

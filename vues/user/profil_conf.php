@@ -18,7 +18,7 @@ if (isset($_SESSION["id"])) {
 
 if ($autorisation === true) {
 
-    echo "<div id='profil_conf'><h2>Modifier mon profil actuel</h2>";
+    echo "<div id='profil_conf'><h2>Modifier mon profil</h2>";
 
 
     $id = $_SESSION["id"];
@@ -27,7 +27,7 @@ if ($autorisation === true) {
 
     // IMAGE
     echo "<div id='photoprofil'><form method='post' action='index.php?action=setAvatar' enctype='multipart/form-data'> ";
-    echo " <label for='actual__img'>Photo de profil actuelle :</label><br />";
+    echo " <label for='actual__img'><h3>Photo de profil actuelle :</h3></label>";
     echo "<img src='uploads/avatar/" . $affiche_user['avatar'] . "' alt='Photo de profil' id='profil_avatar_conf'>";
     echo "<br><br>";
     echo "<label for='fileToUpload' class='choisirbox'>Choisir ma nouvelle photo de profil</label>";
@@ -39,62 +39,63 @@ if ($autorisation === true) {
     echo "<br></div>";
 
     //TOUT
-    echo "<form method='POST' action='index.php?action=changements'>";
+    echo "<br /><h3>Mes données personnelles : </h3><form method='POST' action='index.php?action=changements'><div id='dataperso'>";
 
-    echo "<label>Changer votre pseudo : </label>";
+
+    echo "<label id='changer_pseudo'>Changer mon pseudo : </label>";
     if (getUserInfo($_SESSION["id"])['pseudo'] != NULL) {
-        echo "<input type='text' name='pseudo' placeholder='" . getUserInfo($_SESSION['id'])['pseudo'] . "'><br />";
+        echo "<input type='text' name='pseudo' id='pseudo' placeholder='" . getUserInfo($_SESSION['id'])['pseudo'] . "'>";
     };
 
 
-    echo "<label>Votre nom ? </label>";
+    echo "<label id='changer_nom'>Mon nom : </label>";
     if (getUserInfo($_SESSION["id"])['nom'] != NULL) {
-        echo "<input type='text' name='nom' placeholder='" . getUserInfo($_SESSION['id'])['nom'] . "'><br />";
+        echo "<input type='text' name='nom' class='nom' placeholder='" . getUserInfo($_SESSION['id'])['nom'] . "'><br />";
     } else {
-        echo "<input type='text' name='nom'><br />";
+        echo "<input type='text' name='nom' class='nom' ><br />";
     }
 
-    echo "<label>Votre prénom ? </label>";
+    echo "<label id='changer_prenom'>Mon prénom : </label>";
     if (getUserInfo($_SESSION["id"])['prenom'] != NULL) {
-        echo "<input type='text' name='prenom' placeholder='" . getUserInfo($_SESSION['id'])['prenom'] . "'><br />";
+        echo "<input type='text' name='prenom' class='prenom' placeholder='" . getUserInfo($_SESSION['id'])['prenom'] . "'><br />";
     } else {
-        echo "<input type='text' name='prenom'><br />";
+        echo "<input type='text' name='prenom' class='prenom'><br />";
     }
 
 
-    echo "<label>Vous êtes : </label>";
+    echo "<label id='changer_sexe'>Je suis êtes un(e) : </label>";
     if($affiche_user["sexe"] == NULL ){
-        echo "<select name=\"sexe\">
+        echo "<select name=\"sexe\" id='sexe_input'>
                     <option>Homme</option>
                     <option>Femme</option>
                     <option>Autre</option>
                </select><br />";
     }else {
-        echo $affiche_user["sexe"];
+        echo "<p id='sexe_existe'>".$affiche_user["sexe"];
     };
 
 
 
-    echo "<br/><label>Vous êtes né(e) le: </label>";
+    echo "<br/><label id='changer_anniv'>Je suis né(e) le: </label>";
     if ($affiche_user['anniversaire']=="0000-00-00") {
-        echo "<input type=\"date\" name=\"anniversaire\" value=\"date('Y-m-d')\" />";
+        echo "<input type=\"date\" name=\"anniversaire\" id='anniv_input' value=\"date('Y-m-d')\" />";
     }else {
-        echo $affiche_user["anniversaire"];
+        echo "<p id='anniv_existe'>".$affiche_user["anniversaire"];
     }
 
 
 
-    echo "<br /><label>Vous venez de : </label>";
+    echo "<br /><label id='changer_lieu'>Je viens de : </label>";
     if ($affiche_user['pays'] == NULL){
-        echo "<input type='text' name='pays' />";
+        echo "<input type='text' name='pays' id='lieu_pays'/>";
     }else{
-        echo $affiche_user['pays'];
+        echo "<p id='pays_existe'>".$affiche_user['pays'];
     }
 
     echo ", ";
 
     if ($affiche_user['region'] == NULL){
-        echo "<select name='region'>
+        echo "<select name='region' id='region_input'>
                     <option>Sélectionnez une région...</option>
                     <option>Auvergne-Rhône-Alpes</option>
                     <option>Bourgogne-Franche-Comté</option>
@@ -117,14 +118,14 @@ if ($autorisation === true) {
                     <option>Autre</option>
                 </select>";
     }else{
-        echo $affiche_user['region'];
+        echo "<p id='region_input'>".$affiche_user['region'];
     };
 
-    echo "<br/><input type='submit' value='Enregistrer les modifications'/>";
+    echo "</div><br/><input type='submit' value='Enregistrer les modifications'/>";
     echo "</form>";
 
 
-    echo "<br /><a href='?action=downloadData'>Télécharger mes données</a>";
+    echo "<br /><a href='?action=downloadData' id='downloaddata'>Télécharger mes données</a>";
 
     echo "</div>";
 }
