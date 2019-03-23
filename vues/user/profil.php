@@ -17,7 +17,7 @@ if (!isset($_GET["id"]) || ($_GET["id"]) == ($_SESSION["id"])) {
 } else {
     $id = $_GET["id"];
 }
-echo "<div id='profil'><div id='grille'>";
+echo "<div id='profil'><h2>Mon Profil</h2><div id='grille'>";
 include('vues/user/infos_user_avatar.php');
 
 

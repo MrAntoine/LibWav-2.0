@@ -5,6 +5,15 @@
     margin: auto 100px;
 }*/
 
+#profil h2 {
+    text-align: left;
+    color: #2b4570;
+    margin-bottom: 10px;
+}
+
+#profil h3 {
+    margin-bottom: 0px;
+}
 
 #grille {
     display: grid;
