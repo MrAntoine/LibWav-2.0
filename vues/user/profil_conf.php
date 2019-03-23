@@ -26,17 +26,17 @@ if ($autorisation === true) {
 
 
     // IMAGE
-    echo "<form method='post' action='index.php?action=setAvatar' enctype='multipart/form-data'> ";
-    echo " <label for='actual__img'>Photo de profil actuelle :</label>";
+    echo "<div id='photoprofil'><form method='post' action='index.php?action=setAvatar' enctype='multipart/form-data'> ";
+    echo " <label for='actual__img'>Photo de profil actuelle :</label><br />";
     echo "<img src='uploads/avatar/" . $affiche_user['avatar'] . "' alt='Photo de profil' id='profil_avatar_conf'>";
     echo "<br><br>";
-    echo "<label for='fileToUpload''>Choisissez votre nouvelle photo de profil : </label>";
+    echo "<label for='fileToUpload' class='choisirbox'>Choisir ma nouvelle photo de profil</label><br />";
     echo "<input type='file' name='fileToUpload' id='fileToUpload' required>";
     echo "<br><br>";
-    echo "<input type='submit' name='submit_avatar' id='update_profil_avatar' value='Mettre à jour ma photo'>";
+    echo "<input type='submit' name='submit_avatar' id='update_profil_avatar' value='Mettre à jour ma photo de profil'>";
     echo "</form>";
 
-    echo "<br>";
+    echo "<br></div>";
 
     //TOUT
     echo "<form method='POST' action='index.php?action=changements'>";

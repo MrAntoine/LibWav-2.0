@@ -145,7 +145,6 @@ input[type="submit"]:focus {
     color: #2b4570;
 }
 
-
 button {
     font-family: "Menu";
     color: #46bbec;
@@ -166,6 +165,23 @@ button:hover {
 button:focus {
     outline: none;
     background: #e39172;
+    color: #2b4570;
+}
+
+.choisirbox {
+    border: 1px solid #46bbec;
+    -webkit-border-radius: 12pt;
+    -moz-border-radius: 12pt;
+    border-radius: 12pt;
+    display: inline-block;
+    padding: 5px 7px;
+    cursor: pointer;
+    font-family: "Menu";
+    font-weight: bold;
+}
+
+.choisirbox:hover {
+    background-color: #46bbec;
     color: #2b4570;
 }
 

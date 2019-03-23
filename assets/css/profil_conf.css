@@ -7,3 +7,22 @@
 #profil_conf h3 {
     margin-bottom: 0px;
 }
+
+#profil_conf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#profil_conf #photoprofil {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#fileToUpload {
+    display: none;
+}
