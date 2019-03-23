@@ -7,9 +7,11 @@
 @import url(homepage.css);
 @import url(normalize.css);
 @import url(profil.css);
+@import url(profil_conf.css);
 @import url(sound_page.css);
 @import url(style.css);
 @import url(tutos.css);
+
 
 @font-face {
     font-family: "Titre";

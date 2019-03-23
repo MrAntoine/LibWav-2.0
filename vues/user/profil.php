@@ -19,6 +19,8 @@ if (!isset($_GET["id"]) || ($_GET["id"]) == ($_SESSION["id"])) {
 }
 echo "<div id='profil'><h2>Mon Profil</h2><div id='grille'>";
 include('vues/user/infos_user_avatar.php');
+echo "<img src='uploads/avatar/".$affiche_user['avatar']."' alt='Photo de profil' class='profil_avatar' >";
+
 
 
 if (isset($_SESSION["id"])) {

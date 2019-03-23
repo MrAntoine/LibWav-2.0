@@ -18,15 +18,19 @@ if (isset($_SESSION["id"])) {
 
 if ($autorisation === true) {
 
+    echo "<div id='profil_conf'><h2>Modifier mon profil actuel</h2>";
+
+
     $id = $_SESSION["id"];
     include('vues/user/infos_user_avatar.php');
 
+
     // IMAGE
     echo "<form method='post' action='index.php?action=setAvatar' enctype='multipart/form-data'> ";
-    echo " <label for='actual__img'>Photo de profil actuelle</label>";
+    echo " <label for='actual__img'>Photo de profil actuelle :</label>";
     echo "<img src='uploads/avatar/" . $affiche_user['avatar'] . "' alt='Photo de profil' id='profil_avatar_conf'>";
     echo "<br><br>";
-    echo "<label for='fileToUpload''>Changez de photo de profil</label>";
+    echo "<label for='fileToUpload''>Choisissez votre nouvelle photo de profil : </label>";
     echo "<input type='file' name='fileToUpload' id='fileToUpload' required>";
     echo "<br><br>";
     echo "<input type='submit' name='submit_avatar' id='update_profil_avatar' value='Mettre à jour ma photo'>";
@@ -36,7 +40,6 @@ if ($autorisation === true) {
 
     //TOUT
     echo "<form method='POST' action='index.php?action=changements'>";
-
 
     echo "<label>Changer votre pseudo : </label>";
     if (getUserInfo($_SESSION["id"])['pseudo'] != NULL) {
@@ -122,6 +125,8 @@ if ($autorisation === true) {
 
 
     echo "<br /><a href='?action=downloadData'>Télécharger mes données</a>";
+
+    echo "</div>";
 }
 
 
