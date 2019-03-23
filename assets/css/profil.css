@@ -38,12 +38,10 @@
 
 #sexe {
     grid-area: sexe;
-    font-family: "Menu";
 }
 
 #anniv {
     grid-area: anniv;
-    font-family: "Menu";
 }
 
 
@@ -51,6 +49,5 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid green;
     text-align: center;
 }

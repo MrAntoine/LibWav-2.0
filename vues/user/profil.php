@@ -42,16 +42,16 @@ if ($autorisation === true) {
 
     echo "</div>";
 
-    echo "<div id='subgrille'>";
-    echo " <p> Compte créé le: " . $affiche_user["created_at"] . "</p>";
-    echo " <p> nombre de téléchargements: " . $affiche_user["nb_telechargements"] . "</p>";
+    echo "<br /><div id='subgrille'>";
+    echo " <p> Compte créé le : " . $affiche_user["created_at"] . "</p>";
+    echo " <p> Nombre de téléchargement(s) : " . $affiche_user["nb_telechargements"] . "</p>";
 
     if ($role >= roleUser("modo")) {
         $total = checkSignalementsUser($id);
             echo "<br/>"."Signalé : ".$total." fois";
     }
 
-echo "<a href=\"index.php?action=profilConfiguration\"><button>Modifier mes données</button></a>";
+echo "<br /><a href=\"index.php?action=profilConfiguration\"><button>Modifier mes données</button></a>";
     echo "</div>";
 } else {
     echo needConnect();
