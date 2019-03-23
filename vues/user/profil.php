@@ -32,7 +32,7 @@ echo " <p id='nom'>" . $affiche_user["pseudo"] . "</p>";
 
 if ($autorisation === true) {
     if ($affiche_user["sexe"] != NULL ){
-        echo "<p id='sexe'> Sexe :".$affiche_user["sexe"]."</p>";
+        echo "<p id='sexe'> Sexe : ".$affiche_user["sexe"]."</p>";
     };
 
 

@@ -9,7 +9,7 @@
 #grille {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 50px 50px;
+    grid-template-rows: 50px 25px 25px;
     grid-template-areas:
             "photo  nom"
             "photo  sexe"
@@ -20,11 +20,10 @@
 
 
 .profil_avatar {
-    border: 1px solid purple;
-    /*max-width: 100px;
+    max-width: 100px;
     max-height: 100px;
     width: auto;
-    height: auto;*/
+    height: auto;
     grid-area: photo;
 }
 
@@ -39,10 +38,12 @@
 
 #sexe {
     grid-area: sexe;
+    font-family: "Menu";
 }
 
 #anniv {
     grid-area: anniv;
+    font-family: "Menu";
 }
 
 
@@ -50,4 +51,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: 1px solid green;
+    text-align: center;
 }
