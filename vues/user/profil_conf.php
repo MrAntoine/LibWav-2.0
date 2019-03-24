@@ -50,52 +50,51 @@ if ($autorisation === true) {
 
     echo "<label id='changer_nom'>Mon nom : </label>";
     if (getUserInfo($_SESSION["id"])['nom'] != NULL) {
-        echo "<input type='text' name='nom' class='nom' placeholder='" . getUserInfo($_SESSION['id'])['nom'] . "'><br />";
+        echo "<input type='text' name='nom' class='nom' placeholder='" . getUserInfo($_SESSION['id'])['nom'] . "'>";
     } else {
-        echo "<input type='text' name='nom' class='nom' ><br />";
+        echo "<input type='text' name='nom' class='nom' >";
     }
 
     echo "<label id='changer_prenom'>Mon prénom : </label>";
     if (getUserInfo($_SESSION["id"])['prenom'] != NULL) {
-        echo "<input type='text' name='prenom' class='prenom' placeholder='" . getUserInfo($_SESSION['id'])['prenom'] . "'><br />";
+        echo "<input type='text' name='prenom' class='prenom' placeholder='" . getUserInfo($_SESSION['id'])['prenom'] . "'>";
     } else {
-        echo "<input type='text' name='prenom' class='prenom'><br />";
+        echo "<input type='text' name='prenom' class='prenom'>";
     }
 
 
     echo "<label id='changer_sexe'>Je suis êtes un(e) : </label>";
     if($affiche_user["sexe"] == NULL ){
-        echo "<select name=\"sexe\" id='sexe_input'>
+        echo "<select name=\"sexe\" class='sexe'>
                     <option>Homme</option>
                     <option>Femme</option>
                     <option>Autre</option>
-               </select><br />";
+               </select>";
     }else {
-        echo "<p id='sexe_existe'>".$affiche_user["sexe"];
+        echo "<p class='sexe'>".$affiche_user["sexe"]."</p>";
     };
 
 
 
-    echo "<br/><label id='changer_anniv'>Je suis né(e) le: </label>";
+    echo "<label id='changer_anniv'>Je suis né(e) le: </label>";
     if ($affiche_user['anniversaire']=="0000-00-00") {
-        echo "<input type=\"date\" name=\"anniversaire\" id='anniv_input' value=\"date('Y-m-d')\" />";
+        echo "<input type=\"date\" name=\"anniversaire\" class='anniv' value=\"date('Y-m-d')\" />";
     }else {
-        echo "<p id='anniv_existe'>".$affiche_user["anniversaire"];
+        echo "<p class='anniv'>".$affiche_user["anniversaire"]."</p>";
     }
 
 
 
-    echo "<br /><label id='changer_lieu'>Je viens de : </label>";
+    echo "<label id='changer_lieu'>Je viens de : </label>";
     if ($affiche_user['pays'] == NULL){
-        echo "<input type='text' name='pays' id='lieu_pays'/>";
+        echo "<input type='text' name='pays' class='pays'/>";
     }else{
-        echo "<p id='pays_existe'>".$affiche_user['pays'];
+        echo "<p class='pays'>".$affiche_user['pays']."</p>";
     }
 
-    echo ", ";
 
     if ($affiche_user['region'] == NULL){
-        echo "<select name='region' id='region_input'>
+        echo "<select name='region' class='region'>
                     <option>Sélectionnez une région...</option>
                     <option>Auvergne-Rhône-Alpes</option>
                     <option>Bourgogne-Franche-Comté</option>
@@ -118,10 +117,10 @@ if ($autorisation === true) {
                     <option>Autre</option>
                 </select>";
     }else{
-        echo "<p id='region_input'>".$affiche_user['region'];
+        echo "<p class='region'>".$affiche_user['region']."</p>";
     };
 
-    echo "</div><br/><input type='submit' value='Enregistrer les modifications'/>";
+    echo "</div><br/><input type='submit' id='enregistrermodifs' value='Enregistrer les modifications'/>";
     echo "</form>";
 
 

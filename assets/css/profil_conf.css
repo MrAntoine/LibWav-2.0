@@ -35,6 +35,7 @@
     display: none;
 }
 
+
 #dataperso {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -45,10 +46,18 @@
             "changer_pseudo     pseudo"
             "changer_nom        nom"
             "changer_prenom     prenom"
-;
+            "changer_sexe       sexe"
+            "changer_anniv      anniv"
+            "changer_lieu       region"
+            "changer_lieu       pays";
 
     margin: auto 500px;
-    border: 1px solid blue;
+    margin-top: 5px;
+    border: 1px solid #46bbec;
+    -webkit-border-radius: 12pt;
+    -moz-border-radius: 12pt;
+    border-radius: 12pt;
+    padding: 10px;
 }
 
 
@@ -101,10 +110,77 @@
     justify-content: flex-start;
 }
 
+#changer_sexe  {
+    grid-area: changer_sexe;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: auto;
+    margin-right: 0px;
+}
 
+.sexe {
+    grid-area: sexe;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: auto;
+}
+
+#changer_anniv  {
+    grid-area: changer_anniv;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: auto;
+    margin-right: 0px;
+}
+
+.anniv {
+    grid-area: anniv;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: auto;
+}
+
+
+#changer_lieu {
+    grid-area: changer_lieu;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: auto;
+    margin-right: 0px;
+}
+
+.pays {
+    grid-area: pays;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: auto;
+}
+
+.region {
+    grid-area: region;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: auto;
+}
+
+#enregistrermodifs {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
 
 #downloaddata {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 50px;
 }
