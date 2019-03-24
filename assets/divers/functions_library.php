@@ -169,9 +169,9 @@ function AfficheSoundItem($result){
 //include('vues/user/infos_user_avatar.php');
 
 // echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
-    echo "<br/><span class='sound_item_date'>date: ".$result['date_publi']."</span>";
-    echo "<br/><span class='sound_item_titre'>Titre: ".$result['titre']."</span>";
-    echo "<br/>"."Description: ".$result['description'];
+    echo "<span class='sound_item_titre'><span class='entete'>Titre </span> : ".$result['titre']."</span><br />";
+    echo "<span class='entete'>Description </span> : ".$result['description']."<br />";
+    echo "<span class='sound_item_date'><span class='entete'>Date </span> : ".$result['date_publi']."</span>";
     echo"<br/>";
 
 // Vérifié si un like est deja mis..

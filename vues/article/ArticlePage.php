@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="../../assets/css/articles.css" type="text/css">
+
+
 <?php
 /**
  * Created by PhpStorm.
@@ -94,7 +97,7 @@ if (isset($_SESSION["id"])) {
     }
     // Affichage des sons avec le lecteur et differents boutons //
 
-    echo "<h2>Tout les articles: </h2>";
+    echo "<h2>Tous les articles: </h2>";
 
     //$contenu = "SELECT * FROM son WHERE nb_telechargements>=5";
     $contenu = "SELECT * FROM articles ";

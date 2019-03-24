@@ -39,7 +39,7 @@
     justify-content: space-around;
 }*/
 
-#wrapper_sound h3 {
+#wrapper_sound h2 {
     text-align: center;
     color: #2b4570;
     margin-bottom: 15px;
@@ -158,7 +158,10 @@ form #form_sound_search label {
 
 
 /* SIDE BAR RIGHT */
-
+.entete {
+    font-weight: bold;
+    font-family: "Menu";
+}
 
 /*  SOUND ITEM    */
 
@@ -167,15 +170,16 @@ form #form_sound_search label {
     flex-direction: row-reverse;
 }
 
-/*.postMsg {
-    float: right;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 5px;
-    background-color: #fff;
-    color: #000;
-    margin-right: 10px;
-}*/
+
+    /*.postMsg {
+        float: right;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 5px;
+        background-color: #fff;
+        color: #000;
+        margin-right: 10px;
+    }*/
 
 .nb_likes {
     margin-top:auto;
@@ -191,6 +195,7 @@ form #form_sound_search label {
 }
 
 .reportsound {
+    background-color: red;
     background-repeat: no-repeat;
     width: 30px;
     height: 30px;

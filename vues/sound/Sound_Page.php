@@ -82,7 +82,7 @@ echo "</section>";
 
         // Affichage des sons avec le lecteur et differents boutons //
 
-        echo "<h3>Sons les plus téléchargés : </h3>";
+        echo "<h2>Sons les plus téléchargés : </h2>";
 
         //$contenu = "SELECT * FROM son WHERE nb_telechargements>=5";
 
