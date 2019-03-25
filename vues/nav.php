@@ -31,6 +31,7 @@ if ($autorisation === true) {
 ?>
 
 <div id="mainnav">
+    <header>
     <a href='index.php'><img src="./assets/img/logo.png" alt="LibWav" id="logo"/></a>
     <a href='?action=homepage' class="maintext">Qui sommes-nous ?</a>
     <?php
@@ -64,9 +65,9 @@ if ($autorisation === true) {
     /*LOGIN*/
     if(!isset($_SESSION['id'])) {
 
-        echo "<form action=\"index.php?action=connexion\" method=\"POST\">
-        <input type=\"text\" placeholder=\"Votre email\" name=\"email\" required>
-        <input type=\"password\" placeholder=\"Votre mot de passe\" name=\"password\" required>
+        echo "<form id='login_form' action=\"index.php?action=connexion\" method=\"POST\">
+        <input type=\"text\" id='mail' placeholder=\"Votre email\" name=\"email\" required>
+        <input type=\"password\" id='password' placeholder=\"Votre mot de passe\" name=\"password\" required>
 
         <input type=\"submit\" value=\"Se connecter\">
     </form>";
