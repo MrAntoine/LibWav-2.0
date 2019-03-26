@@ -7,10 +7,12 @@
     text-align: center;
     z-index: 999;
     position: fixed;
-    padding: 20px;
+    padding: 15px;
+    padding-bottom: 30px;
     bottom: 0;
     left: 0;
     right: 0;
+    font-family: "Menu";
 }
 
 .btn_img{
@@ -95,7 +97,7 @@
 #handle{
     width: 8px;
     height: 8px;
-    background-color:royalblue;
+    background-color: #fae31f;
     border-radius: 50%;
     margin-left: -5px;
     transform: scale(2);
@@ -106,6 +108,11 @@
     height:20px;
 }
 
-
+#volumeSlider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
 
 
