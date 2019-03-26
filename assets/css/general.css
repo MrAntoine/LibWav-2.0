@@ -100,6 +100,29 @@ input[type="text"]:focus {
     padding-left: 10px;
 }
 
+input[type="email"] {
+    font-family: "Menu";
+    background: transparent;
+    border: 1px solid #2b4570;
+    padding: 5px;
+    -webkit-border-radius: 12pt;
+    -moz-border-radius: 12pt;
+    border-radius: 12pt;
+    margin: auto;
+}
+
+input[type="email"]::placeholder {
+    color: #2b4570;
+    padding-left: 10px;
+}
+
+input[type="email"]:focus {
+    outline: none;
+    background-color: #2b4570;
+    color: #fae31f;
+    padding-left: 10px;
+}
+
 
 input[type="password"] {
     font-family: "Menu";
@@ -493,3 +516,25 @@ button.btn_lecture:focus {
     color: #e39172;
 }
 
+/* CREATION DE COMPTE */
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.register h1, h3 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.register input {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+
+.register #password_check {
+    width: 225px;
+}
