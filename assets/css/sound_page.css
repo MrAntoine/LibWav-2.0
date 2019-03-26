@@ -222,13 +222,14 @@ form #form_sound_search label {
 .sound_item {
     width: 100%;
     height: auto;
-    background-image: linear-gradient(to top, #2b4570, #336090, #3a7daf, #409cce, #46bbec);
+    border: 1px dashed #2b4570;
     /*margin-top: 5px;
     margin-bottom: 5px;*/
     padding: 20px;
     border-radius: 12pt;
     margin-bottom: 20px;
 }
+
 
 
 .sound_item_date {
