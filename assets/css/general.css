@@ -181,6 +181,11 @@ input[type="submit"].reportsound:hover {
     border-color: red;
 }
 
+input[type="submit"].reportsound:focus {
+    background-color: red;
+    border-color: red;
+}
+
 button {
     font-family: "Menu";
     color: #46bbec;
@@ -206,18 +211,18 @@ button:focus {
 
 
 button.btn_lecture {
-    background-color: #e39172;
-    border-color: #e39172;
-}
-
-button.btn_lecture:hover {
     background-color: #46bbec;
     border-color: #46bbec;
 }
 
+button.btn_lecture:hover {
+    background-color: #2b4570;
+    border-color: #2b4570;
+}
+
 button.btn_lecture:focus {
-    background-color: white;
-    border-color: white;
+    background-color: black;
+    border-color: black;
 }
 
 .choisirbox {
