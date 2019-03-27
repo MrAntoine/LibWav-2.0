@@ -38,7 +38,7 @@ if ($autorisation === true) {
     if(isset($_GET['action'])) {
             $action = $_GET['action'];
             if($action = 'profil'){
-                echo "";
+                echo " ";
             }else {
         ?>
         <a href='?action=son' id="pagebanque" class="maintext">Banque Son</a>
@@ -72,6 +72,7 @@ if ($autorisation === true) {
         <input type=\"submit\" value=\"Se connecter\">
     </form>";
 
+
         ?>
 
         </header>
@@ -86,9 +87,15 @@ if ($autorisation === true) {
 
         <?php
     }
+
     ?>
 </div>
 
+<?php
+    if(isset($_SESSION['id'])) {
+                CompleteProfil();
+            }
+?>
 
             <nav>
                 <div class="navbar">

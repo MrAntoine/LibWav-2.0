@@ -52,7 +52,6 @@ if(isAjax() == false) {
     <?php
 
     if (isset($_SESSION['id'])) {
-        CompleteProfil();
             include('vues/nav.php');
     } else {
             include('vues/nav.php');
