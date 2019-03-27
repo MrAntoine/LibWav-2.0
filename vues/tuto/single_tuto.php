@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="../../assets/css/general.css" type="text/css">
+<link rel="stylesheet" href="../../assets/css/tutos.css" type="text/css">
+
 <?php
 /**
  * Created by PhpStorm.
@@ -19,6 +22,7 @@ if (isset($_SESSION["id"])) {
 
 ?>
 <section id="wrapper_tutoriel">
+
     <?php
 
     if ($autorisation === true) {

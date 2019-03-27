@@ -39,16 +39,21 @@ if (isset($_GET["id"]) && $_GET["id"] >= 1) {
 
         $source = $result['video_lien'];
 
-        echo "<a href='?action=tutoriels'>Retour à la liste des tutoriels</a> </br>";
+        echo "<a href='?action=tutoriels' id='retour_tutos'>Retour à la liste des tutoriels</a> </br>";
 
+        echo "<br/><h2 class='tutoriel_item_titre'>". $result['titre'] . "</h2>";
+        echo "<br/><h4 class='tutoriel_item_date'>Tuto publié le " . $result['date_publi'] . "</h4><br />";
+
+
+        echo "<div id='two_sides'>";
         echo "<iframe allow='fullscreen' width='420' height='315' src='" . $source . "' id=\'video\'> </iframe>";
 
 
         // echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
-        echo "<br/><span class='tutoriel_item_date'>date: " . $result['date_publi'] . "</span>";
-        echo "<br/><span class='tutoriel_item_titre'>Titre: " . $result['titre'] . "</span>";
-        echo "<br/>" . "Contenu: " . $result['contenu'];
-        echo "<br/>";
+
+
+        echo "<br/><div id='texte'>" .$result['contenu'];
+        echo "</div></div><br/>";
 
         // Vérifié si un like est deja mis..
         $totalLikes = countLikes($result['id']);
@@ -64,13 +69,14 @@ if (isset($_GET["id"]) && $_GET["id"] >= 1) {
         ?>
 
         <section id="commentaires">
-            <h3>LES COMMENTAIRES :</h3>
+            <h3>Vos commentaires : </h3>
 
             <form id='form_comment' method='post' action='?action=AddComment' >
                 <?php $id = $_SESSION["id"]; include('vues/user/infos_user_avatar.php');?>
                 <input type='hidden' name='post_id_tuto' value='<?php echo $id_tuto; ?>'>
+                <div id="commentaires">
                 <textarea name='post_contenu_tuto' placeholder='Entrez votre commentaire' required></textarea>
-                <input type='submit' value='Commenter'>
+                <input type='submit' value='Commenter'></div>
             </form>
             <div id='wrapper_comment'>
                 <?php AfficheComment($id_tuto); ?>
