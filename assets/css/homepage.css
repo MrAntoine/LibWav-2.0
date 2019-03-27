@@ -3,20 +3,22 @@
 /* PRESENTATION SITE*/
 #presentation {
     margin: auto;
+    color: black;
+    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
-#presentation .back {
-    color: #2b4570;
+#presentation h3 {
+    margin-bottom: 15px;
 }
-
 
 #presentation article {
     margin: auto 20px;
 }
 
 /* EQUIPE */
-#equipe .back {
-    color: #46bbec;
+#equipe h3 {
+    margin-bottom: 15px;
 }
 
 #equipe .equipe {
@@ -26,6 +28,7 @@
     text-align: center;
     /*border: solid 1px purple;*/
     margin: 20px 100px;
+    margin-top: 0px;
     grid-template-areas:
             "img1 text1 rien1"
             "rien2 text2 img2"

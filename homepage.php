@@ -5,27 +5,19 @@
 
 </div>
 <div id="presentation">
-    <h1 class="back">Présentation</h1>
-    <h1 class="front">Présentation</h1>
+    <h3>Présentation</h3>
     <article>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae luctus magna, a bibendum magna. Etiam
-        feugiat nulla sit amet augue mollis rhoncus. Vivamus tristique viverra sollicitudin. Quisque venenatis pulvinar
-        gravida. Sed egestas volutpat porta. Nullam semper hendrerit turpis in dictum. Fusce vel porttitor erat. Etiam
-        sollicitudin, magna a interdum auctor, risus felis accumsan sapien, vitae feugiat orci ante eu mi. Phasellus
-        arcu lorem, elementum vel leo ut, viverra vulputate neque. Cras non sapien nisi.
+        LibWav est un site sur lequel tu peux télécharger de nombreux sons, divers et variés, tels que des extraits musicaux, des bruitages, etc... C'est LÉGAL et GRATUIT puisque nos fichiers sont libres de droits.
+        Sur LibWav il y a aussi des tutos et des articles pour t'aider à mieux comprendre et choisir ton matériel selon tes besoins.
+        Nous sommes quatre étudiants DUT Métiers du Multimédia et de l'Internet (MMI) de l'IUT de Lens. Ce site est un projet tutoré réalisé tout au long de notre deuxième année de DUT.
 
-        Integer imperdiet diam sed lorem placerat laoreet. Cras interdum ex id ex dapibus dapibus. Morbi nunc diam,
-        sagittis vitae neque bibendum, dictum semper massa. Duis semper purus at sollicitudin euismod. Donec turpis
-        sapien, elementum in lobortis et, varius malesuada augue. Donec tempor justo ac sapien vulputate pharetra.
-        Aenean vel tortor mi. Donec congue massa at turpis facilisis mollis ac iaculis nulla.
     </article>
 </div>
 
 
 
 <div id="equipe">
-    <h1 class="back">Équipe</h1>
-    <h1 class="front">Équipe</h1>
+    <h3>Équipe</h3>
     <article class="equipe">
         <!--Antoine-->
         <div class="imgleft" id="img1">
