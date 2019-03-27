@@ -124,10 +124,11 @@ body {
 
 /*   BANDEAU ALERTE   */
 #alerte-bandeau {
-    background: red;
-    padding: 20px;
+    background: #fae31f;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
+    margin-left: 0px;
 }
 
 #alerte-bandeau > a {
@@ -137,6 +138,18 @@ body {
     font-weight: normal;
     font-size: 1rem;
 }
+
+#alerte-bandeau-croix {
+     color: black;
+     font-size: 20px;
+     border: none;
+     font-weight: normal;
+ }
+
+#alerte-bandeau-croix:hover {
+    font-weight: bolder;
+    background-color: #fae31f;
+}
 /* BANDEAU ALERTE END */
 
 
@@ -144,14 +157,18 @@ body {
 /*  NUMERO DE PAGE  */
 
 #wrapper_nb_page {
-    background-color: yellow;
+    background-color: #2b4570;
     display: flex;
     flex-direction: row;
     width: 30%;
     margin: auto;
+    -webkit-border-radius: 12pt;
+    -moz-border-radius: 12pt;
+    border-radius: 12pt;
 }
 
 #wrapper_nb_page .numero_page {
+    color: white;
     margin: auto;
     padding: 8px;
     cursor: pointer;

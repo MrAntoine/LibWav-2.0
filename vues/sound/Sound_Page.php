@@ -77,12 +77,15 @@ echo "</section>";
                 break;
         }
 
+        echo "<h2>Sons les plus téléchargés : </h2>";
 
         AfficheNbPage($nb_sons);
 
+        echo "<br />";
+
         // Affichage des sons avec le lecteur et differents boutons //
 
-        echo "<h2>Sons les plus téléchargés : </h2>";
+
 
         //$contenu = "SELECT * FROM son WHERE nb_telechargements>=5";
 

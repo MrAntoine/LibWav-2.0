@@ -410,7 +410,7 @@ function CompleteProfil() {
     if($pComplete < 100){
         echo "<div id='alerte-bandeau'>";
         echo "<a href='?action=profilConfiguration'>";
-        echo "Votre profil est compléter à ".$pComplete."%";
+        echo "Votre profil est complété à ".$pComplete."%";
         echo "</a>";
         echo "<button id='alerte-bandeau-croix'>X</button>";
         echo "</div>";
