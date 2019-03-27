@@ -4,28 +4,35 @@
 #presentation {
     margin: auto;
     color: black;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     margin-top: 20px;
     text-align: justify;
 }
 
 #presentation h3 {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    font-size: 30px;
 }
 
 #presentation article {
     margin: auto 20px;
+    font-size: 20px;
+}
+#presentation article b {
+    font-size: 20px;
 }
 
 /* EQUIPE */
 #equipe h3 {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    font-size: 30px;
+
 }
 
 #equipe .equipe {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-rows: 150px 150px 150px 150px;
     text-align: center;
     /*border: solid 1px purple;*/
     margin: 20px 100px;
@@ -40,6 +47,7 @@
 .equipe img {
     width: 150px;
     height: 150px;
+    border-radius:12pt;
 }
 
 #equipe .equipe .imgleft {
@@ -57,6 +65,26 @@ ul li {
     /*border: solid 1px yellow;*/
     text-align: justify;
     padding : 10px;
+
+}
+#equipe .equipe #text1 {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+#equipe .equipe #text2 {
+    margin-right: 15px;
+    margin-top: 20px;
+}
+
+#equipe .equipe #text3 {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+#equipe .equipe #text4 {
+    margin-right: 15px;
+    margin-top: 20px;
 }
 
 #equipe .equipe #text1 ul {
@@ -64,6 +92,7 @@ ul li {
     /*border: solid 1px yellow;*/
     text-align: justify;
     padding : 10px;
+    margin-left: 15px;
 }
 
 #equipe .equipe #text2 ul {
@@ -71,6 +100,7 @@ ul li {
     /*border: solid 1px yellow;*/
     text-align: right;
     padding : 10px;
+    margin-right: 15px;
 }
 
 #equipe .equipe #text3 ul {
@@ -78,6 +108,7 @@ ul li {
     /*border: solid 1px yellow;*/
     text-align: justify;
     padding : 10px;
+    margin-left: 15px;
 }
 
 #equipe .equipe #text4 ul {
@@ -85,7 +116,10 @@ ul li {
     /*border: solid 1px yellow;*/
     text-align: right;
     padding : 10px;
+    margin-right: 15px;
+
 }
+
 
 #equipe .equipe .text .person {
     display: flex;

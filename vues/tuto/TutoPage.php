@@ -41,8 +41,8 @@ if (isset($_GET["id"]) && $_GET["id"] >= 1) {
 
         echo "<a href='?action=tutoriels' id='retour_tutos'>Retour à la liste des tutoriels</a> </br>";
 
-        echo "<br/><h2 class='tutoriel_item_titre'>". $result['titre'] . "</h2>";
-        echo "<br/><h4 class='tutoriel_item_date'>Tuto publié le " . $result['date_publi'] . "</h4><br />";
+        echo "<br/><h2 class='tutoriel_item_titre'> Tuto Conseils et Matériel PART1 en intérieur</h2>";
+        echo "<br/><h4 class='tutoriel_item_date'>Tuto publié le " . /*$result['date_publi'] .*/ " 2019-03-28</h4><br />";
 
 
         echo "<div id='two_sides'>";
@@ -51,8 +51,18 @@ if (isset($_GET["id"]) && $_GET["id"] >= 1) {
 
         // echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
 
+        /*. $result['titre'] .*/
 
-        echo "<br/><div id='texte'>" .$result['contenu'];
+        echo "<br/><div id='texte'>" /*.$result['contenu'];*/
+        ?>
+
+        Bonjour à tous !
+        Libwav vous propose dès maintenant un tutoriel pour vous présenter le matériel à utiliser ainsi que quelques
+        conseils et astuces lorsque vous voulez tourner une vidéo et obtenir une bande son correcte. Celui-ci est découpé
+        en deux parties : la première partie concerne le matériel utile en intérieur et la deuxième partie traite
+        l'utilisation du matériel en prise de son extérieure.
+        Je vous laisse avec la vidéo et je vous souhaite une bonne captation !
+    <?php
         echo "</div></div><br/>";
 
         // Vérifié si un like est deja mis..

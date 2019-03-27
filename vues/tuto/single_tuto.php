@@ -44,7 +44,7 @@ if (isset($_SESSION["id"])) {
     // echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
     echo "<br/><span class='tutoriel_item_date'>date: " . $result['date_publi'] . "</span>";
     echo "<br/><span class='tutoriel_item_titre'>Titre: " . $result['titre'] . "</span>";
-    echo "<br/>" . "Contenu: " . $result['contenu'];
+    echo "<br/>" . "Contenu: ". $result['contenu'];
     echo "<br/>";
 
     // Vérifié si un like est deja mis..

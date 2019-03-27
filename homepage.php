@@ -24,7 +24,7 @@
     <article class="equipe">
         <!--Antoine-->
         <div class="imgleft" id="img1">
-            <img src="" alt="photo Antoine">
+            <img src="./assets/img/Antoine%20pp%20Libwav.jpg" alt="photo Antoine">
         </div>
 
         <div class="text" id="text1">
@@ -57,13 +57,13 @@
         </div>
 
         <div class="imgright" id="img2">
-            <img src="" alt="photo Antoine">
+            <img src="./assets/img/Léa%20T%20pp%20Libwav.jpg" alt="photo Antoine">
         </div>
 
 
         <!--Perso3-->
         <div class="imgleft" id="img3">
-            <img src="" alt="photo Antoine">
+            <img src="./assets/img/Elise%20pp%20Libwav.jpg" alt="photo Antoine">
         </div>
 
         <div class="text" id="text3">
@@ -94,7 +94,7 @@
         </div>
 
         <div class="imgright" id="img4">
-            <img src="" alt="photo Antoine">
+            <img src="./assets/img/Léa%20L%20pp%20Libwav.jpg" alt="photo Antoine">
         </div>
     </article>
 </div>

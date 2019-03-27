@@ -418,7 +418,7 @@ select:focus {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url(../img/test.jpg);
+    background-image: url(../img/banque.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -451,7 +451,7 @@ select:focus {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url(../img/test.jpg);
+    background-image: url(../img/tutos.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -486,7 +486,7 @@ select:focus {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url(../img/test.jpg);
+    background-image: url(../img/articles.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -518,7 +518,7 @@ select:focus {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url(../img/test.jpg);
+    background-image: url(../img/communaute.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;

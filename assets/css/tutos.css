@@ -25,7 +25,7 @@
 
 #two_sides {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: "video     texte";
 }
@@ -48,6 +48,8 @@ iframe {
     justify-content: justify;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin: auto;
+    margin-right: 100px;
 }
 
 
