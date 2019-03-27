@@ -147,6 +147,31 @@ input[type="password"]:focus {
     padding-left: 10px;
 }
 
+input[type="date"] {
+    font-family: "Menu";
+    background: transparent;
+    border: 1px solid #2b4570;
+    padding: 5px;
+    -webkit-border-radius: 12pt;
+    -moz-border-radius: 12pt;
+    border-radius: 12pt;
+    margin: auto;
+    width: 174.4px;
+    height: 28px;
+}
+
+input[type="date"]::placeholder {
+    color: #2b4570;
+    padding-left: 10px;
+}
+
+input[type="date"]:focus {
+    outline: none;
+    background-color: #2b4570;
+    color: #fae31f;
+    padding-left: 10px;
+}
+
 input[type="submit"] {
     font-family: "Menu";
     color: #46bbec;
@@ -186,6 +211,7 @@ input[type="submit"].reportsound:focus {
     border-color: red;
 }
 
+
 button {
     font-family: "Menu";
     color: #46bbec;
@@ -223,6 +249,31 @@ button.btn_lecture:hover {
 button.btn_lecture:focus {
     background-color: black;
     border-color: black;
+}
+
+select {
+    font-family: "Menu";
+    background: transparent;
+    border: 1px solid #2b4570;
+    padding: 5px;
+    -webkit-border-radius: 12pt;
+    -moz-border-radius: 12pt;
+    border-radius: 12pt;
+    margin: auto;
+    width: 174.4px;
+    height: 28px;
+}
+
+select::placeholder {
+    color: #2b4570;
+    padding-left: 10px;
+}
+
+select:focus {
+    outline: none;
+    background-color: #2b4570;
+    color: #fae31f;
+    padding-left: 10px;
 }
 
 .choisirbox {
