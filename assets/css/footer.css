@@ -1,4 +1,17 @@
 footer {
+    margin-bottom: 6%;
+    left: 0px;
+    right: 0px;
+    width: 1600px;
+    margin-left: -50px;
     background-color: darkgrey;
-    margin-bottom: 7%;
+    margin-top: 20px;
+
+}
+
+footer #logo {
+    margin-left: 60px;
+    height: 50px;
+    padding: 0px;
+
 }
