@@ -38,7 +38,7 @@ if ($autorisation === true) {
     };
 
 
-    if ($affiche_user["anniversaire"] !="0000-00-00" ){
+    if ($affiche_user["anniversaire"] != NULL ){
         echo "<p id='anniv'> Anniversaire :".$affiche_user["anniversaire"]."</p>";
     };
 

@@ -76,8 +76,8 @@ if ($autorisation === true) {
 
 
 
-    echo "<label id='changer_anniv'>Je suis né(e) le: </label>";
-    if ($affiche_user['anniversaire']=="0000-00-00") {
+    echo "<label id='changer_anniv'>Je suis né(e) le : </label>";
+    if ($affiche_user['anniversaire']==NULL) {
         echo "<input type=\"date\" name=\"anniversaire\" class='anniv' value=\"date('Y-m-d')\" />";
     }else {
         echo "<p class='anniv'>".$affiche_user["anniversaire"]."</p>";

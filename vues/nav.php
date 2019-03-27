@@ -78,7 +78,6 @@ if ($autorisation === true) {
         </header>
         <div id="subheader">
             <?php
-            echo "<div id='mdp'> Mot de passé oublié ?</div>";
             echo "<div id='inscription'><a href='index.php?action=login'>Pas encore inscrit(e) ?</a></div>";
             ?>
         </div>
