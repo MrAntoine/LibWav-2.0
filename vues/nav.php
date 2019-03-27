@@ -35,10 +35,10 @@ if ($autorisation === true) {
     <a href='index.php'><img src="./assets/img/logo.png" alt="LibWav" id="logo"/></a>
     <a href='?action=homepage' class="maintext">Qui sommes-nous ?</a>
     <?php
-    if(isset($_GET['action'])) {
+    if(isset($_SESSION['id'])) {
             $action = $_GET['action'];
-            if($action = 'profil'){
-                echo " ";
+            if($action != 'profil'){
+                echo "";
             }else {
         ?>
         <a href='?action=son' id="pagebanque" class="maintext">Banque Son</a>
@@ -47,9 +47,17 @@ if ($autorisation === true) {
         <a href='?action=communaute' id="pagecommunaute" class="maintext">Communauté</a>
         <?php
             }
-    }
-    if($action = 'profilConfiguration'){
+
+    if($action != 'profilConfiguration'){
         echo "";
+    }else {
+        ?>
+        <a href='?action=son' id="pagebanque" class="maintext">Banque Son</a>
+        <a href='?action=tutoriels' id="pagetutos" class="maintext">Tutoriels</a>
+        <a href='?action=articles' id="pagearticles" class="maintext">Articles</a>
+        <a href='?action=communaute' id="pagecommunaute" class="maintext">Communauté</a>
+        <?php
+    }
     }
     if(isset($_SESSION['id'])) {
         ?>
@@ -96,6 +104,14 @@ if ($autorisation === true) {
             }
 ?>
 
+
+            <?php
+if(isset($_SESSION['id'])) {
+    if (isset($_GET['action'])) {
+        $action = $_GET['action'];
+        if ($action != 'profil') {
+            ?>
+
             <nav>
                 <div class="navbar">
                     <a href="?action=son">
@@ -128,22 +144,61 @@ if ($autorisation === true) {
 
                 </div>
             </nav>
+
             <?php
 
 
-     if(isset($_GET['action'])) {
-         $action = $_GET['action'];
-         if ($action == 'profil') {
-             echo "";
-         }
-     }
-
-    if(isset($_GET['action'])) {
-        $action = $_GET['action'];
-        if ($action == 'profilConfiguration') {
-            echo "";
         }
     }
+}
+
+
+/*if(isset($_SESSION['id'])) {
+    if (isset($_GET['action'])) {
+        $action = $_GET['action'];
+        if ($action != 'profilConfiguration') {
+            ?>
+
+            <nav>
+                <div class="navbar">
+                    <a href="?action=son">
+                        <div id="first">
+                            <div class="hidden">Banque Son</div>
+                            <span>Banque Son</span>
+                        </div>
+                    </a>
+
+                    <a href="?action=tutoriels">
+                        <div id="second">
+                            <div class="hidden">Tutoriels</div>
+                            <span>Tutoriels</span>
+                        </div>
+                    </a>
+
+                    <a href="?action=articles">
+                        <div id="third">
+                            <div class="hidden">Articles</div>
+                            <span>Articles</span>
+                        </div>
+                    </a>
+
+                    <a href="?action=communaute">
+                        <div id="fourth">
+                            <div class="hidden">Communauté</div>
+                            <span>Communauté</span>
+                        </div>
+                    </a>
+
+                </div>
+            </nav>
+
+            <?php
+
+
+        }
+    }
+}
+*/
 ?>
 
 
