@@ -83,3 +83,61 @@ input[type='submit'] {
     flex-direction: row;
     justify-content: flex-start;
 }
+
+
+/* LISTE */
+.liste_tutos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+
+a.tutoriel_item {
+    margin: auto;
+    border: 1px dotted #46bbec;
+    -webkit-border-radius: 12pt;
+    -moz-border-radius: 12pt;
+    border-radius: 12pt;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+a.tutoriel_item:hover {
+    background-color: #46bbec;
+}
+
+
+#ajout_tuto form p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+#ajout_tuto form p #post_video{
+    width: 200px;
+}
+
+#ajout_tuto form p #post_title {
+    margin-bottom: 20px;
+}
+
+#ajout_tuto form p input[type="checkbox"] {
+    margin: auto;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+#ajout_tuto form p #checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}

@@ -214,6 +214,7 @@ function AfficheSoundItem($result){
 
 function AfficheTutorielItem($result)
 {
+    echo "<div class='liste_tutos'>";
 
     if ($_SESSION) {
         $idSession = $_SESSION['id'];
@@ -228,11 +229,14 @@ function AfficheTutorielItem($result)
 //$id = $result["idCreateur"];
 //include('vues/user/infos_user_avatar.php');
 
-     echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
-    echo "<br/><span class='tutoriel_item_date'>date: " . $result['date_publi'] . "</span>";
-    echo "<br/><span class='tutoriel_item_titre'>Titre: " . $result['titre'] . "</span>";
-    echo "<br/>" . "Description: " . $result['description'];
+
+
+    echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
+    echo "<br/><span class='tutoriel_item_date'>Date : " . $result['date_publi'] . "</span>";
+    echo "<br/><span class='tutoriel_item_titre'>Titre : " . $result['titre'] . "</span>";
+    echo "<br/>" . "Description : " . $result['description'];
     echo "<br/>";
+    echo "</div>";
 
 // Vérifié si un like est deja mis..
     $totalLikes = countLikes($result['id']);
