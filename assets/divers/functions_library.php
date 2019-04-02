@@ -459,7 +459,7 @@ function Badge($nbpts){
         $badge = "w.bronze";
     }elseif ($nbpts>=50){
         $badge = "a.bronze";
-    }elseif ($nbpts>=100{
+    }elseif ($nbpts>=100){
         $badge = "v.bronze";
     }elseif($nbpts>=150){
         $badge = "l.argent";
