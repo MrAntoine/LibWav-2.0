@@ -342,6 +342,25 @@ function AfficheComment($idpost) {
     }
 }
 
+
+function AfficheCommentArticle($idpost) {
+    global $pdo;
+    //$sql = "SELECT * FROM commentaires WHERE id IN (SELECT idCommentaire FROM lien_commentaire WHERE idPost=?)";
+    $sql = "SELECT * FROM commentaires_articles WHERE id_Post=? ";
+    $query = $pdo->prepare($sql);
+    $query->execute(array($idpost));
+
+    while ($result = $query->fetch()){
+        $id = $result["idCreateur"];
+        echo "<div class='commentaire_article'>";
+        echo "<p>".$result['contenu']."</p>";
+        echo "<span>".$result['date_publi']."</span>";
+        echo "<p>".InfoUserAvatar($id)."</p>";
+
+        echo "</div>";
+    }
+}
+
 /*
 
 function AddComment($idpost) {

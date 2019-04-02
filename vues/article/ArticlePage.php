@@ -70,25 +70,26 @@ if (isset($_SESSION["id"])) {
             }
 
         }
-/*
+
         ?>
 
-        <section id="commentaires">
-            <h3>LES COMMENTAIRES :</h3>
+       <section id="commentaires">
+            <h3>Vos commentaires : </h3>
 
-            <form id='form_comment' method='post' action='?action=AddComment' >
+            <form id='form_comment' method='post' action='?action=addComment' >
                 <?php $id = $_SESSION["id"]; include('vues/user/infos_user_avatar.php');?>
-                <input type='hidden' name='post_id_comment' value='<?php echo $id_article; ?>'>
-                <textarea name='post_contenu_comment' placeholder='Entrez votre commentaire' required></textarea>
-                <input type='submit' value='Commenter'>
+                <input type='hidden' name='post_id_article' value='<?php echo $id_article; ?>'>
+                <div id="commentaires">
+                <textarea name='post_contenu_article' placeholder='Entrez votre commentaire' required></textarea>
+                <input type='submit' value='Commenter'></div>
             </form>
             <div id='wrapper_comment'>
-                <?php AfficheComment($id_article); ?>
+                <?php AfficheCommentArticle($id_article); ?>
             </div>
         </section>
 
         <?php
-*/
+
     }else {
 
     if ($autorisation === true) {

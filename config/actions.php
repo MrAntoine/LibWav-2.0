@@ -30,6 +30,7 @@ $listeDesActions = array(
     "statistiques" => "vues/admin/stats_générales.php",
    // "singleTuto" => "vues/tuto/single_tuto.php",
     "AddComment" => "traitements/tuto/addComment.php",
+    "addComment" => "traitements/article/addCommentArticle.php",
     "login" => "vues/login.php",
     "changements" => "traitements/user/changements.php",
     "homepage" => "homepage.php",
