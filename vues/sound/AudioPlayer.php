@@ -28,7 +28,7 @@
     <div id="player">
         <input hidden id="src_player"/>
         <div id="AudiPlayerSongTitle">Aucun son sélectionné</div>
-        <div id="AudiPlayerSongTime">Durée : 0</div>
+       <!-- <div id="AudiPlayerSongTime">Durée : 0</div> -->
         <div id="buttons">
             <a id="AudioPlayerPlay"><img src="assets/img/play-button.svg" alt="bouton lecture lecteur audio" class="btn_img"/></a>
             <a class="cacher" id="AudioPlayerPause"><img src="assets/img/pause-button.svg" alt="bouton pause lecteur audio" class="btn_img"/></a>
