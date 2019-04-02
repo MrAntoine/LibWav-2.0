@@ -48,6 +48,9 @@ if ($autorisation === true) {
     echo " <p> Compte créé le : " . $affiche_user["created_at"] . "</p>";
     echo " <p> Nombre de téléchargement(s) : " . $affiche_user["nb_telechargements"] . "</p>";
 
+    echo "<p> <img id='imgbadge' src='uploads/badges/".Badge($affiche_user["points"]).".svg' alt='badge libwav'></p>";
+
+
     if ($role >= roleUser("modo")) {
         $total = checkSignalementsUser($id);
             echo "<br/>"."Signalé : ".$total." fois";
