@@ -17,5 +17,7 @@ echo "
 
 <footer>
     <a href='index.php'><img src="./assets/img/logo.png" alt="LibWav" id="logo"/></a>
-
+    <span>Tous droits réservés</span>
+    <a href='?action=mentionslegales'>Mentions Légales</a>
+    <a href='?action=cgu'>CGU</a>
 </footer>

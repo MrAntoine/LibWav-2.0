@@ -36,20 +36,18 @@ if ($autorisation === true) {
     <a href='?action=homepage' class="maintext">Qui sommes-nous ?</a>
     <?php
     if(isset($_GET['action'])) {
-            $action = $_GET['action'];
-            if($action = 'profil'){
-                echo "";
-            }else {
-        ?>
-        <a href='?action=son' id="pagebanque" class="maintext">Banque Son</a>
-        <a href='?action=tutoriels' id="pagetutos" class="maintext">Tutoriels</a>
-        <a href='?action=articles' id="pagearticles" class="maintext">Articles</a>
-        <a href='?action=communaute' id="pagecommunaute" class="maintext">Communauté</a>
-        <?php
+        $action = $_GET['action'];
+        if (isset($_SESSION['id'])) {
+            if ($action == 'profil' || $action == 'profilConfiguration' ) {
+
+                ?>
+                <a href='?action=son' id="pagebanque" class="maintext">Banque Son</a>
+                <a href='?action=tutoriels' id="pagetutos" class="maintext">Tutoriels</a>
+                <a href='?action=articles' id="pagearticles" class="maintext">Articles</a>
+                <a href='?action=communaute' id="pagecommunaute" class="maintext">Communauté</a>
+                <?php
             }
-    }
-    if($action = 'profilConfiguration'){
-        echo "";
+        }
     }
     if(isset($_SESSION['id'])) {
         ?>
@@ -94,7 +92,12 @@ if ($autorisation === true) {
     if(isset($_SESSION['id'])) {
                 CompleteProfil();
             }
-?>
+            ?>
+<?php
+
+$action = filter_input(INPUT_GET, 'action');
+if($action != 'profil' && $action != 'profilConfiguration' ): ?>
+
 
             <nav>
                 <div class="navbar">
@@ -128,23 +131,10 @@ if ($autorisation === true) {
 
                 </div>
             </nav>
-            <?php
+
+<?php endif; ?>
 
 
-     if(isset($_GET['action'])) {
-         $action = $_GET['action'];
-         if ($action == 'profil') {
-             echo "";
-         }
-     }
-
-    if(isset($_GET['action'])) {
-        $action = $_GET['action'];
-        if ($action == 'profilConfiguration') {
-            echo "";
-        }
-    }
-?>
 
 
 

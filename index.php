@@ -35,7 +35,7 @@ if(isAjax() == false) {
 
 
 <body>
-
+<div id="body">
 
     <?php
     if (isset($_SESSION['info'])) {
@@ -97,7 +97,7 @@ if(isAjax() == false) {
             </div>
         </div>-->
 
-
+</div>
         <?php
         include('vues/footer.php');
         ?>

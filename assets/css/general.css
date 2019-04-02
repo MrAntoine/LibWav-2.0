@@ -34,8 +34,14 @@
 body {
     font-size: 16px;
     text-align: justify;
-    margin: auto 50px;
     font-family: "Courier";
+}
+
+#body {
+    margin: auto 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 input {
@@ -565,3 +571,5 @@ select:focus {
 .register #password_check {
     width: 225px;
 }
+
+
