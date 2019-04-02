@@ -119,7 +119,7 @@ if ($autorisation === true) {
 
             // on copie le fichier dans le dossier de destination
             move_uploaded_file($tmp_file, $content_dir . $name_file);
-
+    var_dump($_POST);
 
             $date = date('j.m.Y');
             if (isset($_POST["post_description"])) {

@@ -26,7 +26,7 @@ if ($autorisation === true) {
       echo "<br/>";
       echo "<input type='submit' name='upload' value='Upload'></form>";
   */
-    $sql = "SELECT DISTINCT categorie_name FROM son_categorie";
+    $sql = "SELECT DISTINCT categorie_name, id FROM son_categorie";
     $query = $pdo->prepare($sql);
     $query->execute();
     ?>
@@ -38,7 +38,7 @@ if ($autorisation === true) {
             <select name='post_categorie' placeholder='Choisir une catégorie' required>
                 <?php
                 while ($result = $query->fetch()) {
-                    echo "<option>" . $result['categorie_name'] . "</option> ";
+                    echo "<option value='".$result['id'] ."'>" . $result['categorie_name'] . "</option> ";
                 }
                 ?>
             </select>
