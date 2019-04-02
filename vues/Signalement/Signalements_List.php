@@ -23,18 +23,20 @@ if ($autorisation === true) {
     $query_user = $pdo->prepare($avert_user);
     $query_user->execute();
 
-    echo "<h2>Liste des utilisateurs signalés : </h2>";
+    echo "<h2>Utilisateurs signalés : </h2>";
+
+    echo "<div id='utilisateurs_signales'>";
 
     while ($result = $query_user->fetch()) {
 
-        echo  "<br/>"."utilisateur signalé: " . lien('?action=profil&id='.getUserInfo($result['id_user'])['id'],getUserInfo($result['id_user'])['pseudo']) ;
-        echo  "<br/>"."demandeur: " . lien('?action=profil&id='.getUserInfo($result['id_demandeur'])['id'],getUserInfo($result['id_demandeur'])['pseudo']) ;
-        echo "<br/>"."raison: ".$result['raison'];
-        echo "<br/>"."date: ".$result['date'];
-        echo "<br/>"."etat: ".$result['etat'];
+        echo  "<br/>"."<span class='intitule'>Utilisateur signalé :</span> " . lien('?action=profil&id='.getUserInfo($result['id_user'])['id'],getUserInfo($result['id_user'])['pseudo']) ;
+        echo  "<br/>"."<span class='intitule'>Utilsateur signalant :</span> " . lien('?action=profil&id='.getUserInfo($result['id_demandeur'])['id'],getUserInfo($result['id_demandeur'])['pseudo']) ;
+        echo "<br/>"."<span class='intitule'>Raison :</span> ".$result['raison'];
+        echo "<br/>"."<span class='intitule'>Date :</span> ".$result['date'];
+        echo "<br/>"."<span class='intitule'>État du signalement :</span> ".$result['etat'];
         echo"<br/>";
     }
-
+    echo "</div>";
 
 // Affichage des signalements utilisateurs du plus recent au plus ancien //
 
@@ -42,18 +44,22 @@ if ($autorisation === true) {
     $query_post = $pdo->prepare($avert_post);
     $query_post->execute();
 
-    echo "<h2>Liste des sons signalés :</h2>";
+    echo "<h2>Sons signalés :</h2>";
+
+    echo "<div id='sons_signales'>";
+
 
     while ($result = $query_post->fetch()) {
         echo "<ul>";
-        echo  "<li>"."contenu signalé: " . getSonInfo($result['id_post'])['titre'] ;
-        echo  "<li>"."demandeur: " . lien('?action=profil&id='.getUserInfo($result['id_demandeur'])['id'],getUserInfo($result['id_demandeur'])['pseudo']) ;
-        echo "<li>"."raison: ".$result['raison'];
-        echo "<li>"."date: ".$result['date'];
-        echo "<li>"."etat: ".$result['etat'];
+        echo  "<li>"."<span class='intitule'>Son signalé :</span> " . getSonInfo($result['id_post'])['titre'] ;
+        echo  "<li>"."<span class='intitule'>Utilisateur signalant :</span>" . lien('?action=profil&id='.getUserInfo($result['id_demandeur'])['id'],getUserInfo($result['id_demandeur'])['pseudo']) ;
+        echo "<li>"."<span class='intitule'>Raison :</span>".$result['raison'];
+        echo "<li>"."<span class='intitule'>Date :</span>".$result['date'];
+        echo "<li>"."<span class='intitule'>État du signalement :</span>".$result['etat'];
         echo "</ul> <br/>";
     }
 
+    echo "</div>";
 
 }else{
     echo "erreur:";

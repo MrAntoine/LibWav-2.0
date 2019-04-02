@@ -8,7 +8,7 @@
 
 
 
-echo "<h1>Erreur 404</h1><p>La page demandé n'est pas disponible ou n'existe pas.</p>";
+echo "<h1>Erreur 404</h1><p>La page que vous essayez de trouver n'est pas sur nos ondes. Êtes-vous sûr(e) de sa fréquence ?</p>";
 
 
 

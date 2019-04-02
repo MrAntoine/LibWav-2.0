@@ -242,7 +242,6 @@ button:focus {
     color: #2b4570;
 }
 
-
 button.btn_lecture {
     background-color: #46bbec;
     border-color: #46bbec;
@@ -257,6 +256,7 @@ button.btn_lecture:focus {
     background-color: black;
     border-color: black;
 }
+
 
 select {
     font-family: "Menu";
@@ -299,7 +299,16 @@ select:focus {
     background-color: #46bbec;
     color: #2b4570;
 }
-ì
+
+
+
+
+
+
+
+
+
+
 /* MAINNAV */
 #mainnav {
     height: 121px;
@@ -573,4 +582,36 @@ select:focus {
     width: 225px;
 }
 
+.admin_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    margin:auto;
+}
+
+.admin_button h2 {
+    margin-bottom: 10px;
+}
+
+.admin_button button {
+    margin:auto;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+
+.admin_button #signalements_list {
+    margin: auto;
+    text-align: justify;
+}
+
+.admin_button #signalements_list .intitule {
+    font-family: "Menu";
+}
+
+#utilisateurs_signales {
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
 
