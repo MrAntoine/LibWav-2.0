@@ -65,7 +65,7 @@ $id = $_SESSION['id'];
         $query->execute(array ('region' => $region, 'id' => $_SESSION['id']));
     };
 
-        header("Location: index.php?action=login");
+        header("Location: index.php?action=profil");
 //  }
 
     ?>
