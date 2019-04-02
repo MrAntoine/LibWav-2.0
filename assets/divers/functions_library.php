@@ -168,7 +168,7 @@ function AfficheSoundItem($result){
 //$id = $result["idCreateur"];
 //include('vues/user/infos_user_avatar.php');
 
-    echo "<br/>Auteur: <a href='index.php?action=profil&id=".$result['idCreateur']."'>" . getUserInfo($result['idCreateur'])['pseudo']. "</a>" ;
+    echo "<br/><span class=\"entete\">Auteur</span> : <a href='index.php?action=profil&id=".$result['idCreateur']."'>" . getUserInfo($result['idCreateur'])['pseudo']. "</a>" ;
     echo "<br/><span class='sound_item_titre'><span class='entete'>Titre </span> : ".$result['titre']."</span><br />";
     echo "<span class='entete'>Description </span> : ".$result['description']."<br />";
     echo "<span class='sound_item_date'><span class='entete'>Date </span> : ".$result['date_publi']."</span>";

@@ -49,7 +49,7 @@ if (isset($_SESSION["id"])) {
 
             $source = $result['image'];
 
-            echo "<a href='?action=article'>Retour à la liste des articles</a> </br>";
+            echo "<a href='?action=article' id='retour_articles'>Retour à la liste des articles</a> </br>";
 
             echo "<img src='uploads/article/".$source."' alt='miniature_article' class='miniature' />";
 

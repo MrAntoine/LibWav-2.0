@@ -111,44 +111,13 @@
 
 }
 
-#retour_tutos {
+#retour_articles {
     font-family: "Menu";
     font-size: 20px;
 }
 
-
-#two_sides {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "video     texte";
-}
-
-
-
-iframe {
-    grid-area: video;
-    border: 1px dashed #2b4570;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-#texte {
-    grid-area: texte;
-    display: flex;
-    flex-direction: row;
-    justify-content: justify;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin: auto;
-    margin-right: 100px;
-}
-
-
 textarea {
-    border: 1px solid #2b4570;
+    border: 1px solid #fae31f;
     border-radius:12pt;
     width: 400px;
     height: 100px;
@@ -161,13 +130,13 @@ textarea {
 }
 
 textarea::placeholder {
-    color: #2b4570;
+    color: #fae31f;
     padding-left: 10px;
 }
 
 textarea:focus {
     outline: none;
-    background-color: #2b4570;
+    background-color: #fae31f;
     color: #fae31f;
     padding-left: 10px;
 }
