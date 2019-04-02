@@ -51,7 +51,7 @@ if (isset($_SESSION["id"])) {
 
             echo "<a href='?action=article'>Retour à la liste des articles</a> </br>";
 
-            echo "<img src='uploads/article/".$source."' alt='miniature_article' class='miniature' >";
+            echo "<img src='uploads/article/".$source."' alt='miniature_article' class='miniature' />";
 
 
             // echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
