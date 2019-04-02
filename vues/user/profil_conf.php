@@ -65,10 +65,11 @@ if ($autorisation === true) {
 
     echo "<label id='changer_sexe'>Je suis êtes un(e) : </label>";
     if($affiche_user["sexe"] == NULL ){
-        echo "<select name=\"sexe\" class='sexe'>
-                    <option>Homme</option>
-                    <option>Femme</option>
-                    <option>Autre</option>
+        echo "<select name=\"sexe\" class='sexe' required='required'>
+                    <option value=''>Sélectionner votre sexe...</option>
+                    <option value='Homme'>Homme</option>
+                    <option value='Femme'>Femme</option>
+                    <option value='Autre'>Autre</option>
                </select>";
     }else {
         echo "<p class='sexe'>".$affiche_user["sexe"]."</p>";
@@ -87,34 +88,34 @@ if ($autorisation === true) {
 
     echo "<label id='changer_lieu'>Je viens de : </label>";
     if ($affiche_user['pays'] == NULL){
-        echo "<input type='text' name='pays' class='pays'/>";
+        echo "<input type='text' name='pays' class='pays' required='required'/>";
     }else{
         echo "<p class='pays'>".$affiche_user['pays']."</p>";
     }
 
 
     if ($affiche_user['region'] == NULL){
-        echo "<select name='region' class='region'>
-                    <option>Sélectionnez une région...</option>
-                    <option>Auvergne-Rhône-Alpes</option>
-                    <option>Bourgogne-Franche-Comté</option>
-                    <option>Bretagne</option>
-                    <option>Centre-Val de Loire</option>
-                    <option>Corse</option>
-                    <option>Grand Est</option>
-                    <option>Guadeloupe</option>
-                    <option>Guyane</option>
-                    <option>Hauts-de-France</option>
-                    <option>Île-de-France</option>
-                    <option>Martinique</option>
-                    <option>Mayotte</option>
-                    <option>Normandie</option>
-                    <option>Nouvelle-Aquitaine</option>
-                    <option>Occitanie</option>
-                    <option>Pays de la Loire</option>
-                    <option>Provence-Alpes-Côte d'Azur</option>
-                    <option>La Réunion</option>
-                    <option>Autre</option>
+        echo "<select name='region' class='region' required='required'>
+                    <option value=''>Sélectionnez une région...</option>
+                    <option value='Auvergne-Rhône-Alpes'>Auvergne-Rhône-Alpes</option>
+                    <option value='Bourgogne-Franche-Comté'>Bourgogne-Franche-Comté</option>
+                    <option value='Bretagne'>Bretagne</option>
+                    <option value='Centre-Val de Loire'>Centre-Val de Loire</option>
+                    <option value='Corse'>Corse</option>
+                    <option value='Grand Est'>Grand Est</option>
+                    <option value='Guadeloupe'>Guadeloupe</option>
+                    <option value='Guyane'>Guyane</option>
+                    <option value='Hauts-de-France'>Hauts-de-France</option>
+                    <option value='Île-de-France'>Île-de-France</option>
+                    <option value='Martinique'>Martinique</option>
+                    <option value='Mayotte'>Mayotte</option>
+                    <option value='Normandie'>Normandie</option>
+                    <option value='Nouvelle-Aquitaine'>Nouvelle-Aquitaine</option>
+                    <option value='Occitanie'>Occitanie</option>
+                    <option value='Pays de la Loire'>Pays de la Loire</option>
+                    <option value='Provence-Alpes-Côte d'Azur'>Provence-Alpes-Côte d'Azur</option>
+                    <option value='La Réunion'>La Réunion</option>
+                    <option value='Autre'>Autre</option>
                 </select>";
     }else{
         echo "<p class='region'>".$affiche_user['region']."</p>";

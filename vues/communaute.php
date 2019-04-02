@@ -22,7 +22,7 @@
 
         <div class="question"><li>Pourquoi autant d’informations sont demandées dans le compte ?</li></div>
         <blockquote class="réponse">Pour la simple et bonne raison qu’on veut savoir qui tu es ! Sérieusement, nous
-            sommes un groupe d’étudiants, comme c’est expliqué <b>ici</b> (clique, aller, tu verras, on est cools) et par
+            sommes un groupe d’étudiants, comme c’est expliqué <a href="?action=communaute" target="_blank">ici</a> (clique, aller, tu verras, on est cools) et par
             conséquent, on voulait savoir les différents types de personnes étant intéressés par le téléchargement
             GRATUIT et LÉGAL de sons.
         </blockquote>
@@ -31,7 +31,7 @@
         <blockquote class="réponse">Les données que l’on récolte sont uniquement utiles pour nos statistiques, afin de
             savoir d’où tu viens, qui tu es, jusqu’où notre site est allé, quel type de population il touche, la tranche
             d’âge moyenne, le sexe, le lieu de vie, enfin toutes les infos que tu as rempli ! (Et si tu ne l’as toujours
-            pas fait, tu peux aller <b>ici</b> et le faire, t’en as pour trois secondes et demie, après tout tu te connais
+            pas fait, tu peux aller <a href="?action=profilConfiguration" target="_blank">ici</a>  et le faire, t’en as pour trois secondes et demie, après tout tu te connais
             mieux que nous !).
         </blockquote>
 
