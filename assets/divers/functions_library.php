@@ -228,7 +228,7 @@ function AfficheTutorielItem($result)
 //$id = $result["idCreateur"];
 //include('vues/user/infos_user_avatar.php');
 
-// echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
+     echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
     echo "<br/><span class='tutoriel_item_date'>date: " . $result['date_publi'] . "</span>";
     echo "<br/><span class='tutoriel_item_titre'>Titre: " . $result['titre'] . "</span>";
     echo "<br/>" . "Description: " . $result['description'];
@@ -267,6 +267,9 @@ function AfficheTutorielItem($result)
 
 }
 
+
+
+
 function AfficheArticleItem($result)
 {
 
@@ -279,12 +282,8 @@ function AfficheArticleItem($result)
 
     echo "<a class='article_item' href='?action=article&id=".$result['id']."''>";
 
-// Affichage des avatars utilisateur //
-//$id = $result["idCreateur"];
-//include('vues/user/infos_user_avatar.php');
-
-// echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
-    echo "<br/><img class='article_item_image' src='/uploads/article/".$result['image']."' alt='miniature article'>";
+     echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
+    echo "<br/><img class='article_item_image' src='/uploads/article/".$result['image']."' alt='miniature article'/>";
     echo "<br/><span class='article_item_date'>date: " . $result['date_publi'] . "</span>";
     echo "<br/><span class='article_item_titre'>Titre: " . $result['titre'] . "</span>";
     echo "<br/>" . "Description: " . $result['description'];
@@ -440,6 +439,12 @@ function AfficheNbPage($nb_sons){
 
 }
 
+
+function ClearString($string){
+
+    $stringClear =0;
+    return $stringClear;
+}
 
 
 
