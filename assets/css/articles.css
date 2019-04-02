@@ -89,3 +89,149 @@
     justify-content: justify;
 
 }
+
+/* LISTE */
+
+#wrapper_articles h2 {
+    text-align: center;
+    color: #fae31f;
+    margin-bottom: 20px;
+}
+
+#wrapper_articles h3 {
+    text-align: center;
+    color: #fae31f;
+    margin-bottom: 15px;
+}
+
+#wrapper_articles h4 {
+    margin-top: -5px;
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+#retour_tutos {
+    font-family: "Menu";
+    font-size: 20px;
+}
+
+
+#two_sides {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "video     texte";
+}
+
+
+
+iframe {
+    grid-area: video;
+    border: 1px dashed #2b4570;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#texte {
+    grid-area: texte;
+    display: flex;
+    flex-direction: row;
+    justify-content: justify;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: auto;
+    margin-right: 100px;
+}
+
+
+textarea {
+    border: 1px solid #2b4570;
+    border-radius:12pt;
+    width: 400px;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+textarea::placeholder {
+    color: #2b4570;
+    padding-left: 10px;
+}
+
+textarea:focus {
+    outline: none;
+    background-color: #2b4570;
+    color: #fae31f;
+    padding-left: 10px;
+}
+
+input[type='submit'] {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+/* LISTE */
+.liste_articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+
+a.article_item {
+    margin: auto;
+    border: 1px dotted #fae31f;
+    -webkit-border-radius: 12pt;
+    -moz-border-radius: 12pt;
+    border-radius: 12pt;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+a.article_item:hover {
+    background-color: #fae31f;
+}
+
+
+#ajout_tuto form p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+#ajout_tuto form p #post_video{
+    width: 200px;
+}
+
+#ajout_tuto form p #post_title {
+    margin-bottom: 20px;
+}
+
+#ajout_tuto form p input[type="checkbox"] {
+    margin: auto;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+#ajout_tuto form p #checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
