@@ -31,7 +31,7 @@
             <div class="person">Antoine Vanderbrecht</div>
             <div class="role">Chef de projet & développeur back-end</div>
             <ul>
-                <li>Amoureux du PHP et de MySQL.</li>
+                <li>Amoureux du PHP / MySQL et Javascript.</li>
                 <li>Gestion des fonctionnalités du site.</li>
                 <li>Gestion de la base de données du site.</li>
 
