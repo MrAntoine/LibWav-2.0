@@ -46,7 +46,7 @@ $(function() {
         $.post( $(this).attr("action"),
             $(this ).serializeArray(),
             function(data) {
-                $("#wrapper_report").empty().append(data);
+                $("#wrapper_filtre").append(data);
                 playTmp();
             });
     });
@@ -80,7 +80,12 @@ $(function() {
 
 
     $('a#signalements_btn_admin').click(function(){
-            $("#signalements_list").load("?action=signalements");
+        $("#signalements_list").load("?action=signalements");
+
+    });
+
+    $('a#stats_btn_admin').click(function(){
+        $("#stats_list").load("?action=statistiques");
 
     });
 

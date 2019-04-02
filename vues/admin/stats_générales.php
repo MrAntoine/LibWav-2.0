@@ -13,13 +13,13 @@ $sql = "SELECT COUNT(*) FROM son";
 $query = $pdo->prepare($sql);
 $query->execute();
 $result =$query->fetch();
-echo "Nombre de sons uploadés".$result['COUNT(*)'];
 
 
 
+echo "</br>Nombre de total sons uploadés : ". Statistique("son");
+echo "</br>Nombre de total d'utilisateurs : ". Statistique("user");
+echo "</br>Nombre de total catégories : ". Statistique("son_categorie");
+//echo "</br>Nombre de total téléchargements : ". Statistique("user", "nb_telechargements");
 
-echo "Nombre de sons uploadés : ". Statistique("son");
-echo "Nombre de catégories : ". Statistique("son_categorie");
-echo "Nombre de téléchargements : ". Statistique("user", "nb_telechargements");
 
 ?>
