@@ -29,12 +29,13 @@ if ($autorisation === true) {
 
     while ($result = $query_user->fetch()) {
 
-        echo  "<br/>"."<span class='intitule'>Utilisateur signalé :</span> " . lien('?action=profil&id='.getUserInfo($result['id_user'])['id'],getUserInfo($result['id_user'])['pseudo']) ;
-        echo  "<br/>"."<span class='intitule'>Utilsateur signalant :</span> " . lien('?action=profil&id='.getUserInfo($result['id_demandeur'])['id'],getUserInfo($result['id_demandeur'])['pseudo']) ;
-        echo "<br/>"."<span class='intitule'>Raison :</span> ".$result['raison'];
-        echo "<br/>"."<span class='intitule'>Date :</span> ".$result['date'];
-        echo "<br/>"."<span class='intitule'>État du signalement :</span> ".$result['etat'];
-        echo"<br/>";
+        echo "<div class='one_user'>";
+        echo  "<span class='intitule'>Utilisateur signalé :</span><span class='rempli'>" . lien('?action=profil&id='.getUserInfo($result['id_user'])['id'],getUserInfo($result['id_user'])['pseudo'])."</span>" ;
+        echo  "<span class='intitule'>Utilsateur signalant :</span><span class='rempli'> " . lien('?action=profil&id='.getUserInfo($result['id_demandeur'])['id'],getUserInfo($result['id_demandeur'])['pseudo'])."</span>" ;
+        echo "<span class='intitule'>Raison :</span><span class='rempli'> ".$result['raison']."</span>";
+        echo "<span class='intitule'>Date :</span><span class='rempli'> ".$result['date']."</span>";
+        echo "<span class='intitule'>État du signalement :</span><span class='rempli'> ".$result['etat']."</span>";
+        echo"</div><br/>";
     }
     echo "</div>";
 
@@ -51,11 +52,11 @@ if ($autorisation === true) {
 
     while ($result = $query_post->fetch()) {
         echo "<ul>";
-        echo  "<li>"."<span class='intitule'>Son signalé :</span> " . getSonInfo($result['id_post'])['titre'] ;
-        echo  "<li>"."<span class='intitule'>Utilisateur signalant :</span>" . lien('?action=profil&id='.getUserInfo($result['id_demandeur'])['id'],getUserInfo($result['id_demandeur'])['pseudo']) ;
-        echo "<li>"."<span class='intitule'>Raison :</span>".$result['raison'];
-        echo "<li>"."<span class='intitule'>Date :</span>".$result['date'];
-        echo "<li>"."<span class='intitule'>État du signalement :</span>".$result['etat'];
+        echo  "<li>"."<span class='intitule'>Son signalé :</span><span class='rempli'>". getSonInfo($result['id_post'])['titre']."</span>" ;
+        echo  "<li>"."<span class='intitule'>Utilisateur signalant :</span><span class='rempli'>" . lien('?action=profil&id='.getUserInfo($result['id_demandeur'])['id'],getUserInfo($result['id_demandeur'])['pseudo'])."</span>" ;
+        echo "<li>"."<span class='intitule'>Raison :</span><span class='rempli'>".$result['raison']."</span>";
+        echo "<li>"."<span class='intitule'>Date :</span><span class='rempli'>".$result['date']."</span>";
+        echo "<li>"."<span class='intitule'>État du signalement :</span><span class='rempli'>".$result['etat']."</span>";
         echo "</ul> <br/>";
     }
 
