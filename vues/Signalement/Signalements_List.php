@@ -51,13 +51,14 @@ if ($autorisation === true) {
 
 
     while ($result = $query_post->fetch()) {
+        echo "<div class='one_sound'>";
         echo "<ul>";
         echo  "<li>"."<span class='intitule'>Son signalé :</span><span class='rempli'>". getSonInfo($result['id_post'])['titre']."</span>" ;
         echo  "<li>"."<span class='intitule'>Utilisateur signalant :</span><span class='rempli'>" . lien('?action=profil&id='.getUserInfo($result['id_demandeur'])['id'],getUserInfo($result['id_demandeur'])['pseudo'])."</span>" ;
         echo "<li>"."<span class='intitule'>Raison :</span><span class='rempli'>".$result['raison']."</span>";
         echo "<li>"."<span class='intitule'>Date :</span><span class='rempli'>".$result['date']."</span>";
         echo "<li>"."<span class='intitule'>État du signalement :</span><span class='rempli'>".$result['etat']."</span>";
-        echo "</ul> <br/>";
+        echo "</ul></div><br/>";
     }
 
     echo "</div>";

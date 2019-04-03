@@ -631,10 +631,15 @@ select:focus {
     flex-direction: row;
     justify-content: flex-start;
     margin-bottom: 5px;
-
 }
 
 .one_user {
+    border: 1px solid red;
+    border-radius: 12pt;
+    padding: 10px;
+}
+
+.one_sound {
     border: 1px solid red;
     border-radius: 12pt;
     padding: 10px;
