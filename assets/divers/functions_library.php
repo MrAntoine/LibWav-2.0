@@ -510,6 +510,55 @@ function Badge($nbpts){
         $badge = "l.bronze";
     }
 
+    return $badge;
+}
+
+
+function BadgeUp($nbpts){
+
+    function Calcul($ptstoup, $nbpts){
+        $up = $ptstoup - $nbpts;
+        return $up;
+    }
+
+    if($nbpts>=10000){
+        $badge = 0;
+    }elseif($nbpts>=8000) {
+        $badge = Calcul(10000, $nbpts);
+    }elseif($nbpts>=5000){
+        $badge = Calcul(8000, $nbpts);
+    }elseif ($nbpts>=3000){
+        $badge = Calcul(5000, $nbpts);
+    }elseif ($nbpts>=1500){
+        $badge = Calcul(3000, $nbpts);
+    }elseif ($nbpts>=1000){
+        $badge = Calcul(1500, $nbpts);
+    }elseif($nbpts>=800){
+        $badge = Calcul(1000, $nbpts);
+    }elseif($nbpts>=600) {
+        $badge = Calcul(800, $nbpts);
+    }elseif($nbpts>=500){
+        $badge = Calcul(600, $nbpts);
+    }elseif ($nbpts>=400){
+        $badge = Calcul(500, $nbpts);
+    }elseif ($nbpts>=300){
+        $badge = Calcul(400, $nbpts);
+    }elseif ($nbpts>=150){
+        $badge = Calcul(300, $nbpts);
+    }elseif($nbpts>=100){
+        $badge = Calcul(150, $nbpts);
+    }elseif($nbpts>=50) {
+        $badge = Calcul(100, $nbpts);
+    }elseif($nbpts>=30){
+        $badge = Calcul(50, $nbpts);
+    }elseif ($nbpts>=10){
+        $badge = Calcul(30, $nbpts);
+    }elseif ($nbpts>=5){
+        $badge = Calcul(10, $nbpts);
+    }elseif ($nbpts>=0){
+        $badge = Calcul(5, $nbpts);
+    }
+
 
     return $badge;
 }
