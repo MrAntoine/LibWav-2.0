@@ -472,43 +472,44 @@ function ClearString($string){
 
 function Badge($nbpts){
 
-    if($nbpts>=0){
-        $badge = "l.bronze";
-    }elseif($nbpts>=5) {
-        $badge = "i.bronze";
-    }elseif($nbpts>=10){
-        $badge = "b.bronze";
-    }elseif ($nbpts>=30){
-        $badge = "w.bronze";
-    }elseif ($nbpts>=50){
-        $badge = "a.bronze";
-    }elseif ($nbpts>=100){
-        $badge = "v.bronze";
-    }elseif($nbpts>=150){
-        $badge = "l.argent";
-    }elseif($nbpts>=300) {
-        $badge = "i.argent";
-    }elseif($nbpts>=500){
-        $badge = "b.argent";
-    }elseif ($nbpts>=800){
-        $badge = "w.argent";
-    }elseif ($nbpts>=1000){
-        $badge = "a.argent";
-    }elseif ($nbpts>=1500){
-        $badge = "v.argent";
-    }elseif($nbpts>=3000){
-        $badge = "l.or";
-    }elseif($nbpts>=1000) {
-        $badge = "i.or";
-    }elseif($nbpts>=3000){
-        $badge = "b.or";
-    }elseif ($nbpts>=5000){
-        $badge = "w.or";
-    }elseif ($nbpts>=8000){
-        $badge = "a.or";
-    }elseif ($nbpts>=10000){
+    if($nbpts>=10000){
         $badge = "v.or";
+    }elseif($nbpts>=8000) {
+        $badge = "a.or";
+    }elseif($nbpts>=5000){
+        $badge = "w.or";
+    }elseif ($nbpts>=3000){
+        $badge = "b.or";
+    }elseif ($nbpts>=1500){
+        $badge = "i.or";
+    }elseif ($nbpts>=1000){
+        $badge = "l.or";
+    }elseif($nbpts>=800){
+        $badge = "v.argent";
+    }elseif($nbpts>=600) {
+        $badge = "a.argent";
+    }elseif($nbpts>=500){
+        $badge = "w.argent";
+    }elseif ($nbpts>=400){
+        $badge = "b.argent";
+    }elseif ($nbpts>=300){
+        $badge = "i.argent";
+    }elseif ($nbpts>=150){
+        $badge = "l.argent";
+    }elseif($nbpts>=100){
+        $badge = "v.bronze";
+    }elseif($nbpts>=50) {
+        $badge = "a.bronze";
+    }elseif($nbpts>=30){
+        $badge = "w.bronze";
+    }elseif ($nbpts>=10){
+        $badge = "b.bronze";
+    }elseif ($nbpts>=5){
+        $badge = "i.bronze";
+    }elseif ($nbpts>=0){
+        $badge = "l.bronze";
     }
+
 
     return $badge;
 }
