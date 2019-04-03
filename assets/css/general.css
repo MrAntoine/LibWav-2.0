@@ -597,8 +597,11 @@ select:focus {
     margin:auto;
 }
 
-.admin_button h2 {
-    margin-bottom: 10px;
+#signalements_list h2 {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .admin_button button {
@@ -611,14 +614,36 @@ select:focus {
 .admin_button #signalements_list {
     margin: auto;
     text-align: justify;
+    width: 500px;
 }
 
 .admin_button #signalements_list .intitule {
     font-family: "Menu";
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-weight: bold;
+
 }
+
+.admin_button #signalements_list .rempli {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+
+}
+
+.one_user {
+    border: 1px solid red;
+    border-radius: 12pt;
+    padding: 10px;
+}
+
 
 #utilisateurs_signales {
     margin-bottom: 30px;
     margin-top: -10px;
+
 }
 
