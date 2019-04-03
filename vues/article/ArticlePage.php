@@ -49,15 +49,15 @@ if (isset($_SESSION["id"])) {
 
             $source = $result['image'];
 
-            echo "<a href='?action=article'>Retour à la liste des articles</a> </br>";
+            echo "<a href='?action=article' id='retour_articles'>Retour à la liste des articles</a> </br>";
 
             echo "<img src='uploads/article/".$source."' alt='miniature_article' class='miniature' />";
 
 
             // echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
-            echo "<br/><span class='article_item_date'>date: " . $result['date_publi'] . "</span>";
-            echo "<br/><span class='article_item_titre'>Titre: " . $result['titre'] . "</span>";
-            echo "<br/>" . "Contenu: " . $result['contenu'];
+            echo "<br/><span class='article_item_date'>Date : " . $result['date_publi'] . "</span>";
+            echo "<br/><span class='article_item_titre'>Titre : " . $result['titre'] . "</span>";
+            echo "<br/>" . "Contenu : " . $result['contenu'];
             echo "<br/>";
 
             // Vérifié si un like est deja mis..
@@ -98,7 +98,8 @@ if (isset($_SESSION["id"])) {
     }
     // Affichage des sons avec le lecteur et differents boutons //
 
-    echo "<h2>Tous les articles: </h2>";
+    echo "<h2>Nos derniers articles : </h2>";
+
 
     //$contenu = "SELECT * FROM son WHERE nb_telechargements>=5";
     $contenu = "SELECT * FROM articles ";
@@ -106,8 +107,11 @@ if (isset($_SESSION["id"])) {
     $query_contenu->execute();
 
     while ($result = $query_contenu->fetch()) {
+        echo "<div class='liste_articles'>";
         afficheArticleItem($result);
+        echo "</div>";
     }
+
     ?>
 
 </section>
