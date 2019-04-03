@@ -15,11 +15,12 @@
 #grille {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 30px 30px;
+    grid-template-rows: 50px 30px 30px 100px;
     grid-template-areas:
             "photo  nom"
             "photo  sexe"
-            "photo  anniv";
+            "photo  anniv"
+            "badge  badge";
 
     margin: auto 400px;
 }
@@ -61,10 +62,27 @@
     justify-content: center;
 }
 
+#imgbadge {
+    grid-area: badge;
+    width: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
 
 #subgrille {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+}
+
+a button {
+    margin-top: 10px;
+}
+
+#bold {
+    font-weight: bold;
 }

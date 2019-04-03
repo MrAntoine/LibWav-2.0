@@ -29,8 +29,9 @@ if (isset($_SESSION["id"])) {
         $autorisation = true;
     }
 }
-
 echo " <p id='nom'>" . $affiche_user["pseudo"] . "</p>";
+
+
 
 if ($autorisation === true) {
     if ($affiche_user["sexe"] != NULL ){
@@ -42,14 +43,15 @@ if ($autorisation === true) {
         echo "<p id='anniv'> Anniversaire :".$affiche_user["anniversaire"]."</p>";
     };
 
+    echo "<img id='imgbadge' src='uploads/badges/".Badge($affiche_user["points"]).".svg' alt='badge libwav'>";
+
     echo "</div>";
 
     echo "<br /><div id='subgrille'>";
     echo " <p> Compte créé le : " . $affiche_user["created_at"] . "</p>";
     echo " <p> Nombre de téléchargement(s) : " . $affiche_user["nb_telechargements"] . "</p>";
 
-    echo "<p> Il te manque ".BadgeUp($affiche_user["points"])." pour débloquer le prochain badge communautaire !</p>";
-    echo "<p> <img id='imgbadge' src='uploads/badges/".Badge($affiche_user["points"]).".svg' alt='badge libwav'></p>";
+    echo "<br /><p id='bold'> Il te manque ".BadgeUp($affiche_user["points"])." points pour débloquer le prochain badge communautaire !</p>";
 
     if ($role >= roleUser("modo")) {
         $total = checkSignalementsUser($id);
