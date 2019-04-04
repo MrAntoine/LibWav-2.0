@@ -58,8 +58,10 @@ if ($autorisation === true) {
             echo "<br/>"."Signalé : ".$total." fois";
     }
 
-echo "<br /><a href=\"index.php?action=profilConfiguration\"><button>Modifier mes données</button></a>";
-    echo "</div>";
+    if($_GET['id'] == $_SESSION['id']) {
+        echo "<br /><a href=\"index.php?action=profilConfiguration\"><button>Modifier mes données</button></a>";
+        echo "</div>";
+    }
 } else {
     echo needConnect();
 }
