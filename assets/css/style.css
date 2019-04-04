@@ -82,6 +82,14 @@ body {
 }
 
 
+.icon-down-arrow-in-a-circl {
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    -webkit-mask-image: url(../img/telechargement.svg);
+    mask-image: url(../img/telechargement.svg);
+}
+
 
 #wrapper_report {
     background: red;

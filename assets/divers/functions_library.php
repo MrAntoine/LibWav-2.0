@@ -195,7 +195,7 @@ function AfficheSoundItem($result){
         echo "<form class='downloadForm' method='POST' action='?action=downloadSound'>";
             echo "<input type='hidden'  class='postid' name='idPost' value='" . $result['id'] . "'>";
             echo "<input type='hidden'  class='reporterid' name='idReporter' value='" . $idSession . "'>";
-            echo "<input type='submit' name='downloadsound' value='' class='downloadsound'>";
+            echo "<input type='submit' name='downloadsound' value='' class='icon-down-arrow-in-a-circl'>";
         echo "</form>";
 
 
