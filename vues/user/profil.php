@@ -42,23 +42,25 @@ if ($autorisation === true) {
     if ($affiche_user["anniversaire"] != NULL ){
         echo "<p id='anniv'> Anniversaire :".$affiche_user["anniversaire"]."</p>";
     };
-
-    echo "<img id='imgbadge' src='uploads/badges/".Badge($affiche_user["points"]).".svg' alt='badge libwav'>";
-
     echo "</div>";
+
 
     echo "<br /><div id='subgrille'>";
     echo " <p> Compte créé le : " . $affiche_user["created_at"] . "</p>";
     echo " <p> Nombre de téléchargement(s) : " . $affiche_user["nb_telechargements"] . "</p>";
+    echo "</div>";
 
-    echo "<br /><p id='bold'> Il te manque ".BadgeUp($affiche_user["points"])." points pour débloquer le prochain badge communautaire !</p>";
+    echo "<img id='imgbadge' src='uploads/badges/".Badge($affiche_user["points"]).".svg' alt='badge libwav'>";
+
+
+    echo "<div id='center'><br /><p id='bold'> Il te manque ".BadgeUp($affiche_user["points"])." points pour débloquer le prochain badge communautaire !</p>";
 
     if ($role >= roleUser("modo")) {
         $total = checkSignalementsUser($id);
             echo "<br/>"."Signalé : ".$total." fois";
     }
 
-    if($_GET['id'] == $_SESSION['id']) {
+    if($_GET["id"] == $_SESSION["id"]) {
         echo "<br /><a href=\"index.php?action=profilConfiguration\"><button>Modifier mes données</button></a>";
         echo "</div>";
     }

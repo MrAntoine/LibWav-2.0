@@ -28,6 +28,5 @@ if ($autorisation === true) {
 
     Report($requette,$id_post,$id_demandeur,$raison,$date,$etat);
 
-
 }
 ?>
