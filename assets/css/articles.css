@@ -111,6 +111,10 @@
 
 }
 
+.article_item_image {
+    width: 50px;
+}
+
 #retour_articles {
     font-family: "Menu";
     font-size: 20px;
@@ -258,4 +262,39 @@ a.article_item:hover {
     font-family: "Titre";
     margin-left: 10px;
 
+}
+
+
+
+/* CONTENU */
+
+#article #content img {
+    width: 400px;
+    border-radius: 12pt;
+    grid-area: img;
+}
+
+#article .article_item_titre {
+    font-family: "Titre";
+    font-size :
+    text-align: left;
+    color: #fae31f;
+    margin-bottom: 10px;
+}
+
+#article #content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+            "img text"
+            "img text";
+}
+
+#article #content .content_text {
+    grid-area: text;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

@@ -32,8 +32,8 @@ if ($autorisation === true) {
     ?>
 
     <div id="upload_sound">
-    <form method="post" enctype="multipart/form-data" action="index.php?action=soundUpload">
-        <p>
+        <form method="post" enctype="multipart/form-data" action="index.php?action=soundUpload">
+            <p>
             <span>
                 <label for='fileToUpload' class='choisirbox'>Choisir le son à ajouter</label>
                 <input type='file' name='fichier' id='fileToUpload' required size="30">
@@ -46,12 +46,12 @@ if ($autorisation === true) {
                     ?>
                 </select>
             </span>
-            <span id="center">
+                <span id="center">
             <input type='checkbox' name='conditions_utilisation' required><a href="?action=cgu">J'accepte les conditions générales
                     d'utilisation, et d'upload de fichier sonore</a></span>
-            <input type="submit" name="upload" value="Uploader">
-        </p>
-    </form>
+                <input type="submit" name="upload" value="Uploader">
+            </p>
+        </form>
     </div>
 
     <?php

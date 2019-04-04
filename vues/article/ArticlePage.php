@@ -51,14 +51,16 @@ if (isset($_SESSION["id"])) {
 
             echo "<a href='?action=article' id='retour_articles'>Retour à la liste des articles</a> </br>";
 
-            echo "<img src='uploads/article/".$source."' alt='miniature_article' class='miniature' />";
 
-
+            echo "<div id='article'>";
+            echo "<br/><h2>" . $result['titre'] . "</h2>";
             // echo  "<br/>"."Auteur: " . getUserInfo($result['idCreateur'])['pseudo'] ;
-            echo "<br/><span class='article_item_date'>Date : " . $result['date_publi'] . "</span>";
-            echo "<br/><span class='article_item_titre'>Titre : " . $result['titre'] . "</span>";
-            echo "<br/>" . "Contenu : " . $result['contenu'];
-            echo "<br/>";
+            echo "<br/><h4 class='article_item_date'>Article publié le " . $result['date_publi'] . "</h4>";
+
+            echo "<div id='content'>";
+            echo "<img src='uploads/article/".$source."' alt='miniature_article' class='miniature' />";
+            echo "<span class='content_text'>" .$result['contenu']."</span>";
+            echo "<br/></div>";
 
             // Vérifié si un like est deja mis..
             $totalLikes = countLikes($result['id']);

@@ -292,7 +292,7 @@ function AfficheArticleItem($result)
     echo "<a class='article_item' href='?action=article&id=".$result['id']."''>";
 
      echo  "<br/>"."Auteur : " . getUserInfo($result['idCreateur'])['pseudo'] ;
-    echo "<br/><img class='article_item_image' src='/uploads/article/".$result['image']."' alt='miniature article'/>";
+    /*echo "<br/><img class='article_item_image' src='uploads/article/".$result['image']."' alt='miniature article'/>";*/
     echo "<br/><span class='article_item_date'>Date : " . $result['date_publi'] . "</span>";
     echo "<br/><span class='article_item_titre'>Titre : " . $result['titre'] . "</span>";
     echo "<br/>" . "Description : " . $result['description'];

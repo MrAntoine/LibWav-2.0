@@ -31,10 +31,8 @@
 }
 
 
-
 iframe {
     grid-area: video;
-    border: 1px dashed #2b4570;
     margin: auto;
     display: flex;
     flex-direction: row;

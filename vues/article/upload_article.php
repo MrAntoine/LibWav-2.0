@@ -46,7 +46,7 @@ if ($autorisation === true) {
             <label>Selectionnez une miniature</label>
             <input type='file' name='fileToUpload' id='fileToUpload' required>
             <input type='text' name='post_title' placeholder='Entrez un titre' required>
-            <textarea rows="4" cols="50" name="post_description" maxlength="100" placeholder='Entrez une courte description' required></textarea>
+            <textarea rows="4" cols="50" name="post_description" placeholder='Entrez une courte description' required></textarea>
             <textarea rows="4" cols="50" name="post_contenu" placeholder='Entrez le contenu' required></textarea>
             <input type='checkbox' name='conditions_utilisation' required>J'accepte les conditions générales
             d'utilisation, et d'upload de fichier sonore
