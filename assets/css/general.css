@@ -218,6 +218,21 @@ input[type="submit"].reportsound:focus {
     border-color: red;
 }
 
+input[type="submit"].icon-down-arrow-in-a-circl {
+    background-color: #e39172;
+    border-color: #e39172;
+}
+
+input[type="submit"].icon-down-arrow-in-a-circl:hover {
+    background-color: #2b4570;
+    border-color: #2b4570;
+}
+
+input[type="submit"].icon-down-arrow-in-a-circl:focus {
+    background-color: #2b4570;
+    border-color: #2b4570;
+}
+
 
 button {
     font-family: "Menu";
