@@ -248,3 +248,52 @@ form #form_sound_search label {
 
 /* SOUND ITEM END */
 
+
+/* UPLOAD */
+#upload_sound {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+
+#upload_sound p span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+}
+
+#upload_sound p span label {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#upload_sound p span input {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#upload_sound p span select {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+#upload_sound #center {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#upload_sound #center input[type="checkbox"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-right: 10px;
+}

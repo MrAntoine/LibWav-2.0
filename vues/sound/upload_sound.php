@@ -31,22 +31,28 @@ if ($autorisation === true) {
     $query->execute();
     ?>
 
+    <div id="upload_sound">
     <form method="post" enctype="multipart/form-data" action="index.php?action=soundUpload">
         <p>
-            <input type="file" name="fichier" size="30">
-            <input type='text' name='post_title' placeholder='Entrez un titre' required>
-            <select name='post_categorie' placeholder='Choisir une catégorie' required>
-                <?php
-                while ($result = $query->fetch()) {
-                    echo "<option value='".$result['id'] ."'>" . $result['categorie_name'] . "</option> ";
-                }
-                ?>
-            </select>
-            <input type='checkbox' name='conditions_utilisation' required>J'accepte les conditions générales
-            d'utilisation, et d'upload de fichier sonore
+            <span>
+                <label for='fileToUpload' class='choisirbox'>Choisir le son à ajouter</label>
+                <input type='file' name='fichier' id='fileToUpload' required size="30">
+                <input type='text' name='post_title' placeholder='Entrez un titre' required>
+                <select name='post_categorie' placeholder='Choisir une catégorie' required>
+                    <?php
+                    while ($result = $query->fetch()) {
+                        echo "<option value='".$result['id'] ."'>" . $result['categorie_name'] . "</option> ";
+                    }
+                    ?>
+                </select>
+            </span>
+            <span id="center">
+            <input type='checkbox' name='conditions_utilisation' required><a href="?action=cgu">J'accepte les conditions générales
+                    d'utilisation, et d'upload de fichier sonore</a></span>
             <input type="submit" name="upload" value="Uploader">
         </p>
     </form>
+    </div>
 
     <?php
 }
