@@ -167,19 +167,19 @@ form #form_sound_search label {
 
 .sound_item_likes {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 
 
-    /*.postMsg {
-        float: right;
+.postMsg {
+        /*float: right;
         margin-top: 10px;
         margin-bottom: 10px;
-        padding: 5px;
+        padding: 5px;*/
         background-color: #fff;
         color: #000;
         margin-right: 10px;
-    }*/
+    }
 
 .nb_likes {
     margin-top:auto;
@@ -228,18 +228,22 @@ form #form_sound_search label {
     padding: 20px;
     border-radius: 12pt;
     margin-bottom: 20px;
+
+    background-color: purple;
 }
 
 
 .sound_item_date {
-
 }
+
 
 .sound_item_controls {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    margin-top: 10px;
 }
+
 
 
 

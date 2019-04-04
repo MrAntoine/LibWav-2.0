@@ -17,7 +17,18 @@ if (!isset($_GET["id"]) || ($_GET["id"]) == ($_SESSION["id"])) {
 } else {
     $id = $_GET["id"];
 }
-echo "<div id='profil'><h2>Mon Profil</h2><div id='grille'>";
+
+
+if (!isset($_GET["id"])) {
+    $_GET["id"] = $_SESSION['id'];
+}
+if($_GET['id'] == $_SESSION['id']) {
+    echo "<div id='profil'><h2>Mon Profil</h2><div id='grille'>";
+}else {
+    echo "<div id='profil'><h2>Profil</h2><div id='grille'>";
+}
+
+
 include('vues/user/infos_user_avatar.php');
 echo "<img src='uploads/avatar/".$affiche_user['avatar']."' alt='Photo de profil' class='profil_avatar' >";
 
@@ -43,9 +54,10 @@ if ($autorisation === true) {
         echo "<p id='anniv'> Anniversaire :".$affiche_user["anniversaire"]."</p>";
     };
 
+    echo "</div>";
     echo "<img id='imgbadge' src='uploads/badges/".Badge($affiche_user["points"]).".svg' alt='badge libwav'>";
 
-    echo "</div>";
+
 
     echo "<br /><div id='subgrille'>";
     echo " <p> Compte créé le : " . $affiche_user["created_at"] . "</p>";
@@ -64,11 +76,12 @@ if (!isset($_GET["id"])) {
     }
     if($_GET['id'] == $_SESSION['id']) {
         echo "<br /><a href=\"index.php?action=profilConfiguration\"><button>Modifier mes données</button></a>";
-        echo "</div>";
+
     }
 } else {
     echo needConnect();
 }
+echo "</div>";
 echo "</div>";
 
 

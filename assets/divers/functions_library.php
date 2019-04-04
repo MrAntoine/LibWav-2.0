@@ -183,17 +183,11 @@ function AfficheSoundItem($result){
         $style = "style='background-color:red'";// style css
     }
 
-    echo "<div class='sound_item_likes'>";
-        echo "<form class='likesForm' method='POST' action='?action=like'>";
-            echo "<input type='hidden'  class='postid' name='idPost' value='" . $result['id'] . "'>";
-            echo "<input type='submit' name='like' value='' class='postMsg likes'" . $style . " >";
-        echo "</form>";
-        echo "<div class='nb_likes'>" . $totalLikes."</div>";
-        echo"</div>";
+
 
         echo "<div class='sound_item_controls'>";
         echo "<form class='formReport' method='POST' action='?action=soundReport'>";
-            echo "<input type='hidden'  class='postid' name='idPost' value='" . $result['id'] . "'>";
+            echo "<input type='hidden'  class='postid' name='idPost' value=''" . $result['id'] . "'>";
             echo "<input type='hidden'  class='reporterid' name='idReporter' value='" . $idSession . "'>";
             echo "<input type='submit' name='reportsound' value='' class='reportsound'>";
         echo "</form>";
@@ -204,10 +198,21 @@ function AfficheSoundItem($result){
             echo "<input type='submit' name='downloadsound' value='' class='downloadsound'>";
         echo "</form>";
 
+
+        echo "<div class='sound_item_likes'>";
+        echo "<form class='likesForm' method='POST' action='?action=like'>";
+        echo "<input type='hidden'  class='postid' name='idPost' value='" . $result['id'] . "'>";
+        echo "<input type='submit' name='like' value='' class='postMsg likes'" . $style . " >";
+        echo "</form>";
+        echo "<div class='nb_likes'>" . $totalLikes."</div>";
+        echo"</div>";
+
         echo "<button class='btn_lecture'>";
     echo "<input hidden class='src_sound' value='".$result['lien_upload']."'/>";
         echo "</div>";
     echo "</div>";
+
+
 
 }
 
@@ -338,10 +343,9 @@ function AfficheComment($idpost) {
     while ($result = $query->fetch()){
         $id = $result["idCreateur"];
         echo "<div class='commentaire_tuto'>";
-        echo "<p>".$result['contenu']."</p>";
-        echo "<span>".$result['date_publi']."</span>";
         echo "<p>".InfoUserAvatar($id)."</p>";
-
+        echo "<p class='comm'>".$result['contenu']."</p>";
+        echo "<span class='date'>".$result['date_publi']."</span>";
         echo "</div>";
     }
 }
@@ -357,9 +361,10 @@ function AfficheCommentArticle($idpost) {
     while ($result = $query->fetch()){
         $id = $result["idCreateur"];
         echo "<div class='commentaire_article'>";
-        echo "<p>".$result['contenu']."</p>";
-        echo "<span>".$result['date_publi']."</span>";
         echo "<p>".InfoUserAvatar($id)."</p>";
+        echo "<p class='comm'>".$result['contenu']."</p>";
+        echo "<span class='date'>".$result['date_publi']."</span>";
+
 
         echo "</div>";
     }
@@ -392,8 +397,9 @@ function InfoUserAvatar($id) {
 
     echo "<a href='index.php?action=profil&id=" . $id . "' class='avatar'>";
     echo "<img src='uploads/avatar/".$affiche_user['avatar']."' alt='Photo de profil' class='profil_avatar' >";
-    echo " <p>" . $affiche_user["pseudo"] . "</p>";
     echo "</a>";
+    echo " <p id='pseudo_user'>" . $affiche_user["pseudo"] . "</p>";
+
 
 }
 

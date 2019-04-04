@@ -103,7 +103,7 @@ body {
 }
 
 #wrapper_report #div_report {
-   margin:auto;
+    margin:auto;
     background-color: yellow;
     padding: 20px;
 }
