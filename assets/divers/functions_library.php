@@ -187,7 +187,7 @@ function AfficheSoundItem($result){
 
         echo "<div class='sound_item_controls'>";
         echo "<form class='formReport' method='POST' action='?action=soundReport'>";
-            echo "<input type='hidden'  class='postid' name='idPost' value=''" . $result['id'] . "'>";
+            echo "<input type='hidden'  class='postid' name='idPost' value='" . $result['id'] . "'>";
             echo "<input type='hidden'  class='reporterid' name='idReporter' value='" . $idSession . "'>";
             echo "<input type='submit' name='reportsound' value='' class='reportsound'>";
         echo "</form>";

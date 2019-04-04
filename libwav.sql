@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 03 avr. 2019 à 09:29
+-- Généré le :  jeu. 04 avr. 2019 à 18:52
 -- Version du serveur :  5.7.21
 -- Version de PHP :  7.2.4
 
@@ -40,14 +40,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
   `nb_like` int(11) NOT NULL,
   `id_article_categorie` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `articles`
---
-
-INSERT INTO `articles` (`id`, `titre`, `description`, `image`, `contenu`, `idCreateur`, `date_publi`, `nb_like`, `id_article_categorie`) VALUES
-(9, 'kjnkjnkjnjnkjn', 'nkjnkjnkjn', 'apple.png', 'nkjnkjnkjnkj', 1, '2022-03-20', 0, NULL);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -77,20 +70,7 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
   `date_publi` date NOT NULL,
   `id_Post` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `commentaires`
---
-
-INSERT INTO `commentaires` (`id`, `contenu`, `idCreateur`, `nb_like`, `date_publi`, `id_Post`) VALUES
-(1, 'Voici un commentaire', 1, 0, '2008-03-20', 6),
-(2, 'Voici un commentaire', 1, 0, '2007-03-20', 6),
-(3, 'Voici un commentaire', 1, 0, '2008-03-21', 6),
-(4, 'Voici un commentaire', 1, 0, '2008-03-19', 6),
-(5, 'tyer', 1, 0, '2012-03-20', 6),
-(6, 'qsdg', 2, 0, '2013-03-20', 1),
-(7, 'ftjtjtjuuj', 1, 0, '2002-04-20', 5);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -107,14 +87,7 @@ CREATE TABLE IF NOT EXISTS `commentaires_articles` (
   `date_publi` date NOT NULL,
   `id_Post` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `commentaires_articles`
---
-
-INSERT INTO `commentaires_articles` (`id`, `contenu`, `idCreateur`, `nb_like`, `date_publi`, `id_Post`) VALUES
-(7, 'COUCOUCOUCOUCOCUC', 1, 0, '2002-04-20', 9);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -167,16 +140,16 @@ CREATE TABLE IF NOT EXISTS `likes` (
   `id_user` int(11) NOT NULL,
   `id_contenu` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=809 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `likes`
 --
 
 INSERT INTO `likes` (`id`, `id_user`, `id_contenu`) VALUES
-(805, 1, 41),
-(788, 2, 2),
-(804, 1, 2);
+(1, 1, 2),
+(2, 1, 5),
+(3, 1, 9);
 
 -- --------------------------------------------------------
 
@@ -243,18 +216,14 @@ CREATE TABLE IF NOT EXISTS `signalements_posts` (
   `date` date NOT NULL,
   `etat` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `signalements_posts`
 --
 
 INSERT INTO `signalements_posts` (`id`, `id_post`, `id_demandeur`, `raison`, `date`, `etat`) VALUES
-(1, 1, 1, 'klj,kljkljjlk', '2019-01-14', 'attente'),
-(21, 1, 1, 'OBNJOUURURUR', '2002-04-20', 'attente'),
-(20, 1, 1, 'raison test', '2002-04-20', 'attente'),
-(19, 1, 1, 'raison test', '2018-02-20', 'attente'),
-(18, 1, 1, 'bhjbhjbj', '2018-02-20', 'attente');
+(1, 4, 1, 'Ceci est un test', '2004-04-20', 'attente');
 
 -- --------------------------------------------------------
 
@@ -271,17 +240,7 @@ CREATE TABLE IF NOT EXISTS `signalements_users` (
   `date` date NOT NULL,
   `etat` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `signalements_users`
---
-
-INSERT INTO `signalements_users` (`id`, `id_user`, `id_demandeur`, `raison`, `date`, `etat`) VALUES
-(1, 1, 2, 'pour le test', '2019-01-14', 'null'),
-(2, 1, 2, 'musique pourrie', '2019-01-14', 'null'),
-(3, 1, 2, '21321213213231213', '2019-01-23', 'attente'),
-(4, 1, 3, '21321213213231213', '2019-01-23', 'attente');
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -300,45 +259,30 @@ CREATE TABLE IF NOT EXISTS `son` (
   `id_son_categorie` int(11) NOT NULL,
   `nb_telechargements` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `son`
 --
 
 INSERT INTO `son` (`id`, `lien_upload`, `titre`, `description`, `idCreateur`, `date_publi`, `id_son_categorie`, `nb_telechargements`) VALUES
-(1, '429.mp3', 'Mon premier son ', 'voici la description ', 1, '2019-01-01', 1, 10),
-(2, '429.mp3', 'Toto', '', 1, '2020-01-20', 15, 12),
-(41, '429.mp3', 'SON 6', '', 1, '2020-01-20', 15, 12),
-(40, '429.mp3', 'SON 7', '', 1, '2020-01-20', 15, 12),
-(39, '429.mp3', 'SON 10', '', 1, '2020-01-20', 15, 12),
-(38, '429.mp3', 'SON 9', '', 1, '2020-01-20', 15, 12),
-(36, 'Un Gars Une Fille en 4K - Reproduction du Générique - Jingle Un Gars Une Fille - UHD - Fictif - 2016.mp3', 'mec', '', 1, '2009-02-20', 0, 0),
-(35, '7803.wav', 'Toto2', '', 1, '2009-02-20', 0, 0),
-(37, '429.mp3', 'Toto35434', '', 1, '2020-01-20', 15, 12),
-(42, '429.mp3', 'SON 8', '', 1, '2020-01-20', 15, 12),
-(43, '429.mp3', 'SON 5', '', 1, '2020-01-20', 15, 12),
-(44, '429.mp3', 'SON 4', '', 1, '2020-01-20', 15, 12),
-(45, '429.mp3', 'SON 3', '', 1, '2020-01-20', 15, 12),
-(46, '429.mp3', 'SON 2', '', 1, '2020-01-20', 15, 12),
-(47, '429.mp3', 'SON 1', '', 1, '2020-01-20', 15, 12),
-(48, '429.mp3', 'SON 0', '', 1, '2020-01-20', 15, 12),
-(49, '429.mp3', 'SON -1', '', 1, '2020-01-20', 15, 12),
-(50, '429.mp3', 'SON -2', '', 1, '2020-01-20', 15, 12),
-(51, '429.mp3', 'SON -3', '', 1, '2020-01-20', 15, 12),
-(52, '429.mp3', 'SON -4', '', 1, '2020-01-20', 15, 12),
-(53, '429.mp3', 'SON -5', '', 1, '2020-01-20', 15, 12),
-(54, '429.mp3', 'SON -6', '', 1, '2020-01-20', 15, 12),
-(55, '429.mp3', 'SON -7', '', 1, '2020-01-20', 15, 12),
-(56, '429.mp3', 'SON -8', '', 1, '2020-01-20', 15, 12),
-(57, '429.mp3', 'SON -9', '', 1, '2020-01-20', 15, 12),
-(58, '429.mp3', 'SON -10', '', 1, '2020-01-20', 15, 12),
-(59, '429.mp3', 'SON -11', '', 1, '2020-01-20', 15, 12),
-(60, '429.mp3', 'SON -12', '', 1, '2020-01-20', 15, 12),
-(61, '429.mp3', 'SON -13', '', 1, '2020-01-20', 15, 12),
-(62, '429.mp3', 'SON -14', '', 1, '2020-01-20', 15, 12),
-(63, '429.mp3', 'SON -15\r\n', '', 1, '2020-01-20', 15, 12),
-(64, '0452.mp3', 'kpokokokokoko', '', 1, '2002-04-20', 15, 0);
+(1, 'buissons.mp3', 'Buissons', '', 1, '2003-04-20', 3, 0),
+(2, 'fermeture porte + verouillage.mp3', 'Fermeture portière intérieur', '', 1, '2003-04-20', 4, 0),
+(3, 'moteur c3 ext.mp3', 'Démarrage voiture extérieur', '', 1, '2003-04-20', 4, 0),
+(4, 'frein megane int.mp3', 'Frein à main', '', 1, '2003-04-20', 4, 0),
+(5, 'pas branches.mp3', 'Pas branchages', '', 1, '2003-04-20', 5, 0),
+(6, 'pas herbe.mp3', 'Pas herbe', '', 1, '2003-04-20', 5, 0),
+(7, 'aboiement chien ext.mp3', 'Chien aboiements', '', 1, '2003-04-20', 6, 0),
+(8, 'dans les bois ext.mp3', 'Pas feuillage', '', 1, '2003-04-20', 5, 0),
+(9, 'oiseau ext.mp3', 'Oiseaux extérieur', '', 1, '2003-04-20', 1, 0),
+(10, 'ruisseau.mp3', 'Ruisseau', '', 1, '2003-04-20', 3, 0),
+(11, 'verrouilage porte.mp3', 'Vérouillage intérieur', '', 1, '2003-04-20', 4, 0),
+(12, 'arroisoir.mp3', 'Arrosoir ', '', 1, '2004-04-20', 1, 0),
+(13, 'klaxon c3 ext.mp3', 'Klaxon', '', 1, '2004-04-20', 4, 0),
+(14, 'oiseau seul.mp3', 'Oiseau seul', '', 1, '2004-04-20', 1, 0),
+(15, 'marche metallique rapide.mp3', 'Marche bois rapide', '', 1, '2004-04-20', 5, 0),
+(16, 'porte fermeture c3 ext.mp3', 'Fermeture portière extérieur', '', 1, '2004-04-20', 4, 0),
+(17, 'papiers.mp3', 'Papiers', '', 1, '2004-04-20', 5, 0);
 
 -- --------------------------------------------------------
 
@@ -351,15 +295,19 @@ CREATE TABLE IF NOT EXISTS `son_categorie` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `categorie_name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `son_categorie`
 --
 
 INSERT INTO `son_categorie` (`id`, `categorie_name`) VALUES
-(1, 'romantique'),
-(15, 'nature');
+(1, 'environnement'),
+(2, 'instruments'),
+(3, 'nature'),
+(4, 'véhicules'),
+(5, 'humains'),
+(6, 'animaux');
 
 -- --------------------------------------------------------
 
@@ -392,19 +340,7 @@ CREATE TABLE IF NOT EXISTS `tutos` (
   `nb_like` int(11) NOT NULL,
   `id_article_categorie` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `tutos`
---
-
-INSERT INTO `tutos` (`id`, `titre`, `description`, `video_lien`, `contenu`, `idCreateur`, `date_publi`, `nb_like`, `id_article_categorie`) VALUES
-(5, 'Test embed', 'Test embedTest embed', 'https://www.youtube.com/watch?v=ugkK6_XmsaQ', 'Test embedTest embed', 1, '2008-03-20', 0, NULL),
-(6, 'Test embed', 'Test embedTest embed', 'https://www.youtube.com/embed/ugkK6_XmsaQ', 'Test embedTest embed', 1, '2008-03-20', 0, NULL),
-(7, 'LUNDI', '<script>alert(\"coucou\");</script> ', 'https://www.youtube.com/embed/ugkK6_XmsaQ', 'opkopkpk', 2, '2013-03-20', 0, NULL),
-(2, 'kl,k,lkl,,k,', 'k,lk,,,,,,,,,,,,,', 'https://www.youtube.com/embed/ugkK6_XmsaQ', 'k,lk,klkl,,klllllllllllll', 1, '2007-03-20', 0, NULL),
-(3, 'gyuioyhgbyuhb', 'bjbjhbjhb', 'http://www.allocine.fr/video/', 'hjbhjbjhbjh', 1, '2007-03-20', 0, NULL),
-(4, 'facebook', 'wdgfh vugjlhpol;u,yfnjhbgvfcdss', 'https://www.facebook.com/?ref=tn_tnmn', ':opmpli;,nbvfcdxwqsxzdcfvgbhnj,k;l:m!m:l;ik,jnbvqwszxdcefvrgyhnju,ki;lo:', 1, '2007-03-20', 0, NULL);
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -438,7 +374,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `pseudo`, `nom`, `prenom`, `avatar`, `email`, `password`, `sexe`, `anniversaire`, `region`, `pays`, `statut`, `created_at`, `temps_connexion`, `nb_telechargements`, `points`) VALUES
-(1, 'Taneino', 'Vdb', 'Antoine', 'IMG_2862.JPG', 'antoinevdb15@gmail.com', '123456789', 'Homme', '1999-01-15', 'Hauts-De-France', 'France', '5', '2019-01-17', '00:00:03', 29, 955),
+(1, 'Taneino', 'Vdb', 'Antoine', 'IMG_2862.JPG', 'antoinevdb15@gmail.com', '123456789', 'Homme', '1999-01-15', 'Hauts-De-France', 'France', '5', '2019-01-17', '00:00:03', 29, 1040),
 (2, 'Antonio', NULL, NULL, NULL, 'azuivgfdfbhgfd@fgmai.com', '*CC67043C7BCFF5EEA5566BD9B1F3C74FD9A5CF5D', NULL, NULL, NULL, NULL, '3', '2019-03-13', '00:00:00', 0, 10);
 COMMIT;
 
