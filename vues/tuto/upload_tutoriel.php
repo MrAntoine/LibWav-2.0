@@ -43,7 +43,7 @@ if ($autorisation === true) {
             <textarea rows="4" cols="50" name="post_contenu" placeholder='Entrez le contenu' required></textarea>
             <span id="checkbox"><input type='checkbox' name='conditions_utilisation' required>J'accepte les <br><a href="?action=cgu">conditions générales
                     d'utilisation</a>, et d'upload de fichier sonore</span>
-            <input type="submit" name="upload" value="Uploader">
+            <input type="submit" name="upload" value="Publier">
         </p>
     </form>
     </div>

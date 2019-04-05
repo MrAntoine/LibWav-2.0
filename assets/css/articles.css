@@ -177,22 +177,15 @@ a.article_item:hover {
 }
 
 
-#ajout_tuto form p{
+#ajout_article form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: auto;
 }
 
-#ajout_tuto form p #post_video{
-    width: 200px;
-}
 
-#ajout_tuto form p #post_title {
-    margin-bottom: 20px;
-}
-
-#ajout_tuto form p input[type="checkbox"] {
+#ajout_article form p input[type="checkbox"] {
     margin: auto;
     margin-right: 10px;
     margin-bottom: 20px;
@@ -202,14 +195,44 @@ a.article_item:hover {
 }
 
 
-#ajout_tuto form p #checkbox {
+#ajout_article form p #checkbox {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: auto;
 }
 
+#ajout_article .choisirbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+}
 
+#ajout_article input[type="text"] {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+
+}
+
+#ajout_article form p input[type="checkbox"] {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+#ajout_article form p #text {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 /* COMMENTAIRES */
 .commentaire_article {
@@ -298,3 +321,5 @@ a.article_item:hover {
     flex-direction: column;
     justify-content: center;
 }
+
+#

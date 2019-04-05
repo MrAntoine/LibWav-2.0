@@ -40,19 +40,22 @@ if ($autorisation === true) {
 
 
 
-
+    <div id="ajout_article">
     <form method="post" enctype="multipart/form-data" action="index.php?action=articleUpload">
         <p>
-            <label>Selectionnez une miniature</label>
+            <label for="fileToUpload" class="choisirbox">Sélectionnez une miniature</label>
             <input type='file' name='fileToUpload' id='fileToUpload' required>
             <input type='text' name='post_title' placeholder='Entrez un titre' required>
             <textarea rows="4" cols="50" name="post_description" placeholder='Entrez une courte description' required></textarea>
             <textarea rows="4" cols="50" name="post_contenu" placeholder='Entrez le contenu' required></textarea>
-            <input type='checkbox' name='conditions_utilisation' required>J'accepte les conditions générales
-            d'utilisation, et d'upload de fichier sonore
+
+            <span id="checkbox">
+            <input type='checkbox' name='conditions_utilisation' required><a href="?action=cgu">J'accepte les conditions générales
+                    d'utilisation, et d'ajout de fichier sonore.</a></span>
             <input type="submit" name="upload" value="Publier">
         </p>
     </form>
+    </div>
 
     <?php
 }

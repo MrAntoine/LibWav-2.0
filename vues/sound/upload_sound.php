@@ -49,7 +49,7 @@ if ($autorisation === true) {
                 <span id="center">
             <input type='checkbox' name='conditions_utilisation' required><a href="?action=cgu">J'accepte les conditions générales
                     d'utilisation, et d'upload de fichier sonore</a></span>
-                <input type="submit" name="upload" value="Uploader">
+                <input type="submit" name="upload" value="Publier">
             </p>
         </form>
     </div>
